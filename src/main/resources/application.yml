@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    #PROD DB
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?useSSL=false
+    #Credentials
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      max-lifetime: 600000
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 30000
+      pool-name: SpringBootJPAHikariCMP
+      connection-timeout: 30000
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  thymeleaf:
+    enabled: true
+    suffix: .html
+    check-template-location: true
+    servlet:
+      content-type: text/html
+    prefix: classpath:/templates/
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration: 76300000
+  sendgrid:
+    api-key: ${SENDGRID_API_KEY}
+    from: ${SENDGRID_FROM}
+  activation-token:
+    secret: ${ACTIVATION_TOKEN_SECRET}
+    expiration: 3600000
