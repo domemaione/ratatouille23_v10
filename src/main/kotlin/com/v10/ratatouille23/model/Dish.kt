@@ -1,5 +1,6 @@
 package com.v10.ratatouille23.model
 
+import com.v10.ratatouille23.utils.DishType
 import javax.persistence.*
 
 @Entity
@@ -16,8 +17,8 @@ class Dish (
     @Column(name = "description")
     var description: String,
 
-    @Column(name = "type")
-    var type: String,
+    @Enumerated(EnumType.STRING)
+    var type: DishType,
 
     @Column(name = "menu_id")
     var menuId: Long

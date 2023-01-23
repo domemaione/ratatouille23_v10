@@ -1,5 +1,6 @@
 package com.v10.ratatouille23.model
 
+import com.v10.ratatouille23.utils.UserRoles
 import javax.persistence.*
 
 @Entity
@@ -22,8 +23,8 @@ class User (
     @Column(name = "password")
     var password: String,
 
-    @Column(name = "role")
-    var role: String,
+    @Enumerated(EnumType.STRING)
+    var role: UserRoles,
 
     @Column(name = "restaurant_id")
     var restaurantId: Long?,
