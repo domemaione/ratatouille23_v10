@@ -1,6 +1,6 @@
 package com.v10.ratatouille23.dto
 
-data class V_Restaurant_UsersDto(
+data class VRestaurantUsersDto(
     var id: Long?,
     var email: String?,
     var name: String?,
@@ -8,7 +8,6 @@ data class V_Restaurant_UsersDto(
     var password: String?,
     var role: String?,
     var restaurantName: String?
-
 )
 
 
