@@ -28,7 +28,7 @@ class WebSecurity(
         http?.cors()?.and()?.csrf()?.disable()?.exceptionHandling()
             ?.and()?.authorizeRequests()
             ?.antMatchers(HttpMethod.POST, "/api/auth/signup")?.permitAll()
-            ?.antMatchers(HttpMethod.POST, "/api/auth/validate/user/*")?.permitAll()
+            ?.antMatchers(HttpMethod.GET, "/api/auth/validate/user/**")?.permitAll()
             ?.antMatchers(HttpMethod.GET, "/api/auth/check/token/*")?.permitAll()
             ?.antMatchers(HttpMethod.GET, "/api/user/all/*")?.permitAll()
             ?.antMatchers(HttpMethod.GET, "/api/user/*")?.permitAll()

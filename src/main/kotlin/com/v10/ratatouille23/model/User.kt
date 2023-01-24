@@ -29,6 +29,6 @@ class User (
     @Column(name = "restaurant_id")
     var restaurantId: Long?,
 
-    @Column(name = "enabled")
-    var enabled: Boolean
+    @Column(name = "enabled", columnDefinition = "BOOLEAN DEFAULT false")
+    var enabled: Boolean = false
 )

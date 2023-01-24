@@ -17,7 +17,7 @@ class AuthController(
     fun signup(@RequestBody signupRequestDto: SignupRequestDto) =
         ResponseEntity.ok(ServerResponse.ok(authService.signup(signupRequestDto)))
 
-    @PostMapping("validate/user/{token}")
+    @GetMapping("validate/user/{token}")
     fun validate(@PathVariable("token") token: String) =
         ResponseEntity.ok(ServerResponse.ok(authService.validate(token)))
 }

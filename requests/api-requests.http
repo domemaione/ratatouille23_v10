@@ -5,9 +5,19 @@ Content-Type: application/json
 {
   "name": "mimmo",
   "surname": "maions",
-  "email": "domenic.maione@outlook.it",
+  "email": "domenico.maione@outlook.it",
   "password": "provaprova"
 }
+###
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "domenico.maione@outlook.it",
+  "password": "provaprova"
+}
+###
+GET {{host}}/api/auth/validate/user/{{token}}
 ###
 
 POST {{host}}/api/auth/validate/user

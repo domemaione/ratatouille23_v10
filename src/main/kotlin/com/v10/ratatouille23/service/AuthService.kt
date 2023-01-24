@@ -31,6 +31,7 @@ class AuthService(
         return true
     }
 
+    //
     fun validate(token: String): Boolean {
         val id = this.activationTokenManager.validate(token) ?: throw ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR)
         val found = this.userService.get(id)
