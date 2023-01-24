@@ -8,4 +8,5 @@ import java.util.*
 @Repository
 interface UserRepository: CrudRepository<User, Long> {
     fun getByEmail(email: String): Optional<User>
+    fun findByEmail(email: String): Boolean
 }

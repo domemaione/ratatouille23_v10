@@ -1,0 +1,13 @@
+###
+POST {{host}}/api/auth/signup
+Content-Type: application/json
+
+{
+  "name": "mimmo",
+  "surname": "maions",
+  "email": "domenic.maione@outlook.it",
+  "password": "provaprova"
+}
+###
+
+POST {{host}}/api/auth/validate/user

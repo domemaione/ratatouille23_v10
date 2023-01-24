@@ -1,4 +1,4 @@
-package com.v10.ratatouille23.dto
+package com.v10.ratatouille23.dto.Views
 
 data class VRestaurantUsersDto(
     var id: Long?,

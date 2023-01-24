@@ -11,13 +11,13 @@ class User (
     @Column(name = "id")
     var id: Long?,
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     var name: String,
 
-    @Column(name = "surname")
+    @Column(name = "surname", nullable = false)
     var surname: String,
 
-    @Column(name = "email")
+    @Column(name = "email", unique = true) //per evitare che venga registrato un utente con la stessa email
     var email: String,
 
     @Column(name = "password")
