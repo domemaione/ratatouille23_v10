@@ -27,7 +27,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
   jwt:
     secret: ${JWT_SECRET}
     expiration: 76300000

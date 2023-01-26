@@ -25,6 +25,7 @@ class AuthController(
         ResponseEntity.ok(ServerResponse.ok(authService.signupOp(signupRequestDto)))
 
 
+
     @PostMapping("signup/op/resetpassword/{token}")
     fun signupSubAccount(@RequestBody signupRequestDto: SignupRequestDto, @PathVariable("token") token: String) =
         ResponseEntity.ok(ServerResponse.ok(authService.signupSubAccount(signupRequestDto,token)))

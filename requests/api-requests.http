@@ -22,6 +22,9 @@ Content-Type: application/json
   "role": "HALL_ATTENDANT"
 }
 ###
+POST {{host}}/api/auth/signup/op/resetpassword/
+
+###
 
 POST {{host}}/api/auth/login
 Content-Type: application/json

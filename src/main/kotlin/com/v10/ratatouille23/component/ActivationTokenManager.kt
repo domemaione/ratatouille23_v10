@@ -1,5 +1,6 @@
 package com.v10.ratatouille23.component
 
+import io.jsonwebtoken.Jwts
 import org.bouncycastle.jce.provider.BouncyCastleProvider
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
@@ -34,6 +35,21 @@ class ActivationTokenManager(
             return null
         return id.toLong()
     }
+
+    //prende l'id user dal token
+    fun getUserId(token: String): Long? {
+        try {
+            val claims = Jwts.parser()
+                .setSigningKey(secret)
+                .parseClaimsJws(token)
+                .body
+            return claims["userId"] as Long
+        } catch (e: Exception) {
+            return null
+        }
+    }
+
+
 
     private fun encrypt(value: String): String? {
         Security.addProvider(BouncyCastleProvider())
