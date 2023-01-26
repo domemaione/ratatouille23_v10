@@ -46,6 +46,10 @@ Content-Type: application/json
 ###
 POST {{host}}/api/auth/validate/user
 ###
+
+
+GET {{host}}/api/user/{{email}}
+###
 GET {{host}}/api/auth/validate/user/{{token}}
 ###
 GET {{host}}/api/restaurant/users/HALL_ATTENDANT
