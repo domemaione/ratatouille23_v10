@@ -48,8 +48,8 @@ class AuthService(
         return true
     }
 
-
-   fun signupSubAccount(newpassord: SignupRequestDto, token: String): Boolean{
+//reset password da signupOp
+   fun resetPassword(newpassord: SignupRequestDto, token: String): Boolean{
        if(!validate(token))
            throw ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid token")
 

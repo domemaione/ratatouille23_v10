@@ -27,12 +27,14 @@ class AuthController(
 
 
     @PostMapping("signup/op/resetpassword/{token}")
-    fun signupSubAccount(@RequestBody signupRequestDto: SignupRequestDto, @PathVariable("token") token: String) =
-        ResponseEntity.ok(ServerResponse.ok(authService.signupSubAccount(signupRequestDto,token)))
+    fun resetPassword(@RequestBody signupRequestDto: SignupRequestDto, @PathVariable("token") token: String) =
+        ResponseEntity.ok(ServerResponse.ok(authService.resetPassword(signupRequestDto,token)))
+
 
     @GetMapping("validate/user/{token}")
     fun validate(@PathVariable("token") token: String) =
         ResponseEntity.ok(ServerResponse.ok(authService.validate(token)))
+
 
     @GetMapping("check/token/{token}")
     fun checkToken(@PathVariable("token") token: String) =

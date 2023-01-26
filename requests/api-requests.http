@@ -48,6 +48,9 @@ POST {{host}}/api/auth/validate/user
 ###
 
 
+
+
+###
 GET {{host}}/api/user/{{email}}
 ###
 GET {{host}}/api/auth/validate/user/{{token}}
