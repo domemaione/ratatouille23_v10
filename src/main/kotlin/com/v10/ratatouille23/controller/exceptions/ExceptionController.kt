@@ -3,6 +3,7 @@ package com.v10.ratatouille23.controller.exceptions
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.security.access.AccessDeniedException
+import org.springframework.web.bind.MethodArgumentNotValidException
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.server.ResponseStatusException
@@ -35,5 +36,12 @@ class ExceptionController {
         this.logger.severe("handlerException() - error: ${e.message}")
         e.printStackTrace()
         return ResponseEntity("Unexpected error during the execution", HttpStatus.INTERNAL_SERVER_ERROR)
+    }
+
+    @ExceptionHandler
+    fun handleMethodArgumentNotValidException(e: MethodArgumentNotValidException): ResponseEntity<Any> {
+        this.logger.severe("handleMethodArgumentNotValidException() - error: ${e.message}")
+        e.printStackTrace()
+        return ResponseEntity("Incorrect required fields", HttpStatus.BAD_REQUEST)
     }
 }

@@ -1,13 +1,13 @@
 package com.v10.ratatouille23.controller
 
+import com.v10.ratatouille23.dto.RestaurantDto
 import com.v10.ratatouille23.mapper.RestaurantMapper
 import com.v10.ratatouille23.service.RestaurantService
 import org.springframework.http.ResponseEntity
+import com.v10.ratatouille23.dto.ServerResponse
+import com.v10.ratatouille23.utils.UserRoles
 import org.springframework.security.access.prepost.PreAuthorize
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
-import org.springframework.web.servlet.function.ServerResponse
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/restaurant")
@@ -16,9 +16,17 @@ class RestaurantController (
     private val restaurantMapper: RestaurantMapper
 ){
 
-    @GetMapping("/users")
-    fun getUsers() =
-        ResponseEntity.ok(ServerResponse.ok())
+    //Query su tutti gli utenti attivi che hanno lo stesso ruolo nello stesso ristorante
+    @GetMapping("/users/{role}")
+    @PreAuthorize("hasAuthority('ADMIN')")
+    fun getUsersByRole(@PathVariable("role") role: UserRoles) =
+        ResponseEntity.ok(ServerResponse.ok(this.restaurantService.getUsersByRole(role,true)))
+
+    @PostMapping()
+    @PreAuthorize("hasAuthority('ADMIN')")
+    fun add(@RequestBody restaurantDto: RestaurantDto) =
+        ResponseEntity.ok(ServerResponse.ok(this.restaurantMapper.toDomain(restaurantService.add(restaurantDto))))
+
 
 
 }

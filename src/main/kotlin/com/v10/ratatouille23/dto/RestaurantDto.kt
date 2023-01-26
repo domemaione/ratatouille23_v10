@@ -1,13 +1,14 @@
 package com.v10.ratatouille23.dto
 
-import java.sql.Timestamp
+import java.time.LocalDateTime
+
 //nel file dto, la data class ha come parametri le variabili costanti
-data class RestaurantDto (
+data class RestaurantDto(
     val id: Long?,
     val name: String,
     val address: String,
     val menuId: Long?,
-    val userId: Long,
-    val updateAt: Timestamp?,
-    val createdAt: Timestamp?
+    val userId: Long?,
+    val updateAt: LocalDateTime?,
+    val createdAt: LocalDateTime?
     )

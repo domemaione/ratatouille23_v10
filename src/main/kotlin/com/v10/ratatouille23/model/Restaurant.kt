@@ -1,11 +1,12 @@
 package com.v10.ratatouille23.model
 
-import java.sql.Timestamp
+import org.springframework.data.jpa.repository.Temporal
+import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
 @Table(name = "restaurant")
-class Restaurant (
+class Restaurant(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -21,11 +22,13 @@ class Restaurant (
     var menuId: Long?,
 
     @Column(name = "user_id")
-    var userId: Long,
+    var userId: Long?,
 
     @Column(name = "update_at")
-    var updateAt: Timestamp?,
+    @Temporal(TemporalType.TIMESTAMP)
+    var updateAt: LocalDateTime?,
 
     @Column(name = "created_at")
-    var createdAt: Timestamp?
+    @Temporal(TemporalType.TIMESTAMP)
+    var createdAt: LocalDateTime?
 )
