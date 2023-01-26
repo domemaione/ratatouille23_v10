@@ -34,6 +34,9 @@ class AuthController(
     fun validate(@PathVariable("token") token: String) =
         ResponseEntity.ok(ServerResponse.ok(authService.validate(token)))
 
+    @GetMapping("check/token/{token}")
+    fun checkToken(@PathVariable("token") token: String) =
+        ResponseEntity.ok(ServerResponse.ok(authService.checkToken(token)))
 
 
 }

@@ -6,6 +6,7 @@ import com.v10.ratatouille23.dto.UserDto
 import com.v10.ratatouille23.dto.request.SignupRequestDto
 import com.v10.ratatouille23.mapper.UserMapper
 import com.v10.ratatouille23.repository.UserRepository
+import com.v10.ratatouille23.security.JWTCustomManager
 import com.v10.ratatouille23.utils.UserRoles
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -19,7 +20,8 @@ class AuthService(
     private val userRepository: UserRepository,
     private val userMapper: UserMapper,
     private val emailService: EmailService,
-    private val activationTokenManager: ActivationTokenManager
+    private val activationTokenManager: ActivationTokenManager,
+    private val jwtCustomManager: JWTCustomManager
 
 ) {
     private val logger = Logger.getLogger(AuthService::class.java.name)
@@ -67,6 +69,15 @@ class AuthService(
         val found = this.userService.get(id)
         found.enabled = true //per attivare l'utente
         val saved = this.userRepository.save(found)
+        return true
+    }
+
+
+    fun checkToken(token: String): Boolean {
+        this.logger.info("checkToken() - incoming request with token: $token")
+        if (!this.jwtCustomManager.validate(token))
+            throw ResponseStatusException(HttpStatus.UNAUTHORIZED)
+
         return true
     }
 
