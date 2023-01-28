@@ -10,25 +10,31 @@ Content-Type: application/json
 }
 ###
 POST {{host}}/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzQ3NDg2MzksImV4cCI6MTY3NDgyNDkzOX0.g7McYHraXzJmm-6ByVZKjfKOuAB6JAJop3kwqJ2dZCDfN6R4uIZ8NlgY4oEQfd7k9oHMyNARl-vWOXfJHiLlzw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzQ5MTM3NzcsImV4cCI6MTY3NDk5MDA3N30.DcqP9PA1vXEVo48t4z9isMvU2MrLi3JQgkRwYalX23kWYiD4fxz0bTiMmBcjoCmbphjHuUR7vXVrtd3ce0dh2A
 Content-Type: application/json
 
 {
-  "email": "cazz@gmail.com",
-  "password": "provaprova",
-  "name": "giumbo",
-  "surname": "drillo",
-  "role": "HALL_ATTENDANT"
+  "email": "mimmomaions@gmail.com",
+  "password": "ciaomamma",
+  "name": "ciccio",
+  "surname": "merrino",
+  "role": "SUPERVISOR"
 }
 ###
-POST {{host}}/api/auth/signup/op/resetpassword/
+POST {{host}}/api/auth/signup/op/resetpassword/pGyacSER3NqEZqm+zu0HQtTQmmixnz1Q1WrMpOqkUaM
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzQ5MTM3NzcsImV4cCI6MTY3NDk5MDA3N30.DcqP9PA1vXEVo48t4z9isMvU2MrLi3JQgkRwYalX23kWYiD4fxz0bTiMmBcjoCmbphjHuUR7vXVrtd3ce0dh2A
+Content-Type: application/json
+
+{
+  "password": "provaprova"
+}
 ###
 
 POST {{host}}/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "domenico.maione@outlook.it",
+  "email": "mimmomaions@gmail.com",
   "password": "provaprova"
 }
 
@@ -46,9 +52,6 @@ Content-Type: application/json
 ###
 POST {{host}}/api/auth/validate/user
 ###
-
-
-
 
 ###
 GET {{host}}/api/user/{{email}}

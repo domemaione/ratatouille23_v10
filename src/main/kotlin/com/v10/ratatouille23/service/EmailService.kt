@@ -21,6 +21,15 @@ class EmailService(
                     "Ciao, ${user.email},\nbenvenuto su Ratatouille23, per attivare l'account con ruolo ${user.role} <a href=\n$url/$token>Clicca qui!</a>"
                 )
         }
+
+        object ResetPassword : MailComposer() {
+            override fun mail(user: User) =
+                MailObj(
+                    subjectResetPassword,
+                    textHtml,
+                    "Ciao, ${user.email},\nLa tua password è stata reimpostata con successo."
+                )
+        }
     }
 
 

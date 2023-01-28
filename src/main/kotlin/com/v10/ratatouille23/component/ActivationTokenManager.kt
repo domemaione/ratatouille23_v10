@@ -36,20 +36,6 @@ class ActivationTokenManager(
         return id.toLong()
     }
 
-    //prende l'id user dal token generato
-    fun getUserId(token: String): Long? {
-        try {
-            val claims = Jwts.parser()
-                .setSigningKey(secret)
-                .parseClaimsJws(token)
-                .body
-            return claims["userId"] as Long
-        } catch (e: Exception) {
-            return null
-        }
-    }
-
-
 
     private fun encrypt(value: String): String? {
         Security.addProvider(BouncyCastleProvider())

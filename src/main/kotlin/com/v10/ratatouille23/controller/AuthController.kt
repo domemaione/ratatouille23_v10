@@ -3,6 +3,7 @@ package com.v10.ratatouille23.controller
 import com.v10.ratatouille23.dto.request.SignupRequestDto
 import com.v10.ratatouille23.service.AuthService
 import com.v10.ratatouille23.dto.ServerResponse
+import com.v10.ratatouille23.dto.request.ResetPasswordDto
 import org.springframework.http.ResponseEntity
 import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.web.bind.annotation.*
@@ -27,8 +28,8 @@ class AuthController(
 
 
     @PostMapping("signup/op/resetpassword/{token}")
-    fun resetPassword(@RequestBody signupRequestDto: SignupRequestDto, @PathVariable("token") token: String) =
-        ResponseEntity.ok(ServerResponse.ok(authService.resetPassword(signupRequestDto,token)))
+    fun resetPassword(@RequestBody resetPasswordDto: ResetPasswordDto, @PathVariable("token") token: String) =
+        ResponseEntity.ok(ServerResponse.ok(authService.resetPassword(resetPasswordDto,token)))
 
 
     @GetMapping("validate/user/{token}")
