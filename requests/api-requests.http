@@ -10,23 +10,22 @@ Content-Type: application/json
 }
 ###
 POST {{host}}/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzQ5MTM3NzcsImV4cCI6MTY3NDk5MDA3N30.DcqP9PA1vXEVo48t4z9isMvU2MrLi3JQgkRwYalX23kWYiD4fxz0bTiMmBcjoCmbphjHuUR7vXVrtd3ce0dh2A
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUwMDU4MTUsImV4cCI6MTY3NTA4MjExNX0.tFes3PJPmSaGXNXdrhSZjjF0Yg_ZRgPVVhtubfKt9IB8qj32CR213KhyPXdQ9T26taAJrTElcMKLGcp0mZr7Tw
 Content-Type: application/json
 
 {
   "email": "mimmomaions@gmail.com",
-  "password": "ciaomamma",
   "name": "ciccio",
   "surname": "merrino",
+  "password": "provaprova",
   "role": "SUPERVISOR"
 }
 ###
-POST {{host}}/api/auth/signup/op/resetpassword/pGyacSER3NqEZqm+zu0HQtTQmmixnz1Q1WrMpOqkUaM
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzQ5MTM3NzcsImV4cCI6MTY3NDk5MDA3N30.DcqP9PA1vXEVo48t4z9isMvU2MrLi3JQgkRwYalX23kWYiD4fxz0bTiMmBcjoCmbphjHuUR7vXVrtd3ce0dh2A
+POST {{host}}/api/auth/signup/op/resetpassword/HH9Silj+ZLcrB1c6jeyWY9TQmmixnz1Q1WrMpOqkUaM
 Content-Type: application/json
 
 {
-  "password": "provaprova"
+  "password": "ciaomamma"
 }
 ###
 
@@ -34,7 +33,7 @@ POST {{host}}/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "mimmomaions@gmail.com",
+  "email": "domenico.maione@outlook.it",
   "password": "provaprova"
 }
 

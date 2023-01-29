@@ -42,37 +42,35 @@ import java.util.logging.Logger
             val admin = AuthenticatedUserHelper.get()
             val restaurantId = admin?.restaurantId ?: throw IllegalStateException("Restaurant is not exists")
             val role = user.role ?: throw IllegalStateException("Role cannot be null")
-            val toSave = UserDto(null, user.name, user.surname, user.email, user.password,role, restaurantId, enabled = false)
+            val toSave = UserDto(null, user.name, user.surname, user.email,user.password,role, restaurantId, enabled = false)
             val saved = this.userService.save(toSave)
             val token = this.activationTokenManager.generate(saved.id.toString())
            // this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/validate/user"))
             this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/signup/op/resetpassword"))
 
-
             return true
         }
 
-    //reset password da signupOp
-           fun resetPassword(newpassord: ResetPasswordDto, token: String): Boolean{
-               if(!validate(token))
-                   throw ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid token")
+    //reset password per un nuovo utente creato dall'admin
+    fun resetPassword(newpassord: ResetPasswordDto, token: String): Boolean{
+        if(!validate(token))
+            throw ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid token")
 
-               val id = activationTokenManager.validate(token)
-               val found = userRepository.findById(id) ?: throw ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not found")
+        val id = this.activationTokenManager.validate(token) ?: throw ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR)
+        val found = this.userService.get(id)
+        if(passwordEncoder.matches(newpassord.password,found.password))
+            throw ResponseStatusException(HttpStatus.UNAUTHORIZED, "password same as previous one")
 
-            if(passwordEncoder.matches(newpassord.password,found.password))
-                    throw ResponseStatusException(HttpStatus.UNAUTHORIZED, "password same as previous one")
 
-
-                found.enabled = true
-                found.password = passwordEncoder.encode(newpassord.password)
-                val saved = this.userRepository.save(found)
+        found.enabled = true
+        found.password = passwordEncoder.encode(newpassord.password)
+        val saved = this.userRepository.save(found) //bisogna fare userService
 
         this.emailService.send(saved, EmailService.MailComposer.ResetPassword)
 
-            return true
+        return true
 
-           }
+    }
 
 
 
