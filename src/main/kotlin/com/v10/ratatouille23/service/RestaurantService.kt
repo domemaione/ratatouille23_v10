@@ -7,7 +7,9 @@ import com.v10.ratatouille23.model.User
 import com.v10.ratatouille23.repository.RestaurantRepository
 import com.v10.ratatouille23.repository.UserRepository
 import com.v10.ratatouille23.utils.UserRoles
+import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
+import org.springframework.web.server.ResponseStatusException
 import java.time.LocalDateTime
 import java.util.logging.Logger
 
@@ -38,6 +40,12 @@ class RestaurantService(
         this.logger.info("add() - returned obj: $saved")
         return saved
     }
+
+    fun get(id: Long?): Restaurant? {
+        return restaurantRepository.findById(id) ?: throw ResponseStatusException(HttpStatus.NO_CONTENT, "Restaurant not found!")
+    }
+
+
 
     //Restituisce la lista di utenti attivi e con lo stesso ruolo
     fun getUsersByRole(role: UserRoles, enabled: Boolean): List<User> {

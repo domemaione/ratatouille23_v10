@@ -42,7 +42,6 @@ class UserService(
 
     fun get(id: Long): User {
         this.logger.info("get() - incoming request with id: $id")
-        val res: UserDto
         val found = this.userRepository.findById(id)
         if (found.isEmpty)
             throw ResponseStatusException(HttpStatus.NO_CONTENT, "User not found!")
