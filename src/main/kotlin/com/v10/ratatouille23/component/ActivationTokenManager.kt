@@ -24,7 +24,8 @@ class ActivationTokenManager(
         val timestamp = Date().time
         val toEncrypt = "$userReference:$timestamp"
         val token: String = this.encrypt(toEncrypt) ?: throw IllegalStateException("Creation activation token failed")
-        return token.substring(0, token.length-1);
+        //return token.substring(0, token.length-1);
+        return token.replace("/","B").substring(0, token.length-1)
     }
 
     fun validate(token: String): Long? {
