@@ -7,6 +7,7 @@ import com.v10.ratatouille23.mapper.MenuMapper
 import com.v10.ratatouille23.service.MenuService
 import org.springframework.http.ResponseEntity
 import org.springframework.security.access.prepost.PreAuthorize
+import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -19,9 +20,14 @@ class MenuController(
     private val menuMapper: MenuMapper
 ){
 
-    @PostMapping()
+    @PostMapping("add")
     @PreAuthorize("hasAuthority('ADMIN')") //il menu può essere creato solo dall'admin
     fun add() =
         ResponseEntity.ok(ServerResponse.ok(this.menuMapper.toDomain(menuService.add())))
+
+    @DeleteMapping()
+    @PreAuthorize("hasAuthority('ADMIN')")
+    fun delete() =
+        ResponseEntity.ok(ServerResponse.ok(this.menuMapper.toDomain(menuService.delete())))
 
 }

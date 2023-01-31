@@ -34,15 +34,20 @@ class RestaurantService(
             updateAt = LocalDateTime.now()
         )
 
-        val saved: Restaurant = this.restaurantRepository.save(toSave) //TODO: prassi spaventosa.... da rivedere
+        val saved: Restaurant = this.restaurantRepository.save(toSave)
         user.restaurantId = toSave.id
         this.userRepository.save(user)
         this.logger.info("add() - returned obj: $saved")
         return saved
     }
 
-    fun get(id: Long?): Restaurant? {
-        return restaurantRepository.findById(id) ?: throw ResponseStatusException(HttpStatus.NO_CONTENT, "Restaurant not found!")
+    fun get(id: Long): Restaurant {
+        val restaurantId = AuthenticatedUserHelper.get()?.restaurantId
+        val found = this.restaurantRepository.findById(restaurantId!!)
+        if(found.isEmpty)
+            throw IllegalStateException("Restaurant not found")
+
+        return found.get()
     }
 
 

@@ -73,7 +73,6 @@ import java.util.logging.Logger
     }
 
 
-
         //verifica che il token sia valido e attiva l'utente appena registrato
         fun validate(token: String): Boolean {
             val id = this.activationTokenManager.validate(token) ?: throw ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR)

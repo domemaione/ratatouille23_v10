@@ -39,7 +39,7 @@ Content-Type: application/json
 
 ###
 POST {{host}}/api/restaurant
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUwMTQxMDMsImV4cCI6MTY3NTA5MDQwM30.vZz5hWHgE9ZEuCVKgFzaBkNHGmtdIE9R0lgGUEXiKbIi7QxjfIipoaV5JJrvMszjVH9-NTV8yaiS1zw-jtx0Bg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUxMTg4MTUsImV4cCI6MTY3NTE5NTExNX0.1u0n7LYMjWi-bO86oJvWphMepKkmwp4ptbAM8GeshnV4Piljd08i--BFSN3ZxBxNA-wMqMcLeI29HnzHimDWGQ
 Content-Type: application/json
 
 {
@@ -49,10 +49,11 @@ Content-Type: application/json
 }
 
 ###
-POST {{host}}/api/auth/validate/user
-###
-POST {{host}}/api/menu
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUwODY2MzksImV4cCI6MTY3NTE2MjkzOX0.vcJDFPsT4Ag-e4bTJWj-ZEIBfcv4tgFjlYQCWezt06OT8KU5ZvaSZKajV27xfBxNrFKCJrV9XU4mUmMwagYrfg
+POST {{host}}/api/menu/add
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUxMjEwNzIsImV4cCI6MTY3NTE5NzM3Mn0.ChVN-DuW7jrsVheLW8RujIGGGYMd63nGjsDqxvXus18QqVLNTkjw-SeFHzaz54U8Wtb5tTwUT5zTn3OXBNKoAg
+
+
+
 
 
 ###
@@ -64,4 +65,14 @@ GET {{host}}/api/restaurant/users/HALL_ATTENDANT
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzQ2ODQ2MTUsImV4cCI6MTY3NDc2MDkxNX0.lBeJ0my_blBdpmjdoDk1eFPX5YDvGNJc3VHZWkJAsFhw7CEbidf_Qzt9zGgLB7ZgdPG2kZ4LPO1IVs8lWLNGLw
 ###
 GET {{host}}/api/auth/check/token/{token}
+###
+DELETE {{host}}/api/menu
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUxMjI2MTAsImV4cCI6MTY3NTE5ODkxMH0.EYDRdEj_xL8I_y9VBAU2VUxIBsWWoAaXeT1wB2cFJJVyrrIsqGxion-CZUnnZ_Hyr5SYD2JJnt7ALwi0UIOxpA
+
+
+
+
+
+
+
 ###
