@@ -11,5 +11,6 @@ interface UserRepository: CrudRepository<User, Long> {
     fun getByEmail(email: String): Optional<User>
     fun findByRoleAndEnabled(role: UserRoles, enabled: Boolean): List<User>
     fun findById(userId: Long?): User?
+    fun findByRestaurantId(restaurantId: Long): User
     fun findByEmail(email: String): Boolean
 }

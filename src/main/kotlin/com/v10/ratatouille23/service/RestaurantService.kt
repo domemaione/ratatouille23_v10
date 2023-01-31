@@ -51,13 +51,21 @@ class RestaurantService(
     }
 
 
-
     //Restituisce la lista di utenti attivi e con lo stesso ruolo
     fun getUsersByRole(role: UserRoles, enabled: Boolean): List<User> {
         return this.userRepository.findByRoleAndEnabled(role,true)
     }
 
+    fun delete(): Restaurant{
+        val restaurantId = AuthenticatedUserHelper.get()?.restaurantId ?: throw ResponseStatusException(HttpStatus.NO_CONTENT)
+        val user = this.userRepository.findByRestaurantId(restaurantId)
+        user.restaurantId = null
+        this.userRepository.save(user)
+        val found = this.restaurantRepository.findById(restaurantId) //forse si potrebbe evitare
+        this.restaurantRepository.deleteById(restaurantId)
 
+        return found.get()
+    }
 
 
 }

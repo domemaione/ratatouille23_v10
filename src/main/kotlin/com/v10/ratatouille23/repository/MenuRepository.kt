@@ -8,5 +8,6 @@ import java.util.*
 
 @Repository
 interface MenuRepository : JpaRepository<Menu, Long> {
-   fun findByRestaurantId(id: Long): Menu?
+   fun findByRestaurantId(restaurantId: Long): Menu
+   fun deleteByRestaurantId(restaurantId: Long): Menu
 }

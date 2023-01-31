@@ -28,5 +28,9 @@ class RestaurantController (
         ResponseEntity.ok(ServerResponse.ok(this.restaurantMapper.toDomain(restaurantService.add(restaurantDto))))
 
 
+    @DeleteMapping()
+    @PreAuthorize("hasAuthority('ADMIN')")
+    fun delete() =
+        ResponseEntity.ok(ServerResponse.ok(this.restaurantMapper.toDomain(restaurantService.delete())))
 
 }

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
+
 @RestController
 @RequestMapping("/api/menu")
 class MenuController(
@@ -25,8 +26,9 @@ class MenuController(
     fun add() =
         ResponseEntity.ok(ServerResponse.ok(this.menuMapper.toDomain(menuService.add())))
 
+
     @DeleteMapping()
-    @PreAuthorize("hasAuthority('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')") //il menu può essere creato solo dall'admin
     fun delete() =
         ResponseEntity.ok(ServerResponse.ok(this.menuMapper.toDomain(menuService.delete())))
 

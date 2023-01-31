@@ -15,33 +15,24 @@ class MenuService(
 
     fun add(): Menu {
 
-            val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not valid")
-            val restaurant = this.restaurantService.get(user.restaurantId!!)
-            val toSave = Menu(id = null, restaurantId = restaurant.id!!)
-            val menuSaved = this.menuRepository.save(toSave)
-            restaurant.menuId = menuSaved.id
-            this.restaurantRepository.save(restaurant)
-
+        val foundRestaurantId = AuthenticatedUserHelper.get()?.restaurantId ?: throw IllegalStateException("Restaurant not found")
+        val toSave = Menu(id = null, restaurantId = foundRestaurantId)
+        val menuSaved = this.menuRepository.save(toSave)
+        val restaurant = this.restaurantRepository.findById(foundRestaurantId).get()
+        restaurant.menuId = menuSaved.id
+        this.restaurantRepository.save(restaurant)
         return menuSaved
     }
 
-
-    fun get(): Menu {
-        val restaurantId =
-            AuthenticatedUserHelper.get()?.restaurantId ?: throw IllegalStateException("Restaurant not found")
-
-        return menuRepository.findByRestaurantId(restaurantId) ?: throw IllegalStateException("Menu not found")
-    }
-
-
     fun delete(): Menu{
-        val res = this.get()
-        val restaurant = this.restaurantService.get(res.id!!)
-        restaurant.menuId = null
-        this.restaurantRepository.save(restaurant)
-        this.menuRepository.deleteById(res.id!!)
+        val foundRestaurantId = AuthenticatedUserHelper.get()?.restaurantId ?: throw IllegalStateException("Restaurant not found")
+        val foundRestaurant = this.restaurantRepository.findById(foundRestaurantId).get()
+        foundRestaurant.menuId = null
+        this.restaurantRepository.save(foundRestaurant)
+        val foundMenu = this.menuRepository.findByRestaurantId(foundRestaurantId)
+        this.menuRepository.deleteById(foundMenu.id!!)
 
-        return res
+        return foundMenu
     }
 
 }
