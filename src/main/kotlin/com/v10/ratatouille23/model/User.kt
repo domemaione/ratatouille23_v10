@@ -30,5 +30,8 @@ class User (
     var restaurantId: Long?,
 
     @Column(name = "enabled", columnDefinition = "BOOLEAN DEFAULT false")
-    var enabled: Boolean = false
+    var enabled: Boolean = false,
+
+    @Column(name = "first_access", columnDefinition = "BOOLEAN DEFAULT false")
+    var firstAccess: Boolean = false
 )

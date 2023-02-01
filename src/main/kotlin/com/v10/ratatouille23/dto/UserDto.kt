@@ -14,5 +14,6 @@ data class UserDto (
 
     val role: UserRoles,
     val restaurantId: Long?,
-    val enabled: Boolean
+    val enabled: Boolean,
+    val firstAccess: Boolean
 )

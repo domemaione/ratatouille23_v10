@@ -30,7 +30,7 @@ import java.util.logging.Logger
 
         //Registrazione utente con ruolo ADMIN
         fun signup(user: SignupRequestDto): Boolean {
-            val toSave = UserDto(null, user.name, user.surname, user.email, user.password, UserRoles.ADMIN, null, enabled = false)
+            val toSave = UserDto(null, user.name, user.surname, user.email, user.password, UserRoles.ADMIN, null, enabled = false, firstAccess = true)
             val saved = this.userService.save(toSave)
             val token = this.activationTokenManager.generate(saved.id.toString())
             this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/validate/user"))
@@ -42,7 +42,7 @@ import java.util.logging.Logger
             val admin = AuthenticatedUserHelper.get()
             val restaurantId = admin?.restaurantId ?: throw IllegalStateException("Restaurant is not exists")
             val role = user.role ?: throw IllegalStateException("Role cannot be null")
-            val toSave = UserDto(null, user.name, user.surname, user.email,user.password,role, restaurantId, enabled = false)
+            val toSave = UserDto(null, user.name, user.surname, user.email,user.password,role, restaurantId, enabled = false, firstAccess = false)
             val saved = this.userService.save(toSave)
             val token = this.activationTokenManager.generate(saved.id.toString())
            // this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/validate/user"))
@@ -62,8 +62,10 @@ import java.util.logging.Logger
             throw ResponseStatusException(HttpStatus.UNAUTHORIZED, "password same as previous one")
 
 
-        found.enabled = true
+
         found.password = passwordEncoder.encode(newpassord.password)
+        found.firstAccess = true
+        found.enabled = true
         val saved = this.userRepository.save(found) //bisogna fare userService
 
         this.emailService.send(saved, EmailService.MailComposer.ResetPassword)

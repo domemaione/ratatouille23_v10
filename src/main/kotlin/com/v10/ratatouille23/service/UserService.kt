@@ -32,7 +32,8 @@ class UserService(
             password = bCryptPasswordEncoder.encode(userDto.password),
             role = userDto.role,
             restaurantId = userDto.restaurantId,
-            enabled = userDto.enabled
+            enabled = userDto.enabled,
+            firstAccess = userDto.firstAccess
         )
         val saved = this.userRepository.save(toSave)
         this.logger.info("save() - saved obj: $saved")

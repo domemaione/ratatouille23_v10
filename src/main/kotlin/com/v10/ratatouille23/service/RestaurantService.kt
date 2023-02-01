@@ -4,6 +4,7 @@ import com.v10.ratatouille23.component.AuthenticatedUserHelper
 import com.v10.ratatouille23.dto.RestaurantDto
 import com.v10.ratatouille23.model.Restaurant
 import com.v10.ratatouille23.model.User
+import com.v10.ratatouille23.repository.MenuRepository
 import com.v10.ratatouille23.repository.RestaurantRepository
 import com.v10.ratatouille23.repository.UserRepository
 import com.v10.ratatouille23.utils.UserRoles
@@ -16,7 +17,8 @@ import java.util.logging.Logger
 @Service
 class RestaurantService(
     private val restaurantRepository: RestaurantRepository,
-    private val userRepository: UserRepository
+    private val userRepository: UserRepository,
+    private val menuRepository: MenuRepository
 ) {
 
     private val logger = Logger.getLogger(RestaurantService::class.java.name)
@@ -61,10 +63,17 @@ class RestaurantService(
         val user = this.userRepository.findByRestaurantId(restaurantId)
         user.restaurantId = null
         this.userRepository.save(user)
-        val found = this.restaurantRepository.findById(restaurantId) //forse si potrebbe evitare
+
+        val res = this.restaurantRepository.findById(restaurantId) //forse si potrebbe evitare
+
+        if(res.isEmpty)
+            throw ResponseStatusException(HttpStatus.NO_CONTENT, "Restaurant not found!")
+
+        val menuId = res.get().menuId
+        this.menuRepository.deleteById(menuId!!)
         this.restaurantRepository.deleteById(restaurantId)
 
-        return found.get()
+        return res.get()
     }
 
 

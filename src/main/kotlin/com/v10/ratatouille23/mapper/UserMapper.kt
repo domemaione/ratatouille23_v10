@@ -16,7 +16,8 @@ class UserMapper: Mapper<User, UserDto> {
             password = e.password,
             role =  e.role,
            restaurantId = e.restaurantId,
-            enabled = e.enabled
+            enabled = e.enabled,
+            firstAccess = e.firstAccess
         )
 
     override fun toEntity(d: UserDto) =
@@ -28,6 +29,7 @@ class UserMapper: Mapper<User, UserDto> {
            password = d.password,
            role = d.role,
            restaurantId = d.restaurantId,
-           enabled = d.enabled
+           enabled = d.enabled,
+           firstAccess = d.firstAccess
        )
 }
