@@ -60,20 +60,14 @@ class RestaurantService(
 
     fun delete(): Restaurant{
         val restaurantId = AuthenticatedUserHelper.get()?.restaurantId ?: throw ResponseStatusException(HttpStatus.NO_CONTENT)
-        val user = this.userRepository.findByRestaurantId(restaurantId)
-        user.restaurantId = null
-        this.userRepository.save(user)
-
-        val res = this.restaurantRepository.findById(restaurantId) //forse si potrebbe evitare
-
-        if(res.isEmpty)
+        val restaurant = this.restaurantRepository.findById(restaurantId) //forse si potrebbe evitare
+        if(restaurant.isEmpty)
             throw ResponseStatusException(HttpStatus.NO_CONTENT, "Restaurant not found!")
 
-        val menuId = res.get().menuId
-        this.menuRepository.deleteById(menuId!!)
+        this.userRepository.setRestaurantIdToNullForUsersByRestaurantId(restaurantId)
         this.restaurantRepository.deleteById(restaurantId)
-
-        return res.get()
+        this.userRepository.deleteUsersWithoutRestaurantIdAndNotAdmin()
+        return restaurant.get()
     }
 
 

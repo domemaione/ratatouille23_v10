@@ -11,4 +11,4 @@ class Menu (
 
     @Column(name = "restaurant_id")
     var restaurantId: Long
-    )
+)
