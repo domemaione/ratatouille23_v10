@@ -27,9 +27,10 @@ class AuthController(
 
 
 
-    @PostMapping("signup/op/resetpassword/{token}")
-    fun resetPassword(@RequestBody resetPasswordDto: ResetPasswordDto, @PathVariable("token") token: String) =
-        ResponseEntity.ok(ServerResponse.ok(authService.resetPassword(resetPasswordDto,token)))
+    @PostMapping("signup/op/resetpassword")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun resetPassword(@RequestBody resetPasswordDto: ResetPasswordDto) =
+        ResponseEntity.ok(ServerResponse.ok(authService.resetPassword(resetPasswordDto)))
 
 
     @GetMapping("validate/user/{token}")

@@ -11,6 +11,8 @@ import com.v10.ratatouille23.security.JWTCustomManager
 import com.v10.ratatouille23.utils.UserRoles
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
+import org.springframework.security.core.context.SecurityContextHolder
+import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
 import org.springframework.web.server.ResponseStatusException
@@ -45,29 +47,22 @@ import java.util.logging.Logger
             val toSave = UserDto(null, user.name, user.surname, user.email,user.password,role, restaurantId, enabled = false, firstAccess = false)
             val saved = this.userService.save(toSave)
             val token = this.activationTokenManager.generate(saved.id.toString())
-           // this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/validate/user"))
-            this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/signup/op/resetpassword"))
+            this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/validate/user"))
+           // this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/signup/op/resetpassword"))
 
             return true
         }
 
     //reset password per un nuovo utente creato dall'admin
-    fun resetPassword(newpassord: ResetPasswordDto, token: String): Boolean{
-        if(!validate(token))
-            throw ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid token")
+    fun resetPassword(newpassord: ResetPasswordDto): Boolean{
+        val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not found")
 
-        val id = this.activationTokenManager.validate(token) ?: throw ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR)
-        val found = this.userService.get(id)
-        if(passwordEncoder.matches(newpassord.password,found.password))
+        if(passwordEncoder.matches(newpassord.password,user.password))
             throw ResponseStatusException(HttpStatus.UNAUTHORIZED, "password same as previous one")
 
-
-
-        found.password = passwordEncoder.encode(newpassord.password)
-        found.firstAccess = true
-        found.enabled = true
-        val saved = this.userRepository.save(found) //bisogna fare userService
-
+        user.password = passwordEncoder.encode(newpassord.password)
+        user.firstAccess = true
+        val saved = this.userRepository.save(user) //bisogna fare userService
         this.emailService.send(saved, EmailService.MailComposer.ResetPassword)
 
         return true
@@ -94,3 +89,26 @@ import java.util.logging.Logger
         }
 
     }
+
+
+/*fun resetPassword(newpassord: ResetPasswordDto, token: String): Boolean{
+        if(!validate(token))
+            throw ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid token")
+
+        val id = this.activationTokenManager.validate(token) ?: throw ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR)
+        val found = this.userService.get(id)
+        if(passwordEncoder.matches(newpassord.password,found.password))
+            throw ResponseStatusException(HttpStatus.UNAUTHORIZED, "password same as previous one")
+
+
+
+        found.password = passwordEncoder.encode(newpassord.password)
+        found.firstAccess = true
+        found.enabled = true
+        val saved = this.userRepository.save(found) //bisogna fare userService
+
+        this.emailService.send(saved, EmailService.MailComposer.ResetPassword)
+
+        return true
+
+    }*/

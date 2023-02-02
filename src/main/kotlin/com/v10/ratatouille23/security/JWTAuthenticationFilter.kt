@@ -19,6 +19,7 @@ class JWTAuthenticationFilter(
 ): UsernamePasswordAuthenticationFilter(authenticationManager) {
     init {
         setFilterProcessesUrl("/api/auth/login")
+
     }
 
     companion object {

@@ -10,7 +10,7 @@ Content-Type: application/json
 }
 ###
 POST {{host}}/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUyNjI1NTcsImV4cCI6MTY3NTMzODg1N30.Mg8ylx7yulNElrFfhUYnGlLvERHQDtstNPDhYNnOKXSLOEojyFjyXTsRu0nZYoFSkOBvyi7kpk1CFUI7slibrQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUyNzY5OTUsImV4cCI6MTY3NTM1MzI5NX0.oTBGTaAFLsvddMhwyu0pq0pq_gMWxOnN9yC6dPZHqToDeKt6DD78aXCgvcm2o_cXcdmjTj_BNX2UTFi_SurPEg
 Content-Type: application/json
 
 {
@@ -21,11 +21,12 @@ Content-Type: application/json
   "role": "SUPERVISOR"
 }
 ###
-POST {{host}}/api/auth/signup/op/resetpassword/YKpC4PdY1RHg4tyZWNiZu7ZD0HbmjR13T9UaLD54BxA
+POST {{host}}/api/auth/signup/op/resetpassword
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoibWltbW9tYWlvbnNAZ21haWwuY29tIiwicm9sZSI6IlNVUEVSVklTT1IiLCJpYXQiOjE2NzUzMzA1MTAsImV4cCI6MTY3NTQwNjgxMH0.SshT-dXwtCucq2-EBY5tcjVAkBx_CYdJ5C19Z_5HUdqubMu4CIsdnS5M3dKiFNOMT4jfvgBwc2RCI7TYCo71ZQ
 Content-Type: application/json
 
 {
-  "password": "ciaomamma"
+  "password": "ciaobello"
 }
 ###
 
@@ -33,8 +34,8 @@ POST {{host}}/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "domenico.maione@outlook.it",
-  "password": "provaprova"
+  "email": "mimmomaions@gmail.com",
+  "password": "ciaobello"
 }
 
 ###
