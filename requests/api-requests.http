@@ -40,22 +40,43 @@ Content-Type: application/json
 
 ###
 POST {{host}}/api/restaurant
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUzNTY2MTMsImV4cCI6MTY3NTQzMjkxM30.i-M8_rrHGe0MhTXxyAoBFE34zzAyyZHltla_1I5lF7mYohoqiHzE_fjhkCrpMMwOIFThcGwW2nKk_PdCr8oKQA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY5MDgwMDAsImV4cCI6MTY3Njk4NDMwMH0.Tz21r_5DNLukX7YBaZIz4fIIFYKezHUURMPGfMhWzxV5tKPn-WoQmf0qVD0Mm1yzyiLT3amjve-ufvW5KC_1Fw
 Content-Type: application/json
 
 {
   "id": null,
-  "name": "fottuto restaurant",
+  "name": "quel fottuto ristorante",
   "address": "Via marco polo"
 }
 
 ###
 POST {{host}}/api/menu/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUzNDgwNjAsImV4cCI6MTY3NTQyNDM2MH0.a1Q40wtwVGuktKPdSK41UCdZ_bYchC5Ka-4e9hZh1fNp29LZ8msi4C3crMulEY1NWImQoNuKYq670km2lzXnsw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY2MzMzNjIsImV4cCI6MTY3NjcwOTY2Mn0.P8U2l1DWbXI5KQtQAKhOT-hsRPUPL9LDQMIroun9U0DL2QrULeax7ZY9Q2ooY0rjbiKtu_yiCoewXIes3Nqg9A
 
+###
+POST {{host}}/api/dish/add
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY5MDgwMDAsImV4cCI6MTY3Njk4NDMwMH0.Tz21r_5DNLukX7YBaZIz4fIIFYKezHUURMPGfMhWzxV5tKPn-WoQmf0qVD0Mm1yzyiLT3amjve-ufvW5KC_1Fw
+Content-Type: application/json
 
+{
+  "id": null,
+  "name": "Graffe con miele",
+  "description": "ingredienti",
+  "cost": 2.50,
+  "categoryName": "dolce",
+  "allergens": [16]
+}
+###
+POST {{host}}/api/allergens/add
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY4OTA0ODMsImV4cCI6MTY3Njk2Njc4M30.Z4mFdAh41tBPQX2tlKKCxq9LWVY56t8YBAgkhyvG8NcpfHKEvw5G5JPgX-vJhCeGPI9FU67cR5F14nuRYwSrNg
+Content-Type: application/json
 
-
+{
+  "id": null,
+  "name": "latte"
+}
+###
+GET {{host}}/api/restaurant/
 ###
 GET {{host}}/api/user/{email}
 ###
@@ -67,14 +88,13 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 GET {{host}}/api/auth/check/token/{token}
 ###
 DELETE {{host}}/api/menu
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUyNDY0NzksImV4cCI6MTY3NTMyMjc3OX0.CtYPqP-RCqIQabi32TfHR778XUKgdLmXpxcTGzgEiCz3sn50XlYOYWz9CkPqKyUGcI9Wl5Tou99BPFREzzqJxA
-
-
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY0MDk1MTEsImV4cCI6MTY3NjQ4NTgxMX0.j7ZywxlE7Os-ny3nRoad_w07DmisGdDAo2w4j_2E7nzkGjjrE-OPPDYKEXN7REVeEglWBv9LjGhZu0Fcu8pfUw
 
 
 ###
 DELETE {{host}}/api/restaurant
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzUzNTY2MTMsImV4cCI6MTY3NTQzMjkxM30.i-M8_rrHGe0MhTXxyAoBFE34zzAyyZHltla_1I5lF7mYohoqiHzE_fjhkCrpMMwOIFThcGwW2nKk_PdCr8oKQA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY0MDk1MTEsImV4cCI6MTY3NjQ4NTgxMX0.j7ZywxlE7Os-ny3nRoad_w07DmisGdDAo2w4j_2E7nzkGjjrE-OPPDYKEXN7REVeEglWBv9LjGhZu0Fcu8pfUw
+
 
 
 

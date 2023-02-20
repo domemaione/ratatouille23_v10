@@ -7,8 +7,6 @@ data class RestaurantDto(
     val id: Long?,
     val name: String,
     val address: String,
-    val menuId: Long?,
-    val userId: Long?,
     val updateAt: LocalDateTime?,
     val createdAt: LocalDateTime?
     )

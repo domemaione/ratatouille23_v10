@@ -18,12 +18,6 @@ class Restaurant(
     @Column(name = "address")
     var address: String,
 
-    @Column(name = "menu_id")
-    var menuId: Long?,
-
-    @Column(name = "user_id")
-    var userId: Long?,
-
     @Column(name = "update_at")
     @Temporal(TemporalType.TIMESTAMP)
     var updateAt: LocalDateTime?,

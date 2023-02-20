@@ -14,8 +14,6 @@ class RestaurantMapper(
             id = e.id,
             name = e.name,
             address = e.address,
-            menuId = e.menuId,
-            userId = e.userId,
             createdAt = e.createdAt,
             updateAt = e.updateAt
         )
@@ -26,8 +24,6 @@ class RestaurantMapper(
             id = d.id,
             name = d.name,
             address = d.address,
-            menuId = d.menuId,
-            userId =d.userId,
             createdAt = d.createdAt,
             updateAt = d.updateAt
         )

@@ -1,6 +1,6 @@
 package com.v10.ratatouille23.model
 
-import com.v10.ratatouille23.utils.DishType
+import org.jetbrains.annotations.NotNull
 import javax.persistence.*
 
 @Entity
@@ -17,9 +17,12 @@ class Dish (
     @Column(name = "description")
     var description: String,
 
-    @Enumerated(EnumType.STRING)
-    var type: DishType,
+    @Column(name = "cost")
+    val cost: Double = 0.0,
 
     @Column(name = "menu_id")
-    var menuId: Long
+    var menuId: Long,
+
+    @Column(name = "category_id")
+    var categoryId: Long
 )

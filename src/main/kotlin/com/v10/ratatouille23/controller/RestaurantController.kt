@@ -22,6 +22,11 @@ class RestaurantController (
     fun getUsersByRole(@PathVariable("role") role: UserRoles) =
         ResponseEntity.ok(ServerResponse.ok(this.restaurantService.getUsersByRole(role,true)))
 
+
+    @GetMapping("{id}")
+    fun get(@PathVariable("id") id: Long) =
+        ResponseEntity.ok(ServerResponse.ok(this.restaurantService.get(id)))
+
     @PostMapping()
     @PreAuthorize("hasAuthority('ADMIN')")
     fun add(@RequestBody restaurantDto: RestaurantDto) =

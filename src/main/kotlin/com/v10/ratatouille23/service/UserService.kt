@@ -62,7 +62,6 @@ class UserService(
         return found.get()
     }
 
-
     //Viene usata nel package security => JWTAuthorizationFilter, per prendere l'utente e verificare se è autorizzato
     override fun loadUserByUsername(username: String?): UserDetails {
         val email = username ?: throw ResponseStatusException(HttpStatus.BAD_REQUEST)

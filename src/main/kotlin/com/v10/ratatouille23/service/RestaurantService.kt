@@ -26,17 +26,19 @@ class RestaurantService(
     fun add(restaurantDto: RestaurantDto): Restaurant {
         this.logger.info("add() - incoming request with obj: $restaurantDto")
         val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not valid")
+
+        if(user.restaurantId != null)
+            throw IllegalStateException("Restaurant already exists")
+
         val toSave = Restaurant(
             id = null,
             name = restaurantDto.name,
             address = restaurantDto.address,
-            menuId = null,
-            userId = user.id,
             createdAt = LocalDateTime.now(),
             updateAt = LocalDateTime.now()
         )
 
-        val saved: Restaurant = this.restaurantRepository.save(toSave)
+        val saved = this.restaurantRepository.save(toSave)
         user.restaurantId = toSave.id
         this.userRepository.save(user)
         this.logger.info("add() - returned obj: $saved")
@@ -44,14 +46,13 @@ class RestaurantService(
     }
 
     fun get(id: Long): Restaurant {
-        val restaurantId = AuthenticatedUserHelper.get()?.restaurantId
-        val found = this.restaurantRepository.findById(restaurantId!!)
+        //val restaurantId = AuthenticatedUserHelper.get()?.restaurantId
+        val found = this.restaurantRepository.findById(id)
         if(found.isEmpty)
             throw IllegalStateException("Restaurant not found")
 
         return found.get()
     }
-
 
     //Restituisce la lista di utenti attivi e con lo stesso ruolo
     fun getUsersByRole(role: UserRoles, enabled: Boolean): List<User> {

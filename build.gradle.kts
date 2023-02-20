@@ -40,7 +40,6 @@ dependencies {
     implementation("com.sendgrid:sendgrid-java:4.9.3")
     implementation ("org.springframework:spring-context:5.3.19")
 
-
     testImplementation("org.testng:testng:7.7.0")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.mysql:mysql-connector-j")
