@@ -64,7 +64,7 @@ Content-Type: application/json
   "description": "ingredienti",
   "cost": 2.50,
   "categoryName": "dolce",
-  "allergens": [16]
+  "allergens": [16,2,5]
 }
 ###
 POST {{host}}/api/allergens/add
@@ -75,6 +75,18 @@ Content-Type: application/json
   "id": null,
   "name": "latte"
 }
+###
+
+POST {{host}}/api/category/add
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY5MzEwMjYsImV4cCI6MTY3NzAwNzMyNn0.WYbPgUjXFnvSqFlH34Hk4s66Rwl5QBHiP_47BQCoTAyIoSRfX_UGZhM2i3qE9jZh9JF8E-Yfa0XEcn-YGgzU9Q
+Content-Type: application/json
+
+{
+  "id": null,
+  "name": "primo piatto di pesce"
+}
+
+
 ###
 GET {{host}}/api/restaurant/
 ###
@@ -94,6 +106,10 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 ###
 DELETE {{host}}/api/restaurant
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY0MDk1MTEsImV4cCI6MTY3NjQ4NTgxMX0.j7ZywxlE7Os-ny3nRoad_w07DmisGdDAo2w4j_2E7nzkGjjrE-OPPDYKEXN7REVeEglWBv9LjGhZu0Fcu8pfUw
+###
+DELETE {{host}}/api/category/delete/4
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY5MzI5MTcsImV4cCI6MTY3NzAwOTIxN30.mUn7CGC5JbX_lC2sPAEqaO6Ep73VFhQm2pIWo7s-im388I0DxQwn6b7tIDlpHZgOLl9Og1fXPWpyyyBRfMUz0Q
+
 
 
 
