@@ -65,9 +65,8 @@ class RestaurantService(
         if(restaurant.isEmpty)
             throw ResponseStatusException(HttpStatus.NO_CONTENT, "Restaurant not found!")
 
-        this.userRepository.setRestaurantIdToNullForUsersByRestaurantId(restaurantId)
         this.restaurantRepository.deleteById(restaurantId)
-        this.userRepository.deleteUsersWithoutRestaurantIdAndNotAdmin()
+        this.userRepository.deleteUsers()
         return restaurant.get()
     }
 

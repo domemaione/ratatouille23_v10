@@ -12,19 +12,13 @@ import java.util.*
 
 @Repository
 interface UserRepository: CrudRepository<User, Long> {
-    //Query che setta a null a tutti gli utenti il restaurant_id in user quando viene cancellato
-    //il ristorante
-    @Transactional
-    @Modifying
-    @Query("UPDATE User u SET u.restaurantId = NULL WHERE u.restaurantId = :restaurantId")
-    fun setRestaurantIdToNullForUsersByRestaurantId(@Param("restaurantId") restaurantId: Long) : Int
 
     //query che cancella tutti gli utenti che non sono ADMIN se il ristorante viene
     //cancellato
     @Transactional
     @Modifying
     @Query("DELETE FROM User u WHERE u.restaurantId IS NULL AND u.role != 'ADMIN'")
-    fun deleteUsersWithoutRestaurantIdAndNotAdmin() : Int
+    fun deleteUsers() : Int
 
 
     fun getByEmail(email: String): Optional<User>
