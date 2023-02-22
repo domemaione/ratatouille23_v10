@@ -23,6 +23,6 @@ class Dish (
     @Column(name = "menu_id")
     var menuId: Long,
 
-    @Column(name = "category_id")
-    var categoryId: Long
+    @Column(name = "category_id", nullable = true)
+    var categoryId: Long?
 )

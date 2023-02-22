@@ -21,7 +21,56 @@ class DishService(
 ){
 
     @Transactional
-    fun addDishToMenu(dishRequestDto: DishRequestDto): Dish {
+    fun add(dishRequestDto: DishRequestDto): Dish {
+        val foundRestaurantId = AuthenticatedUserHelper.get()?.restaurantId ?: throw IllegalStateException("Restaurant not found")
+        val foundMenu = this.menuRepository.findByRestaurantId(foundRestaurantId)
+        var categoryId: Long? = null
+
+        if(dishRequestDto.categoryName != null) {
+            val foundCategory = this.categoryRepository.findByName(dishRequestDto.categoryName)
+            categoryId = if (foundCategory.isPresent) {
+                foundCategory.get().id
+            } else {
+                val newCategory = Category(id = null, name = dishRequestDto.categoryName)
+                this.categoryRepository.save(newCategory)
+                newCategory.id
+            }
+        }
+
+
+        val toSave = Dish(
+            id = null,
+            name = dishRequestDto.name,
+            description = dishRequestDto.description,
+            cost = dishRequestDto.cost,
+            menuId = foundMenu.id!!,
+            categoryId = categoryId
+
+        )
+        val saved = this.dishRepository.save(toSave)
+        //inserisce successivamente nella tabella DishAllergens, tutti gli allergeni associati a quella portata
+        if(dishRequestDto.allergens != null) {
+            for (allergenId in dishRequestDto.allergens) {
+                val dishAllergens = DishAllergens(
+                    id = null,
+                    dishId = saved.id!!,
+                    allergenId = allergenId
+                )
+                this.dishAllergensRepository.save(dishAllergens)
+
+            }
+        }
+        return saved
+    }
+
+}
+
+
+
+
+
+/* @Transactional
+    fun add(dishRequestDto: DishRequestDto): Dish {
         val foundRestaurantId = AuthenticatedUserHelper.get()?.restaurantId ?: throw IllegalStateException("Restaurant not found")
         val foundMenu = this.menuRepository.findByRestaurantId(foundRestaurantId)
         val foundCategory = this.categoryRepository.findByName(dishRequestDto.categoryName)
@@ -56,6 +105,4 @@ class DishService(
 
         }
         return saved
-    }
-
-}
+    }*/

@@ -20,7 +20,7 @@ class DishController (
 
     @PostMapping("add")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
-    fun addDishToMenu(@RequestBody dishRequestDto: DishRequestDto) =
-        ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.addDishToMenu(dishRequestDto))))
+    fun add(@RequestBody dishRequestDto: DishRequestDto) =
+        ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.add(dishRequestDto))))
 
 }

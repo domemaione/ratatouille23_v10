@@ -40,7 +40,7 @@ Content-Type: application/json
 
 ###
 POST {{host}}/api/restaurant
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY5ODc4NDUsImV4cCI6MTY3NzA2NDE0NX0.y_h_JJLpvlJyNaO2wuV2x9rRWpXHuuEhP_gfzPfe12Q1CmUy_bUI1xHC6ZrKLN1HErcOAMZIdFUXLDF1-fUWrg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcwODY1MzcsImV4cCI6MTY3NzE2MjgzN30.5xBKX6WqfGtatztRy8jv-7XnGF7ogx3xZrcT87nwUNxj9-kI0sTyjRR78vO0TtpqgjOW2kXRgnQ4Ffu3gbLPvg
 Content-Type: application/json
 
 {
@@ -51,22 +51,23 @@ Content-Type: application/json
 
 ###
 POST {{host}}/api/menu/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY5ODc4NDUsImV4cCI6MTY3NzA2NDE0NX0.y_h_JJLpvlJyNaO2wuV2x9rRWpXHuuEhP_gfzPfe12Q1CmUy_bUI1xHC6ZrKLN1HErcOAMZIdFUXLDF1-fUWrg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcwODY1MzcsImV4cCI6MTY3NzE2MjgzN30.5xBKX6WqfGtatztRy8jv-7XnGF7ogx3xZrcT87nwUNxj9-kI0sTyjRR78vO0TtpqgjOW2kXRgnQ4Ffu3gbLPvg
+
 
 
 
 ###
 POST {{host}}/api/dish/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY5ODc4NDUsImV4cCI6MTY3NzA2NDE0NX0.y_h_JJLpvlJyNaO2wuV2x9rRWpXHuuEhP_gfzPfe12Q1CmUy_bUI1xHC6ZrKLN1HErcOAMZIdFUXLDF1-fUWrg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcwOTE1MDUsImV4cCI6MTY3NzE2NzgwNX0.HrU7mNRNLAxPThkKpB3Gllb5JnnETu8-B2Hn1ApvbQ_97McNwbfDDn4SW82vwrwKDmIwpfG6kvhWCzHq9xeh7g
 Content-Type: application/json
 
 {
   "id": null,
-  "name": "Graffe con miele",
-  "description": "ingredienti",
-  "cost": 2.50,
-  "categoryName": "dolce",
-  "allergens": [14]
+  "name": "spaghetto alle vongole",
+  "description": "vongole, spaghetto, peperoncino",
+  "cost": 12.5,
+  "categoryName": "primo piatto di pesce"
+
 }
 ###
 POST {{host}}/api/allergens/add
@@ -104,16 +105,9 @@ GET {{host}}/api/auth/check/token/{token}
 DELETE {{host}}/api/menu
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY0MDk1MTEsImV4cCI6MTY3NjQ4NTgxMX0.j7ZywxlE7Os-ny3nRoad_w07DmisGdDAo2w4j_2E7nzkGjjrE-OPPDYKEXN7REVeEglWBv9LjGhZu0Fcu8pfUw
 
-
 ###
 DELETE {{host}}/api/restaurant
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY5ODg0OTMsImV4cCI6MTY3NzA2NDc5M30.6_dWVJBPMjc1GN6elQAD4VUK5oQWA2VxiXQWCXPKtwZwEwfxdUTNa3HZdkVUPJn1jZLLKoORkobsVMan19cR_A
-
-
-
-
-
-
 
 
 ###

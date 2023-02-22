@@ -8,5 +8,5 @@ data class DishDto (
     val description: String,
     val cost: Double,
     val menuId: Long,
-    val categoryId: Long
+    val categoryId: Long?
 )

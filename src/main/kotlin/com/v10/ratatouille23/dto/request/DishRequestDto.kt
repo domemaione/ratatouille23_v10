@@ -5,6 +5,6 @@ data class DishRequestDto (
     val name: String,
     val description: String,
     val cost: Double = 0.0,
-    val categoryName: String,
-    val allergens: Array<Long>
+    val categoryName: String?,
+    val allergens: Array<Long>?
 )
