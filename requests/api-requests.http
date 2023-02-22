@@ -71,12 +71,12 @@ Content-Type: application/json
 }
 ###
 POST {{host}}/api/allergens/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY4OTA0ODMsImV4cCI6MTY3Njk2Njc4M30.Z4mFdAh41tBPQX2tlKKCxq9LWVY56t8YBAgkhyvG8NcpfHKEvw5G5JPgX-vJhCeGPI9FU67cR5F14nuRYwSrNg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcwOTY0MjksImV4cCI6MTY3NzE3MjcyOX0.N6CR5iM9kwmbV875WIoRktlWzfcsYPttaYqRcTBKCGsyEBem1VEGhLm2K1PBcm7SaNXSzce2cuSwzGUW6Eew4g
 Content-Type: application/json
 
 {
   "id": null,
-  "name": "latte"
+  "name": "mandorla"
 }
 ###
 
@@ -88,6 +88,9 @@ Content-Type: application/json
   "id": null,
   "name": "primo piatto di pesce"
 }
+###
+GET {{host}}/api/allergens/
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcwOTY0MjksImV4cCI6MTY3NzE3MjcyOX0.N6CR5iM9kwmbV875WIoRktlWzfcsYPttaYqRcTBKCGsyEBem1VEGhLm2K1PBcm7SaNXSzce2cuSwzGUW6Eew4g
 
 
 ###

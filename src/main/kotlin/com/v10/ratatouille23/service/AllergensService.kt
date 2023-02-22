@@ -5,6 +5,7 @@ import com.v10.ratatouille23.dto.AllergensDto
 import com.v10.ratatouille23.model.Allergens
 import com.v10.ratatouille23.repository.AllergensRepository
 import org.springframework.stereotype.Service
+import org.springframework.web.bind.annotation.GetMapping
 
 @Service
 class AllergensService(
@@ -17,4 +18,11 @@ class AllergensService(
 
         return allergenSaved
     }
+
+
+    fun getAll(): List<Allergens> {
+        return allergensRepository.findAll()
+    }
+
+
 }

@@ -10,10 +10,7 @@ import com.v10.ratatouille23.service.AllergensService
 import com.v10.ratatouille23.service.DishService
 import org.springframework.http.ResponseEntity
 import org.springframework.security.access.prepost.PreAuthorize
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 
 @RestController
@@ -27,5 +24,9 @@ class AllergensController (
     fun add(@RequestBody allergensDto: AllergensDto) =
         ResponseEntity.ok(ServerResponse.ok(this.allergensMapper.toDomain(allergensService.add(allergensDto))))
 
+    @GetMapping("")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun getAll() =
+        ResponseEntity.ok(ServerResponse.ok(allergensService.getAll()))
 
 }
