@@ -46,7 +46,6 @@ class RestaurantService(
     }
 
     fun get(id: Long): Restaurant {
-        //val restaurantId = AuthenticatedUserHelper.get()?.restaurantId
         val found = this.restaurantRepository.findById(id)
         if(found.isEmpty)
             throw IllegalStateException("Restaurant not found")

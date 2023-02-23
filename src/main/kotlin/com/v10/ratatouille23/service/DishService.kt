@@ -5,6 +5,7 @@ import com.v10.ratatouille23.dto.request.DishRequestDto
 import com.v10.ratatouille23.model.Category
 import com.v10.ratatouille23.model.Dish
 import com.v10.ratatouille23.model.DishAllergens
+import com.v10.ratatouille23.model.Restaurant
 import com.v10.ratatouille23.repository.CategoryRepository
 import com.v10.ratatouille23.repository.DishAllergensRepository
 import com.v10.ratatouille23.repository.DishRepository
@@ -37,7 +38,6 @@ class DishService(
             }
         }
 
-
         val toSave = Dish(
             id = null,
             name = dishRequestDto.name,
@@ -50,6 +50,11 @@ class DishService(
         val saved = this.dishRepository.save(toSave)
         //inserisce successivamente nella tabella DishAllergens, tutti gli allergeni associati a quella portata
         if(dishRequestDto.allergens != null) {
+          val toSave = dishRequestDto.allergens.map {
+              DishAllergens(id = null, dishId = saved.id!!, it)
+          }
+            this.dishAllergensRepository.saveAll(toSave)
+        /*
             for (allergenId in dishRequestDto.allergens) {
                 val dishAllergens = DishAllergens(
                     id = null,
@@ -58,10 +63,21 @@ class DishService(
                 )
                 this.dishAllergensRepository.save(dishAllergens)
 
-            }
+            }*/
         }
         return saved
     }
+
+
+    fun get(id: Long): Dish {
+        val found = this.dishRepository.findById(id)
+        if(found.isEmpty)
+            throw IllegalStateException("Dish not found")
+
+        return found.get()
+    }
+
+
 
 }
 
