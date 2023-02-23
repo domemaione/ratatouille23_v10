@@ -10,8 +10,10 @@ import com.v10.ratatouille23.repository.CategoryRepository
 import com.v10.ratatouille23.repository.DishAllergensRepository
 import com.v10.ratatouille23.repository.DishRepository
 import com.v10.ratatouille23.repository.MenuRepository
+import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
+import org.springframework.web.server.ResponseStatusException
 import java.time.LocalDateTime
 
 @Service
@@ -112,6 +114,13 @@ class DishService(
         return saved
     }
 
+
+    fun delete(id: Long): Dish{
+        val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not found")
+        val found: Dish = this.get(id)
+        this.dishRepository.deleteById(found.id!!)
+        return found
+    }
 
 
 }

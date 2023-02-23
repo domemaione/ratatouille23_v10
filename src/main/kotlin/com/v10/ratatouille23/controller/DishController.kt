@@ -42,4 +42,10 @@ class DishController (
         ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.addCategoryToDish(dishRequestDto))))
 
 
+    @DeleteMapping("{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun delete(@PathVariable("id") id: Long) =
+        ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.delete(id))))
+
+
 }
