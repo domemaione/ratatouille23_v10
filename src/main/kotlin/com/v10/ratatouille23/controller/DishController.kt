@@ -30,11 +30,9 @@ class DishController (
         ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.get(id))))
 
 
-
-    /*
-        @PutMapping("")
-        @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
-        fun update(@RequestBody dishRequestDto: DishRequestDto) =
-            ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.update(dishRequestDto))))*/
+    @PutMapping("")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun update(@RequestBody dishRequestDto: DishRequestDto) =
+        ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.update(dishRequestDto))))
 
 }

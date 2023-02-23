@@ -12,6 +12,7 @@ import com.v10.ratatouille23.repository.DishRepository
 import com.v10.ratatouille23.repository.MenuRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
+import java.time.LocalDateTime
 
 @Service
 class DishService(
@@ -54,16 +55,6 @@ class DishService(
               DishAllergens(id = null, dishId = saved.id!!, it)
           }
             this.dishAllergensRepository.saveAll(toSave)
-        /*
-            for (allergenId in dishRequestDto.allergens) {
-                val dishAllergens = DishAllergens(
-                    id = null,
-                    dishId = saved.id!!,
-                    allergenId = allergenId
-                )
-                this.dishAllergensRepository.save(dishAllergens)
-
-            }*/
         }
         return saved
     }
@@ -75,6 +66,21 @@ class DishService(
             throw IllegalStateException("Dish not found")
 
         return found.get()
+    }
+
+    fun update(dishRequestDto: DishRequestDto): Dish {
+        val found: Dish = this.get(dishRequestDto.id!!)
+        val toSave = Dish(
+            id = found.id,
+            name = dishRequestDto.name,
+            description = dishRequestDto.description,
+            cost = dishRequestDto.cost,
+            menuId = found.menuId,
+            categoryId = found.categoryId
+
+        )
+        val saved = this.dishRepository.save(toSave)
+        return saved
     }
 
 
@@ -122,3 +128,17 @@ class DishService(
         }
         return saved
     }*/
+
+
+
+
+/*
+            for (allergenId in dishRequestDto.allergens) {
+                val dishAllergens = DishAllergens(
+                    id = null,
+                    dishId = saved.id!!,
+                    allergenId = allergenId
+                )
+                this.dishAllergensRepository.save(dishAllergens)
+
+            }*/

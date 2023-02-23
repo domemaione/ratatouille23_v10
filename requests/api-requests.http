@@ -58,15 +58,16 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 ###
 POST {{host}}/api/dish/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcwOTE1MDUsImV4cCI6MTY3NzE2NzgwNX0.HrU7mNRNLAxPThkKpB3Gllb5JnnETu8-B2Hn1ApvbQ_97McNwbfDDn4SW82vwrwKDmIwpfG6kvhWCzHq9xeh7g
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcxNTQ3NTAsImV4cCI6MTY3NzIzMTA1MH0.FmQU2FoZ5I9s6KRFU9ySJFDlXDEV-wlYT1eGi-kFZJgKDv8U7AbiOJSpH31OlN_bCVo-Yth5xpwDiFd7wvhRIw
 Content-Type: application/json
 
 {
   "id": null,
-  "name": "spaghetto alle vongole",
-  "description": "vongole, spaghetto, peperoncino",
-  "cost": 12.5,
-  "categoryName": "primo piatto di pesce"
+  "name": "maccheroni con braciola",
+  "description": "pasta fresca e carne di ieri",
+  "cost": 10,
+  "categoryName": "primo piatto",
+  "allergens": [12,14]
 
 }
 ###
@@ -88,12 +89,21 @@ Content-Type: application/json
   "id": null,
   "name": "primo piatto di pesce"
 }
+
+###
+PUT {{host}}/api/dish/
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcxNTY0MzgsImV4cCI6MTY3NzIzMjczOH0.E5DzWdILNNBuLY3w26e1sTXPKcE4Z-ZcDsASq4yjIAtwpmb8bPLYDcCHSBH37SmkYrx4zqGEtw-6HAnpl7Y9tQ
+Content-Type: application/json
+
+{
+  "id": 50,
+  "name": "maccheroni con braciola",
+  "description": "pasta fresca e carne di ieri, forse",
+  "cost": 15
+}
 ###
 GET {{host}}/api/allergens/
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcwOTY5ODgsImV4cCI6MTY3NzE3MzI4OH0.OhccEkZPaKaFezhnwrHrT1YVu4IGJ63KGcSd33oi8ybn6OoitEuV9ZEUqZRuP8jKTV06Hy2h4kdz-tTmZj6EWQ
-
-
-
 ###
 GET {{host}}/api/restaurant/
 ###
@@ -110,10 +120,6 @@ GET {{host}}/api/auth/check/token/{token}
 GET {{host}}/api/dish/40
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcxNTQ0OTYsImV4cCI6MTY3NzIzMDc5Nn0.yiScGqsn8qYGoBPat8LXfCdsI7HPXxI3vhDXxXjL4JOEAKGSpp5htB7sc7V4sci4GIcKLxml7qazOc4pOuGGlw
 
-
-
-
-
 ###
 DELETE {{host}}/api/menu
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY0MDk1MTEsImV4cCI6MTY3NjQ4NTgxMX0.j7ZywxlE7Os-ny3nRoad_w07DmisGdDAo2w4j_2E7nzkGjjrE-OPPDYKEXN7REVeEglWBv9LjGhZu0Fcu8pfUw
@@ -125,13 +131,5 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 ###
 DELETE {{host}}/api/category/delete/4
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY5MzI5MTcsImV4cCI6MTY3NzAwOTIxN30.mUn7CGC5JbX_lC2sPAEqaO6Ep73VFhQm2pIWo7s-im388I0DxQwn6b7tIDlpHZgOLl9Og1fXPWpyyyBRfMUz0Q
-
-
-
-
-
-
-
-
 
 ###
