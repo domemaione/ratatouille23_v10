@@ -33,7 +33,7 @@ class AllergensController (
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
     fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(allergensService.getAll()))
-
+    //elimina allergeno
     @DeleteMapping("{id}")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
     fun delete(@PathVariable("id") id: Long) =
