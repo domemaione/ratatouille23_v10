@@ -102,6 +102,18 @@ Content-Type: application/json
   "cost": 15
 }
 ###
+PUT {{host}}/api/dish/category
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcxNjI5MTYsImV4cCI6MTY3NzIzOTIxNn0.WBpzmvOky3z6VbHoHyNDw48ZX7SRg9BzVkVHK5uSmBecxwAuvkymATlYP-Hd8vPrnClFb8g6KOi5rFQYevwpsA
+Content-Type: application/json
+
+{
+  "id": 50,
+  "name": "maccheroni con braciola",
+  "description": "pasta fresca e carne di ieri, forse",
+  "cost": 15,
+  "categoryName": "primo piatto"
+}
+###
 GET {{host}}/api/allergens/
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcwOTY5ODgsImV4cCI6MTY3NzE3MzI4OH0.OhccEkZPaKaFezhnwrHrT1YVu4IGJ63KGcSd33oi8ybn6OoitEuV9ZEUqZRuP8jKTV06Hy2h4kdz-tTmZj6EWQ
 ###

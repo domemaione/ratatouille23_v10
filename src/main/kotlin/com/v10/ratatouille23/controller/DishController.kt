@@ -35,4 +35,11 @@ class DishController (
     fun update(@RequestBody dishRequestDto: DishRequestDto) =
         ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.update(dishRequestDto))))
 
+
+    @PutMapping("category")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun addCategoryToDish(@RequestBody dishRequestDto: DishRequestDto) =
+        ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.addCategoryToDish(dishRequestDto))))
+
+
 }

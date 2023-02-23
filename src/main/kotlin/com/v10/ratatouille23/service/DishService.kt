@@ -84,6 +84,35 @@ class DishService(
     }
 
 
+    fun addCategoryToDish(dishRequestDto: DishRequestDto): Dish{
+        val found: Dish = this.get(dishRequestDto.id!!)
+        var categoryId: Long? = null
+
+        if(dishRequestDto.categoryName != null) {
+            val foundCategory = this.categoryRepository.findByName(dishRequestDto.categoryName)
+            categoryId = if (foundCategory.isPresent) {
+                foundCategory.get().id
+            } else {
+                val newCategory = Category(id = null, name = dishRequestDto.categoryName)
+                this.categoryRepository.save(newCategory)
+                newCategory.id
+            }
+        }
+        val toSave = Dish(
+            id = found.id,
+            name = found.name,
+            description = found.description,
+            cost = found.cost,
+            menuId = found.menuId,
+            categoryId = categoryId
+
+        )
+        val saved = this.dishRepository.save(toSave)
+
+        return saved
+    }
+
+
 
 }
 
