@@ -24,9 +24,19 @@ class AllergensController (
     fun add(@RequestBody allergensDto: AllergensDto) =
         ResponseEntity.ok(ServerResponse.ok(this.allergensMapper.toDomain(allergensService.add(allergensDto))))
 
-    @GetMapping("")
+    @GetMapping("{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun get(@PathVariable("id") id: Long) =
+        ResponseEntity.ok(ServerResponse.ok(allergensService.get(id)))
+
+    @GetMapping("all")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
     fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(allergensService.getAll()))
+
+    @DeleteMapping("{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun delete(@PathVariable("id") id: Long) =
+        ResponseEntity.ok(ServerResponse.ok(allergensService.delete(id)))
 
 }
