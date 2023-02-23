@@ -20,6 +20,17 @@ class CategoryController(
     fun add(@RequestBody categoryDto: CategoryDto) =
         ResponseEntity.ok(ServerResponse.ok(this.categoryMapper.toDomain(categoryService.add(categoryDto))))
 
+    @GetMapping("{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun get(@PathVariable("id") id: Long) =
+        ResponseEntity.ok(ServerResponse.ok(this.categoryMapper.toDomain(categoryService.get(id))))
+
+    @GetMapping("all")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun getAll() =
+        ResponseEntity.ok(ServerResponse.ok(categoryService.getAll()))
+
+
     @DeleteMapping("delete/{id}")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
     fun delete(@PathVariable("id") id: Long) =
