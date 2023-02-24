@@ -3,9 +3,9 @@ POST {{host}}/api/auth/signup
 Content-Type: application/json
 
 {
-  "name": "mimmo",
-  "surname": "maions",
-  "email": "domenico.maione@outlook.it",
+  "name": "giacomino",
+  "surname": "dinamo",
+  "email": "fagibic549@wireps.com",
   "password": "provaprova"
 }
 ###
@@ -34,13 +34,13 @@ POST {{host}}/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "domenico.maione@outlook.it",
+  "email": "fagibic549@wireps.com",
   "password": "provaprova"
 }
 
 ###
 POST {{host}}/api/restaurant
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcwODY1MzcsImV4cCI6MTY3NzE2MjgzN30.5xBKX6WqfGtatztRy8jv-7XnGF7ogx3xZrcT87nwUNxj9-kI0sTyjRR78vO0TtpqgjOW2kXRgnQ4Ffu3gbLPvg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3MjUyOTkyLCJleHAiOjE2NzczMjkyOTJ9.zY_Lmj3Si_e8BSfWmbpCmxZ6PGDJmYLAdJuRODEwDJdV6jkGMIR6o_f2p3hE9IBrsd9y9AbAVqT_FUSRP2PCEg
 Content-Type: application/json
 
 {
@@ -51,9 +51,7 @@ Content-Type: application/json
 
 ###
 POST {{host}}/api/menu/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcwODY1MzcsImV4cCI6MTY3NzE2MjgzN30.5xBKX6WqfGtatztRy8jv-7XnGF7ogx3xZrcT87nwUNxj9-kI0sTyjRR78vO0TtpqgjOW2kXRgnQ4Ffu3gbLPvg
-
-
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3MjUyOTkyLCJleHAiOjE2NzczMjkyOTJ9.zY_Lmj3Si_e8BSfWmbpCmxZ6PGDJmYLAdJuRODEwDJdV6jkGMIR6o_f2p3hE9IBrsd9y9AbAVqT_FUSRP2PCEg
 
 
 ###
@@ -89,7 +87,15 @@ Content-Type: application/json
   "id": null,
   "name": "primo piatto di pesce"
 }
+###
+POST {{host}}/api/tablerestaurant/add
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3MjYwODQ4LCJleHAiOjE2NzczMzcxNDh9.mleejajy1dIxI1sQHX5s2uYGypTvgQOKtHXPU59XlGRydtCDzIila2yKoEqki7TsjXpSxaClTvdsdFJgA1XRPQ
+Content-Type: application/json
 
+{
+  "id": null,
+  "seats": 8
+}
 ###
 PUT {{host}}/api/dish/
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcxNTY0MzgsImV4cCI6MTY3NzIzMjczOH0.E5DzWdILNNBuLY3w26e1sTXPKcE4Z-ZcDsASq4yjIAtwpmb8bPLYDcCHSBH37SmkYrx4zqGEtw-6HAnpl7Y9tQ
