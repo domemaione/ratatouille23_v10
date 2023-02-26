@@ -1,6 +1,6 @@
 package com.v10.ratatouille23.utils
 
-enum class OrderStatus {
+enum class CartStatus {
     OPEN,
     CLOSED
 }

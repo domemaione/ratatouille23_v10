@@ -1,13 +1,13 @@
 package com.v10.ratatouille23.model
 
-import com.v10.ratatouille23.utils.OrderStatus
+import com.v10.ratatouille23.utils.CartStatus
 import org.springframework.data.jpa.repository.Temporal
 import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
-@Table(name = "order")
-class Order (
+@Table(name = "cart")
+class Cart (
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -18,9 +18,13 @@ class Order (
 
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
-    var status: OrderStatus,
+    var status: CartStatus,
 
     @Column(name = "created_at")
     @Temporal(TemporalType.TIMESTAMP)
-    var createdAt: LocalDateTime?
+    var createdAt: LocalDateTime?,
+
+    @Column(name = "update_at")
+    @Temporal(TemporalType.TIMESTAMP)
+    var updateAt: LocalDateTime?
 )

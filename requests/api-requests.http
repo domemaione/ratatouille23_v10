@@ -56,7 +56,7 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 ###
 POST {{host}}/api/dish/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcxNTQ3NTAsImV4cCI6MTY3NzIzMTA1MH0.FmQU2FoZ5I9s6KRFU9ySJFDlXDEV-wlYT1eGi-kFZJgKDv8U7AbiOJSpH31OlN_bCVo-Yth5xpwDiFd7wvhRIw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NDExMjk5LCJleHAiOjE2Nzc0ODc1OTl9.Yl0m9Valmd0peQ8pchz5ZJ73USu-nzxbXN_rF-5dWmElxC79LaVOJF-CLKaR8nALlcZ8Aut8Yady9Os4Z316Iw
 Content-Type: application/json
 
 {
@@ -67,6 +67,14 @@ Content-Type: application/json
   "categoryName": "primo piatto",
   "allergens": [12,14]
 
+}
+###
+POST {{host}}/api/cart/add/111
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NDIwNTg4LCJleHAiOjE2Nzc0OTY4ODh9.ngcPF1mW8RnkVber7sm1f6Zr9SA92yHhjyGP43ZXospmfMLQ9bGPusbaWT4yAw0XfKqig1PtqIAqtjUcWAD12g
+Content-Type: application/json
+
+{
+  "dishes": [122]
 }
 ###
 POST {{host}}/api/allergens/add
