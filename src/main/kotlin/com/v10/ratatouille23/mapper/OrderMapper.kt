@@ -12,12 +12,16 @@ class OrderMapper(
     override fun toDomain(e: Order) =
         OrderDto(
             id = e.id,
-            tableId = e.tableId
+            tableId = e.tableId,
+            status = e.status,
+            createdAt = e.createdAt
         )
 
     override fun toEntity(d: OrderDto) =
         Order(
             id = d.id,
-            tableId = d.tableId
+            tableId = d.tableId,
+            status = d.status,
+            createdAt = d.createdAt
         )
 }

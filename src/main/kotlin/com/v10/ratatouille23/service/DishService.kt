@@ -35,7 +35,7 @@ class DishService(
             categoryId = if (foundCategory.isPresent) {
                 foundCategory.get().id
             } else {
-                val newCategory = Category(id = null, name = dishRequestDto.categoryName)
+                val newCategory = Category(id = null, name = dishRequestDto.categoryName, priority = 0)
                 this.categoryRepository.save(newCategory)
                 newCategory.id
             }
@@ -95,7 +95,7 @@ class DishService(
             categoryId = if (foundCategory.isPresent) {
                 foundCategory.get().id
             } else {
-                val newCategory = Category(id = null, name = dishRequestDto.categoryName)
+                val newCategory = Category(id = null, name = dishRequestDto.categoryName, priority = 0)
                 this.categoryRepository.save(newCategory)
                 newCategory.id
             }

@@ -88,6 +88,14 @@ Content-Type: application/json
   "name": "primo piatto di pesce"
 }
 ###
+POST {{host}}/api/category/priority/add/71
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NDAzMTAwLCJleHAiOjE2Nzc0Nzk0MDB9.B7iJXWUPhUQNDn-mZmRxNUsZJKMXX85BJz4soRu9EzV-cOYl78chqyaMkPXontzoHU1BwlzoYmJ1ixsnCaDI4Q
+Content-Type: application/json
+
+{
+  "priority": 3
+}
+###
 POST {{host}}/api/tablerestaurant/add
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3MjYwODQ4LCJleHAiOjE2NzczMzcxNDh9.mleejajy1dIxI1sQHX5s2uYGypTvgQOKtHXPU59XlGRydtCDzIila2yKoEqki7TsjXpSxaClTvdsdFJgA1XRPQ
 Content-Type: application/json

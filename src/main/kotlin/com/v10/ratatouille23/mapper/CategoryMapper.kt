@@ -11,12 +11,14 @@ class CategoryMapper(): Mapper<Category, CategoryDto> {
     override fun toDomain(e: Category) =
         CategoryDto(
             id = e.id,
-            name = e.name
+            name = e.name,
+            priority = e.priority
         )
 
     override fun toEntity(d: CategoryDto) =
         Category(
             id = d.id,
-            name = d.name
+            name = d.name,
+            priority = d.priority
         )
 }
