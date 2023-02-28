@@ -24,9 +24,7 @@ class CartService(
     @Transactional
     fun add(id: Long, cartRequestDto: CartRequestDto): Cart {
         val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not valid")
-        val tableId =
-            this.tableRestaurantRepository.getReferenceById(id).id ?: throw IllegalStateException("Table not found")
-        //devo verificare se il tavolo è già presente nella tabella cart e se il suo status è aperto allora aggiorna l'ordine già esistente
+        val tableId = this.tableRestaurantRepository.getReferenceById(id).id ?: throw IllegalStateException("Table not found")
         val found = this.cartRepository.findByTableId(tableId)
 
         if (found != null && found.status == CartStatus.OPEN) {
@@ -43,6 +41,9 @@ class CartService(
                 }
                 this.cartDishRepository.saveAll(toSaveDishes)
             }
+
+        } else if (found != null && found.status == CartStatus.CLOSED) {
+            throw IllegalStateException("Cart already closed")
 
         } else if (found == null) {
             val toSave = Cart(
@@ -70,6 +71,23 @@ class CartService(
             return savedOrder
         }
 
+
+
         return found
+    }
+
+
+    fun closeCart(id: Long): Cart{
+        val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not valid")
+        val found = this.cartRepository.getReferenceById(id)
+        val toSave = Cart(
+            id = found.id,
+            tableId = found.tableId,
+            status = CartStatus.CLOSED,
+            createdAt = found.createdAt,
+            updateAt = LocalDateTime.now()
+        )
+        val saved = this.cartRepository.save(toSave)
+        return saved
     }
 }

@@ -20,4 +20,10 @@ class CartController(
     fun add(@PathVariable("id") id: Long, @RequestBody cartRequestDto: CartRequestDto) =
         ResponseEntity.ok(ServerResponse.ok(this.cartMapper.toDomain(cartService.add(id,cartRequestDto))))
 
+    @PutMapping("close/{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun closeCart(@PathVariable("id") id: Long) =
+        ResponseEntity.ok(ServerResponse.ok(this.cartMapper.toDomain(cartService.closeCart(id))))
+
+
 }

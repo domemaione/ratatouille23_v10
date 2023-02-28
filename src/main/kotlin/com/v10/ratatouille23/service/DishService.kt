@@ -2,19 +2,13 @@ package com.v10.ratatouille23.service
 
 import com.v10.ratatouille23.component.AuthenticatedUserHelper
 import com.v10.ratatouille23.dto.request.DishRequestDto
-import com.v10.ratatouille23.model.Category
-import com.v10.ratatouille23.model.Dish
-import com.v10.ratatouille23.model.DishAllergens
-import com.v10.ratatouille23.model.Restaurant
+import com.v10.ratatouille23.model.*
 import com.v10.ratatouille23.repository.CategoryRepository
 import com.v10.ratatouille23.repository.DishAllergensRepository
 import com.v10.ratatouille23.repository.DishRepository
 import com.v10.ratatouille23.repository.MenuRepository
-import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import org.springframework.web.server.ResponseStatusException
-import java.time.LocalDateTime
 
 @Service
 class DishService(
@@ -69,6 +63,7 @@ class DishService(
 
         return found.get()
     }
+
 
     fun update(dishRequestDto: DishRequestDto): Dish {
         val found: Dish = this.get(dishRequestDto.id!!)

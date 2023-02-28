@@ -69,8 +69,8 @@ Content-Type: application/json
 
 }
 ###
-POST {{host}}/api/cart/add/111
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NDIwNTg4LCJleHAiOjE2Nzc0OTY4ODh9.ngcPF1mW8RnkVber7sm1f6Zr9SA92yHhjyGP43ZXospmfMLQ9bGPusbaWT4yAw0XfKqig1PtqIAqtjUcWAD12g
+POST {{host}}/api/cart/add/112
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NTc2MTM3LCJleHAiOjE2Nzc2NTI0Mzd9.yXkbtN8qWhu_j4fbEZCl5wLsoE2UybhqVCQEcoQOFajUrxSFdoBsxIqijyQCFRWIXGJ6KZNz6xD1ivJgmV88ug
 Content-Type: application/json
 
 {
@@ -135,6 +135,14 @@ Content-Type: application/json
   "cost": 15,
   "categoryName": "primo piatto"
 }
+###
+PUT {{host}}/api/cart/close/120
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NTA4OTUzLCJleHAiOjE2Nzc1ODUyNTN9.eYBJkwy2nOh12oihGy3kMHTB35A8FtJzlpCv_MRcwWBhggUMasRXBeYs4o9Hv9ftbWEZzo9qeLINJBwuR69MIg
+
+
+
+
+###
 ###
 GET {{host}}/api/allergens/all
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcxNjYwMzIsImV4cCI6MTY3NzI0MjMzMn0.fK13chkJ4mfQHdpyUNe0Z0Te_eTBNYN5S4I1G-1agFvoNVxrPD1jUIF6yFuzembEfO8UTdVe3tunssy9VAbI0g
