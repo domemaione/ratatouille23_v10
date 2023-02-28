@@ -65,6 +65,11 @@ class DishService(
     }
 
 
+    fun getAll(): List<Dish> {
+        return dishRepository.findAll()
+    }
+
+
     fun update(dishRequestDto: DishRequestDto): Dish {
         val found: Dish = this.get(dishRequestDto.id!!)
         val toSave = Dish(

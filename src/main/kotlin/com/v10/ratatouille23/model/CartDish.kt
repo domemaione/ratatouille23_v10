@@ -12,8 +12,8 @@ class CartDish(
     @Column(name = "id")
     var id: Long?,
 
-    @Column(name = "order_id")
-    var orderId: Long,
+    @Column(name = "cart_id")
+    var cartId: Long,
 
     @Column(name = "dish_id")
     var dishId: Long,

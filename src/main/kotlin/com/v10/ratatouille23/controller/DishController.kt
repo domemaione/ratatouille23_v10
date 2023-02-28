@@ -29,6 +29,10 @@ class DishController (
     fun get(@PathVariable("id") id: Long) =
         ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.get(id))))
 
+    @GetMapping("all")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun getAll() =
+        ResponseEntity.ok(ServerResponse.ok(dishService.getAll()))
 
     @PutMapping("")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
@@ -47,5 +51,4 @@ class DishController (
     fun delete(@PathVariable("id") id: Long) =
         ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.delete(id))))
 
-                //TODO: getAll di tutte le portate dello stesso menu e il nome degli allergeni associati
 }

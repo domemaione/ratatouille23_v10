@@ -10,7 +10,7 @@ class CartDishMapper(
     override fun toDomain(e: CartDish) =
         CartDishDto(
             id = e.id,
-            orderId = e.orderId,
+            cartId = e.cartId,
             dishId = e.dishId,
             userId = e.userId,
             createdAt = e.createdAt,
@@ -20,7 +20,7 @@ class CartDishMapper(
     override fun toEntity(d: CartDishDto) =
         CartDish(
             id = d.id,
-            orderId = d.orderId,
+            cartId = d.cartId,
             dishId = d.dishId,
             userId = d.userId,
             createdAt = d.createdAt,

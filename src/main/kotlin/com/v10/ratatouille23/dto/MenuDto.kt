@@ -1,6 +1,6 @@
 package com.v10.ratatouille23.dto
 
 data class MenuDto (
-    var id: Long?,
-    var restaurantId: Long
+    val id: Long?,
+    val restaurantId: Long
     )

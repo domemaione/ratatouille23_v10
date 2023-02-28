@@ -32,7 +32,7 @@ class CartService(
                 val toSaveDishes = cartRequestDto.dishes.map {
                     CartDish(
                         id = null,
-                        orderId = found.id!!,
+                        cartId = found.id!!,
                         it,
                         userId = user.id!!,
                         createdAt = LocalDateTime.now(),
@@ -59,7 +59,7 @@ class CartService(
                 val toSaveDishes = cartRequestDto.dishes.map {
                     CartDish(
                         id = null,
-                        orderId = savedOrder.id!!,
+                        cartId = savedOrder.id!!,
                         it,
                         userId = user.id!!,
                         createdAt = LocalDateTime.now(),
