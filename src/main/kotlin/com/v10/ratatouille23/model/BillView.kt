@@ -2,19 +2,19 @@ package com.v10.ratatouille23.model
 
 import org.hibernate.annotations.Immutable
 import org.hibernate.annotations.Subselect
+import java.math.BigDecimal
 import javax.persistence.*
 
 @Entity
-@Immutable
+@Table(name = "bill_view")
 class BillView(
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", updatable = false, nullable = false)
-    var id: Long?,
+    @Column(name = "id")
+    var id: Long,
 
     @Column(name = "cart_id")
     var cartId: Long,
 
-    @Column(name = "total")
-    var total: Long
+    @Column(name = "total", precision = 10, scale = 2)
+    var total: BigDecimal
 )

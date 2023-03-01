@@ -2,8 +2,10 @@ package com.v10.ratatouille23.service
 
 import com.v10.ratatouille23.component.AuthenticatedUserHelper
 import com.v10.ratatouille23.dto.request.CartRequestDto
+import com.v10.ratatouille23.model.BillView
 import com.v10.ratatouille23.model.Cart
 import com.v10.ratatouille23.model.CartDish
+import com.v10.ratatouille23.repository.BillViewRepository
 import com.v10.ratatouille23.repository.CartDishRepository
 import com.v10.ratatouille23.repository.CartRepository
 import com.v10.ratatouille23.repository.TableRestaurantRepository
@@ -16,7 +18,8 @@ import java.time.LocalDateTime
 class CartService(
     private val tableRestaurantRepository: TableRestaurantRepository,
     private val cartDishRepository: CartDishRepository,
-    private val cartRepository: CartRepository
+    private val cartRepository: CartRepository,
+    private val billViewRepository: BillViewRepository
 
 
     ){
@@ -90,4 +93,11 @@ class CartService(
         val saved = this.cartRepository.save(toSave)
         return saved
     }
+
+
+    fun getBill(cartId: Long): List<BillView>{
+        return billViewRepository.findByCartId(cartId)
+    }
+
+
 }
