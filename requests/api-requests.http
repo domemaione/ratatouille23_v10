@@ -10,15 +10,15 @@ Content-Type: application/json
 }
 ###
 POST {{host}}/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY5ODg0OTMsImV4cCI6MTY3NzA2NDc5M30.6_dWVJBPMjc1GN6elQAD4VUK5oQWA2VxiXQWCXPKtwZwEwfxdUTNa3HZdkVUPJn1jZLLKoORkobsVMan19cR_A
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NzU0Njg1LCJleHAiOjE2Nzc4MzA5ODV9.kUyqi-69RmQpCXWFafICLAsXNeaUCozflV6e8f5tODT-O6ei-2Nm4CDz3wap7iq-b8QiBNJ4yIlWvtI9H-RqWA
 Content-Type: application/json
 
 {
-  "email": "mimmomaions@gmail.com",
-  "name": "ciccio",
+  "email": "giacomino@gmail.com",
+  "name": "marco",
   "surname": "merrino",
   "password": "provaprova",
-  "role": "SUPERVISOR"
+  "role": "WAITER"
 }
 ###
 POST {{host}}/api/auth/signup/op/resetpassword
@@ -138,6 +138,9 @@ Content-Type: application/json
 ###
 PUT {{host}}/api/cart/close/132
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NTk1MTM3LCJleHAiOjE2Nzc2NzE0Mzd9.Kq-JlbUj5fYzrC6QwfmRlEeEoVSyDOwbwoUD0Qc5V2QxuvYF4SWhwYb8ZxX4vYvGnmJxlXgbl-IDQKnoZ0ehkA
+###
+GET {{host}}/api/user/all/108
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NzU0Njg1LCJleHAiOjE2Nzc4MzA5ODV9.kUyqi-69RmQpCXWFafICLAsXNeaUCozflV6e8f5tODT-O6ei-2Nm4CDz3wap7iq-b8QiBNJ4yIlWvtI9H-RqWA
 
 ###
 GET {{host}}/api/dish/all

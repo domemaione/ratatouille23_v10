@@ -2,6 +2,7 @@ package com.v10.ratatouille23.service
 
 import com.v10.ratatouille23.component.AuthenticatedUserHelper
 import com.v10.ratatouille23.dto.UserDto
+import com.v10.ratatouille23.model.BillView
 import com.v10.ratatouille23.model.User
 import com.v10.ratatouille23.repository.UserRepository
 import com.v10.ratatouille23.security.CustomUserDetails
@@ -61,6 +62,12 @@ class UserService(
         this.logger.info("get() - returned obj: ${found.get()}")
         return found.get()
     }
+
+    fun getAll(restaurantId: Long): List<User>{
+        val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not valid")
+        return userRepository.getAllNoAdmin(restaurantId)
+    }
+
 
     //Viene usata nel package security => JWTAuthorizationFilter, per prendere l'utente e verificare se è autorizzato
     override fun loadUserByUsername(username: String?): UserDetails {

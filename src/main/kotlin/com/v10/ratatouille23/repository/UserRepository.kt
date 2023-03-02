@@ -20,11 +20,14 @@ interface UserRepository: CrudRepository<User, Long> {
     @Query("DELETE FROM User u WHERE u.restaurantId IS NULL AND u.role != 'ADMIN'")
     fun deleteUsers() : Int
 
+    @Transactional
+    @Modifying
+    @Query("SELECT u FROM User u WHERE u.role <> 'ADMIN' AND u.restaurantId = :restaurantId")
+    fun getAllNoAdmin(restaurantId: Long) : List<User>
 
     fun getByEmail(email: String): Optional<User>
     fun findByRoleAndEnabled(role: UserRoles, enabled: Boolean): List<User>
-    fun findById(userId: Long?): User?
-    fun findByRestaurantId(restaurantId: Long): User
-    fun findByEmail(username: String?): User
+
+
 
 }

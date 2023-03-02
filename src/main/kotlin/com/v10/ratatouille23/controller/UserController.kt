@@ -4,6 +4,7 @@ import com.v10.ratatouille23.dto.ServerResponse
 import com.v10.ratatouille23.mapper.UserMapper
 import com.v10.ratatouille23.service.UserService
 import org.springframework.http.ResponseEntity
+import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
@@ -20,7 +21,12 @@ class UserController (
     fun get(@PathVariable("email") email: String) =
         ResponseEntity.ok(ServerResponse.ok(this.userMapper.toDomain(userService.get(email))))
 
+    @GetMapping("all/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
+    fun  getAll(@PathVariable("id") restairantId: Long) =
+        ResponseEntity.ok(ServerResponse.ok(userService.getAll(restairantId)))
 
-// TODO() CANCELLARE L'UTENTE
+
+//TODO() CANCELLARE L'UTENTE
 
 }

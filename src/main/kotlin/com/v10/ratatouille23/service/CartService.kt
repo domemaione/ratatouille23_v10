@@ -19,7 +19,7 @@ class CartService(
     private val tableRestaurantRepository: TableRestaurantRepository,
     private val cartDishRepository: CartDishRepository,
     private val cartRepository: CartRepository,
-    private val billViewRepository: BillViewRepository
+    private val billViewRepository: BillViewRepository,
 
 
     ){
@@ -30,6 +30,8 @@ class CartService(
         val tableId = this.tableRestaurantRepository.getReferenceById(id).id ?: throw IllegalStateException("Table not found")
         val found = this.cartRepository.findByTableId(tableId)
 
+        //una get reference nella tabella cart_dish che se non trova un id del cameriere nell'ordine trovato allora si procede all'ordine
+        //TODO devo controllare se l'ordine esistente ed aperto non venga effettuato da un altro cameriere
         if (found != null && found.status == CartStatus.OPEN) {
             if (cartRequestDto.dishes != null) {
                 val toSaveDishes = cartRequestDto.dishes.map {
