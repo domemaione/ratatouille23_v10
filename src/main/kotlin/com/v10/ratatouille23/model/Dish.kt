@@ -11,10 +11,10 @@ class Dish (
     @Column(name = "id")
     var id: Long?,
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     var name: String,
 
-    @Column(name = "description")
+    @Column(name = "description", nullable = false)
     var description: String,
 
     @Column(name = "cost")
