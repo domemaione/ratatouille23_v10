@@ -56,14 +56,16 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 ###
 POST {{host}}/api/dish/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NDExMjk5LCJleHAiOjE2Nzc0ODc1OTl9.Yl0m9Valmd0peQ8pchz5ZJ73USu-nzxbXN_rF-5dWmElxC79LaVOJF-CLKaR8nALlcZ8Aut8Yady9Os4Z316Iw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3ODY2NjQ1LCJleHAiOjE2Nzc5NDI5NDV9._jHpUVZquZl1yk8kIEekAkkNplH-clhdVj-UM8xzji1YcgOckucjASx2Yt-C8geNoCfbEnFrSeNOJOfmsPdvYw
 Content-Type: application/json
 
 {
   "id": null,
-  "name": "maccheroni con braciola",
-  "description": "pasta fresca e carne di ieri",
-  "cost": 10,
+  "name": "pizza alla nutella",
+  "description": "nutella della ferrero",
+  "nameLan": null,
+  "descriptionLan": null,
+  "cost": 8.50,
   "categoryName": "primo piatto",
   "allergens": [12,14]
 
@@ -88,12 +90,12 @@ Content-Type: application/json
 ###
 
 POST {{host}}/api/category/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzY5MzEwMjYsImV4cCI6MTY3NzAwNzMyNn0.WYbPgUjXFnvSqFlH34Hk4s66Rwl5QBHiP_47BQCoTAyIoSRfX_UGZhM2i3qE9jZh9JF8E-Yfa0XEcn-YGgzU9Q
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3ODYwMDE4LCJleHAiOjE2Nzc5MzYzMTh9.oKL84JthXP0wuaIUYuwyTsDcDMaHzHJLdVqxTgsUvTyb2bX3r41-4lxIRdkpWC12XM33ifAf4WWUxY3TDFR1vg
 Content-Type: application/json
 
 {
   "id": null,
-  "name": "primo piatto di pesce"
+  "name": "primo"
 }
 ###
 POST {{host}}/api/category/priority/add/71

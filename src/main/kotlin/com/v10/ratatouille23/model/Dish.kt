@@ -17,6 +17,12 @@ class Dish (
     @Column(name = "description", nullable = false)
     var description: String,
 
+    @Column(name = "name_lan", nullable = true)
+    var nameLan: String?,
+
+    @Column(name = "description_lan", nullable = true)
+    var descriptionLan: String?,
+
     @Column(name = "cost")
     val cost: Double = 0.0,
 

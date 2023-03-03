@@ -39,6 +39,8 @@ class DishService(
             id = null,
             name = dishRequestDto.name,
             description = dishRequestDto.description,
+            nameLan = dishRequestDto.nameLan,
+            descriptionLan = dishRequestDto.descriptionLan,
             cost = dishRequestDto.cost,
             menuId = foundMenu.id!!,
             categoryId = categoryId
@@ -80,6 +82,8 @@ class DishService(
             id = found.id,
             name = dishRequestDto.name,
             description = dishRequestDto.description,
+            nameLan = dishRequestDto.nameLan,
+            descriptionLan = dishRequestDto.descriptionLan,
             cost = dishRequestDto.cost,
             menuId = found.menuId,
             categoryId = found.categoryId
@@ -108,6 +112,8 @@ class DishService(
             id = found.id,
             name = found.name,
             description = found.description,
+            nameLan = found.nameLan,
+            descriptionLan = found.descriptionLan,
             cost = found.cost,
             menuId = found.menuId,
             categoryId = categoryId

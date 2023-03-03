@@ -4,6 +4,8 @@ data class DishRequestDto (
     val id: Long?,
     val name: String,
     val description: String,
+    val nameLan: String?,
+    val descriptionLan: String?,
     val cost: Double = 0.0,
     val categoryName: String?,
     val allergens: Array<Long>?
