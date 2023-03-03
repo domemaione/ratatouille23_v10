@@ -5,4 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface DishRepository : JpaRepository<Dish, Long> {}
+interface DishRepository : JpaRepository<Dish, Long> {
+    fun findByCategoryId(categoryId: Long): List<Dish>
+}

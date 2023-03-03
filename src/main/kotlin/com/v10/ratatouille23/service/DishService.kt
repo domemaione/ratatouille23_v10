@@ -69,6 +69,10 @@ class DishService(
         return dishRepository.findAll()
     }
 
+    fun getDishesByCategory(categoryId: Long): List<Dish>{
+        val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not valid")
+        return dishRepository.findByCategoryId(categoryId)
+    }
 
     fun update(dishRequestDto: DishRequestDto): Dish {
         val found: Dish = this.get(dishRequestDto.id!!)

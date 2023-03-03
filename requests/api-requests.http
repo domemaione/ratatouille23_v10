@@ -141,6 +141,10 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 ###
 GET {{host}}/api/user/all/108
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NzU0Njg1LCJleHAiOjE2Nzc4MzA5ODV9.kUyqi-69RmQpCXWFafICLAsXNeaUCozflV6e8f5tODT-O6ei-2Nm4CDz3wap7iq-b8QiBNJ4yIlWvtI9H-RqWA
+###
+GET {{host}}/api/dish/category/55
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3ODM2ODYzLCJleHAiOjE2Nzc5MTMxNjN9.QeibV-EW4IDltm98I_kv3eHbUBOKYaT07X3hY1bYLHrGcDz7ZvpmU-iIFPXyKHDssQ0EsXmpF8kogPt6QUKfoA
+
 
 ###
 GET {{host}}/api/dish/all

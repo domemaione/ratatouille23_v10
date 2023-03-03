@@ -34,6 +34,11 @@ class DishController (
     fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(dishService.getAll()))
 
+    @GetMapping("category/{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun getDishesByCategory(@PathVariable("id") categoryId: Long) =
+        ResponseEntity.ok(ServerResponse.ok(dishService.getDishesByCategory(categoryId)))
+
     @PutMapping("")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
     fun update(@RequestBody dishRequestDto: DishRequestDto) =
