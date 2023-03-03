@@ -5,10 +5,7 @@ import com.v10.ratatouille23.mapper.UserMapper
 import com.v10.ratatouille23.service.UserService
 import org.springframework.http.ResponseEntity
 import org.springframework.security.access.prepost.PreAuthorize
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/user")
@@ -27,6 +24,9 @@ class UserController (
         ResponseEntity.ok(ServerResponse.ok(userService.getAll(restairantId)))
 
 
-//TODO() CANCELLARE L'UTENTE
+    @DeleteMapping("{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
+    fun delete(@PathVariable("id") userId: Long) =
+        ResponseEntity.ok(ServerResponse.ok(this.userMapper.toDomain(userService.delete(userId))))
 
 }

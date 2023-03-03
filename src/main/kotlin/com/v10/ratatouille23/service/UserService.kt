@@ -81,4 +81,10 @@ class UserService(
         }
         return CustomUserDetails.build(user)
     }
+
+    fun delete(userId: Long): User{
+        val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not valid")
+        this.userRepository.deleteById(userId)
+        return user
+    }
 }
