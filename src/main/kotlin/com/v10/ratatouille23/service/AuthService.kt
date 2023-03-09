@@ -2,6 +2,8 @@ package com.v10.ratatouille23.service
 
 import com.v10.ratatouille23.component.ActivationTokenManager
 import com.v10.ratatouille23.component.AuthenticatedUserHelper
+import com.v10.ratatouille23.controller.exceptions.ExceptionController
+import com.v10.ratatouille23.controller.exceptions.InvalidEmailException
 import com.v10.ratatouille23.dto.UserDto
 import com.v10.ratatouille23.dto.request.ResetPasswordDto
 import com.v10.ratatouille23.dto.request.SignupRequestDto
@@ -9,16 +11,14 @@ import com.v10.ratatouille23.mapper.UserMapper
 import com.v10.ratatouille23.repository.UserRepository
 import com.v10.ratatouille23.security.JWTCustomManager
 import com.v10.ratatouille23.utils.UserRoles
+import org.apache.commons.validator.routines.EmailValidator
 import org.springframework.http.HttpStatus
-import org.springframework.http.ResponseEntity
-import org.springframework.security.core.context.SecurityContextHolder
-import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
 import org.springframework.web.server.ResponseStatusException
 import java.util.logging.Logger
 
-    @Service
+@Service
     class AuthService(
         private val userService: UserService,
         private val userRepository: UserRepository,
@@ -32,6 +32,9 @@ import java.util.logging.Logger
 
         //Registrazione utente con ruolo ADMIN
         fun signup(user: SignupRequestDto): Boolean {
+            if (!EmailValidator.getInstance().isValid(user.email))
+                throw InvalidEmailException("email not valid")
+
             val toSave = UserDto(null, user.name, user.surname, user.email, user.password, UserRoles.ADMIN, null, enabled = false, firstAccess = true)
             val saved = this.userService.save(toSave)
             val token = this.activationTokenManager.generate(saved.id.toString())
