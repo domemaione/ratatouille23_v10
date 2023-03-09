@@ -3,10 +3,10 @@ POST {{host}}/api/auth/signup
 Content-Type: application/json
 
 {
-  "name": "giacomino",
-  "surname": "dinamo",
-  "email": "fagibic549@wireps.com",
-  "password": "provaprova"
+  "name": "franco",
+  "surname": "cavaluccio",
+  "email": "giacominofedele@gmail.com",
+  "password": "Provaprova-1"
 }
 ###
 POST {{host}}/api/auth/signup/op

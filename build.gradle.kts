@@ -39,6 +39,8 @@ dependencies {
     implementation("io.jsonwebtoken:jjwt:0.9.1")
     implementation("com.sendgrid:sendgrid-java:4.9.3")
     implementation ("org.springframework:spring-context:5.3.19")
+    implementation("commons-validator:commons-validator:1.7")
+
 
     testImplementation("org.testng:testng:7.7.0")
     developmentOnly("org.springframework.boot:spring-boot-devtools")

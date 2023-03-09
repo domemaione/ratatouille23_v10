@@ -2,8 +2,10 @@ package com.v10.ratatouille23.service
 
 import com.v10.ratatouille23.component.ActivationTokenManager
 import com.v10.ratatouille23.component.AuthenticatedUserHelper
+import com.v10.ratatouille23.component.PasswordValidator
 import com.v10.ratatouille23.controller.exceptions.ExceptionController
 import com.v10.ratatouille23.controller.exceptions.InvalidEmailException
+import com.v10.ratatouille23.controller.exceptions.InvalidPasswordException
 import com.v10.ratatouille23.dto.UserDto
 import com.v10.ratatouille23.dto.request.ResetPasswordDto
 import com.v10.ratatouille23.dto.request.SignupRequestDto
@@ -15,6 +17,7 @@ import org.apache.commons.validator.routines.EmailValidator
 import org.springframework.http.HttpStatus
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
+import org.springframework.validation.BeanPropertyBindingResult
 import org.springframework.web.server.ResponseStatusException
 import java.util.logging.Logger
 
@@ -26,7 +29,8 @@ import java.util.logging.Logger
         private val emailService: EmailService,
         private val activationTokenManager: ActivationTokenManager,
         private val jwtCustomManager: JWTCustomManager,
-        private val passwordEncoder: BCryptPasswordEncoder
+        private val passwordEncoder: BCryptPasswordEncoder,
+        private val passwordValidator: PasswordValidator
     ) {
         private val logger = Logger.getLogger(AuthService::class.java.name)
 
@@ -34,6 +38,10 @@ import java.util.logging.Logger
         fun signup(user: SignupRequestDto): Boolean {
             if (!EmailValidator.getInstance().isValid(user.email))
                 throw InvalidEmailException("email not valid")
+            //TODO non so se va bene, ma nel caso devo contrallare le policy anche in signup op
+            val errors = passwordValidator.validate(user.password)
+            if (errors.hasErrors())
+                throw InvalidPasswordException("Password failed: $errors.message")
 
             val toSave = UserDto(null, user.name, user.surname, user.email, user.password, UserRoles.ADMIN, null, enabled = false, firstAccess = true)
             val saved = this.userService.save(toSave)

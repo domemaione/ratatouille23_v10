@@ -44,4 +44,16 @@ class ExceptionController {
         e.printStackTrace()
         return ResponseEntity("Incorrect required fields", HttpStatus.BAD_REQUEST)
     }
+
+    @ExceptionHandler
+    fun handleInvalidEmailException(e: InvalidEmailException): ResponseEntity<Any> {
+        this.logger.severe("handleInvalidEmailException() - error: ${e.message}")
+        return ResponseEntity(e.message, HttpStatus.BAD_REQUEST)
+    }
+
+    @ExceptionHandler
+    fun handleInvalidPasswordException(e: InvalidPasswordException): ResponseEntity<Any> {
+        this.logger.severe("handleInvalidPasswordException() - error: ${e.message}")
+        return ResponseEntity(e.message, HttpStatus.BAD_REQUEST)
+    }
 }
