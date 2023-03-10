@@ -11,10 +11,7 @@ import com.v10.ratatouille23.service.MenuService
 import com.v10.ratatouille23.service.TableRestaurantService
 import org.springframework.http.ResponseEntity
 import org.springframework.security.access.prepost.PreAuthorize
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/tablerestaurant")
@@ -29,4 +26,9 @@ class TableRestaurantController(
     fun add(@RequestBody tableRequestDto: TableRequestDto) =
         ResponseEntity.ok(ServerResponse.ok(this.tableRestaurantMapper.toDomain(tableRestaurantService.add(tableRequestDto))))
 
+    @GetMapping("all/restaurant/{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun getAll(@PathVariable("id") restaurantId: Long) =
+        ResponseEntity.ok(ServerResponse.ok(tableRestaurantService.getAll(restaurantId)))
+    //TODO cancellare un tavolo
 }

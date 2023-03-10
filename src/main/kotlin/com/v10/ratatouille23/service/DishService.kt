@@ -3,10 +3,7 @@ package com.v10.ratatouille23.service
 import com.v10.ratatouille23.component.AuthenticatedUserHelper
 import com.v10.ratatouille23.dto.request.DishRequestDto
 import com.v10.ratatouille23.model.*
-import com.v10.ratatouille23.repository.CategoryRepository
-import com.v10.ratatouille23.repository.DishAllergensRepository
-import com.v10.ratatouille23.repository.DishRepository
-import com.v10.ratatouille23.repository.MenuRepository
+import com.v10.ratatouille23.repository.*
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -15,7 +12,7 @@ class DishService(
     private val menuRepository: MenuRepository,
     private val categoryRepository: CategoryRepository,
     private val dishRepository: DishRepository,
-    private val dishAllergensRepository: DishAllergensRepository
+    private val dishAllergensRepository: DishAllergensRepository, private val restaurantRepository: RestaurantRepository
 ){
 
     @Transactional
@@ -67,13 +64,14 @@ class DishService(
     }
 
 
-    fun getAll(): List<Dish> {
-        return dishRepository.findAll()
+    fun getAll(restaurantId: Long): List<Dish> {
+        val menuId = this.menuRepository.findByRestaurantId(restaurantId).id
+        return dishRepository.findAllByMenuId(menuId)
     }
 
     fun getDishesByCategory(categoryId: Long): List<Dish>{
         val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not valid")
-        return dishRepository.findByCategoryId(categoryId)
+        return dishRepository.findAllByCategoryId(categoryId)
     }
 
     fun update(dishRequestDto: DishRequestDto): Dish {

@@ -6,5 +6,6 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface DishRepository : JpaRepository<Dish, Long> {
-    fun findByCategoryId(categoryId: Long): List<Dish>
+    fun findAllByCategoryId(categoryId: Long): List<Dish>
+    fun findAllByMenuId(menuId: Long?): List<Dish>
 }

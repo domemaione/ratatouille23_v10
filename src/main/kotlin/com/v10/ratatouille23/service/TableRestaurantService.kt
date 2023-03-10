@@ -19,4 +19,8 @@ class TableRestaurantService(
         return saved
     }
 
+    fun getAll(restaurantId: Long): List<TableRestaurant>{
+        return tableRestaurantRepository.findAllByRestaurantId(restaurantId)
+    }
+
 }

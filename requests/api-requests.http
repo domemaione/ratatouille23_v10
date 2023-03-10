@@ -3,9 +3,9 @@ POST {{host}}/api/auth/signup
 Content-Type: application/json
 
 {
-  "name": "franco",
-  "surname": "cavaluccio",
-  "email": "giacominofedele@gmail.com",
+  "name": "peppino",
+  "surname": "dicapri",
+  "email": "dicapri@gmail.com",
   "password": "Provaprova-1"
 }
 ###
@@ -34,45 +34,46 @@ POST {{host}}/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "fagibic549@wireps.com",
-  "password": "provaprova"
+  "email": "dicapri@gmail.com",
+  "password": "Provaprova-1"
 }
 
 ###
 POST {{host}}/api/restaurant
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3MjUyOTkyLCJleHAiOjE2NzczMjkyOTJ9.zY_Lmj3Si_e8BSfWmbpCmxZ6PGDJmYLAdJuRODEwDJdV6jkGMIR6o_f2p3hE9IBrsd9y9AbAVqT_FUSRP2PCEg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
 Content-Type: application/json
 
 {
   "id": null,
-  "name": "quel fottuto ristorante",
-  "address": "Via marco polo"
+  "name": "Di capri forever",
+  "address": "Via Roma"
 }
 
 ###
 POST {{host}}/api/menu/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3MjUyOTkyLCJleHAiOjE2NzczMjkyOTJ9.zY_Lmj3Si_e8BSfWmbpCmxZ6PGDJmYLAdJuRODEwDJdV6jkGMIR6o_f2p3hE9IBrsd9y9AbAVqT_FUSRP2PCEg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
+
 
 
 ###
 POST {{host}}/api/dish/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3ODY2NjQ1LCJleHAiOjE2Nzc5NDI5NDV9._jHpUVZquZl1yk8kIEekAkkNplH-clhdVj-UM8xzji1YcgOckucjASx2Yt-C8geNoCfbEnFrSeNOJOfmsPdvYw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
 Content-Type: application/json
 
 {
   "id": null,
-  "name": "pizza alla nutella",
-  "description": "nutella della ferrero",
+  "name": "pizza con l'ananas",
+  "description": "ananas ben cotta di Pozzuoli",
   "nameLan": null,
   "descriptionLan": null,
-  "cost": 8.50,
+  "cost": 9.50,
   "categoryName": "primo piatto",
   "allergens": [12,14]
 
 }
 ###
-POST {{host}}/api/cart/add/112
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NTc2MTM3LCJleHAiOjE2Nzc2NTI0Mzd9.yXkbtN8qWhu_j4fbEZCl5wLsoE2UybhqVCQEcoQOFajUrxSFdoBsxIqijyQCFRWIXGJ6KZNz6xD1ivJgmV88ug
+POST {{host}}/api/cart/add/table/112
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDQ5MzYyLCJleHAiOjE2Nzg1MjU2NjJ9.8mE3Zq69Y8wv3mqWnW8h7pwjrcXOd6viEtaxtIcwoPz9euSJdLttuUzwRTxUKgfqi4Ci9vuixjUlqyrXJ-X2LA
 Content-Type: application/json
 
 {
@@ -150,6 +151,16 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 
 
+
+
+
+
+###
+GET {{host}}/api/tablerestaurant/all/restaurant/229
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTU4NjgsImV4cCI6MTY3ODUzMjE2OH0.ZQ_gS8JN9Yn0KonjR5dq3AcTrGSy3BjXYHFGDnyZE6k86B7chuMe1_nuBX20x1G-Ri56JATja1688z3SjPifVw
+
+
+
 ###
 GET {{host}}/api/cartdish/user/107
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDQxMDAyLCJleHAiOjE2Nzg1MTczMDJ9.BwyUUJjKayrLSwU4mnlFCBtlsT-RsalkebfO3aDQnPVzmjU37day-0MqEjNPS3uPjAcxLLwD66cvBSHhU8THwg
@@ -173,8 +184,10 @@ GET {{host}}/api/dishallergens/all
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3ODQyOTI5LCJleHAiOjE2Nzc5MTkyMjl9.3ovKMw8bOBp5QySQd-eehgwMPp_X_DA-Q9_txI5Yk1wofu7EjD9pzt6lUZVe4hyMHiFYmLDsclMRCHCaPIoF9A
 
 ###
-GET {{host}}/api/dish/all
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NjYwMzA0LCJleHAiOjE2Nzc3MzY2MDR9.DUG0RABZDGZEf4aS9h5vH4bPDfhEcDcNaAT6hhj3QzRLGyQYWfHCUV7MbXnwU-zCl-7F2_yIgkt0JNPvPUvbGw
+GET {{host}}/api/dish/all/restaurant/229
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
+
+
 
 ###
 GET {{host}}/api/cart/bill/224

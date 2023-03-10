@@ -29,10 +29,10 @@ class DishController (
     fun get(@PathVariable("id") id: Long) =
         ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.get(id))))
 
-    @GetMapping("all")
+    @GetMapping("all/restaurant/{id}")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
-    fun getAll() =
-        ResponseEntity.ok(ServerResponse.ok(dishService.getAll()))
+    fun getAll(@PathVariable("id") restaurantId: Long) =
+        ResponseEntity.ok(ServerResponse.ok(dishService.getAll(restaurantId)))
 
     @GetMapping("category/{id}")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")

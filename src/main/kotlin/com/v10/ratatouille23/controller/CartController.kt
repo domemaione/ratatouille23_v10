@@ -15,10 +15,10 @@ class CartController(
     private val cartService: CartService
 ){
 
-    @PostMapping("add/{id}")
+    @PostMapping("add/table/{id}")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
-    fun add(@PathVariable("id") id: Long, @RequestBody cartRequestDto: CartRequestDto) =
-        ResponseEntity.ok(ServerResponse.ok(this.cartMapper.toDomain(cartService.add(id,cartRequestDto))))
+    fun add(@PathVariable("id") tableId: Long, @RequestBody cartRequestDto: CartRequestDto) =
+        ResponseEntity.ok(ServerResponse.ok(this.cartMapper.toDomain(cartService.add(tableId,cartRequestDto))))
 
 
     @GetMapping("bill/{id}")

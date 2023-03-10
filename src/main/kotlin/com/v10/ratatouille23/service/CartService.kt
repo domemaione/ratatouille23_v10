@@ -25,9 +25,9 @@ class CartService(
     ){
 
     @Transactional
-    fun add(id: Long, cartRequestDto: CartRequestDto): Cart {
+    fun add(tableId: Long, cartRequestDto: CartRequestDto): Cart {
         val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not valid")
-        val tableId = this.tableRestaurantRepository.getReferenceById(id).id ?: throw IllegalStateException("Table not found")
+        val tableRestaurantId = this.tableRestaurantRepository.getReferenceById(tableId).id ?: throw IllegalStateException("Table not found")
         val found = this.cartRepository.findByTableId(tableId)
 
         //una get reference nella tabella cart_dish che se non trova un id del cameriere nell'ordine trovato allora si procede all'ordine
@@ -53,7 +53,7 @@ class CartService(
         } else if (found == null) {
             val toSave = Cart(
                 id = null,
-                tableId = tableId,
+                tableId = tableRestaurantId,
                 status = CartStatus.OPEN,
                 createdAt = LocalDateTime.now(),
                 updateAt = null //TODO da controllare
@@ -75,9 +75,6 @@ class CartService(
             }
             return savedOrder
         }
-
-
-
         return found
     }
 
