@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface CartDishRepository : JpaRepository<CartDish, Long> {
+    fun findByUserId(userId: Long): List<CartDish>
 }
