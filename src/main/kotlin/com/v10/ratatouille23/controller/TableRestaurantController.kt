@@ -26,9 +26,9 @@ class TableRestaurantController(
     fun add(@RequestBody tableRequestDto: TableRequestDto) =
         ResponseEntity.ok(ServerResponse.ok(this.tableRestaurantMapper.toDomain(tableRestaurantService.add(tableRequestDto))))
 
-    @GetMapping("all/restaurant/{id}")
+    @GetMapping("all")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
-    fun getAll(@PathVariable("id") restaurantId: Long) =
-        ResponseEntity.ok(ServerResponse.ok(tableRestaurantService.getAll(restaurantId)))
+    fun getAll() =
+        ResponseEntity.ok(ServerResponse.ok(tableRestaurantService.getAll()))
     //TODO cancellare un tavolo
 }

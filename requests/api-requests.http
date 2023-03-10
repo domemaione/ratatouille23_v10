@@ -34,8 +34,8 @@ POST {{host}}/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "dicapri@gmail.com",
-  "password": "Provaprova-1"
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
 }
 
 ###
@@ -156,9 +156,8 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 
 ###
-GET {{host}}/api/tablerestaurant/all/restaurant/229
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTU4NjgsImV4cCI6MTY3ODUzMjE2OH0.ZQ_gS8JN9Yn0KonjR5dq3AcTrGSy3BjXYHFGDnyZE6k86B7chuMe1_nuBX20x1G-Ri56JATja1688z3SjPifVw
-
+GET {{host}}/api/tablerestaurant/all
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDYwMTQ2LCJleHAiOjE2Nzg1MzY0NDZ9.B9yRwP3UQWeyvBAwneBnN1d93p27SNPGaLYEoQR7S0CsAa9FdE9HRmu5skPLbWlU-1tde6c0JIiFB6svHWKEbQ
 
 
 ###
@@ -184,9 +183,8 @@ GET {{host}}/api/dishallergens/all
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3ODQyOTI5LCJleHAiOjE2Nzc5MTkyMjl9.3ovKMw8bOBp5QySQd-eehgwMPp_X_DA-Q9_txI5Yk1wofu7EjD9pzt6lUZVe4hyMHiFYmLDsclMRCHCaPIoF9A
 
 ###
-GET {{host}}/api/dish/all/restaurant/229
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
-
+GET {{host}}/api/dish/all
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDU5ODE4LCJleHAiOjE2Nzg1MzYxMTh9.c6VR4ZRzx6vjP-aE7XIvhfXO1Fd2TWR51u8v-AXI-w7hFtAgZRzH-XvbGzvwzrcSsgdlQSHKKvlvNlEA0fnntg
 
 
 ###

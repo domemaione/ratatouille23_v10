@@ -64,7 +64,8 @@ class DishService(
     }
 
 
-    fun getAll(restaurantId: Long): List<Dish> {
+    fun getAll(): List<Dish> {
+        val restaurantId = AuthenticatedUserHelper.get()?.restaurantId ?: throw IllegalStateException("Restaurant not found")
         val menuId = this.menuRepository.findByRestaurantId(restaurantId).id
         return dishRepository.findAllByMenuId(menuId)
     }

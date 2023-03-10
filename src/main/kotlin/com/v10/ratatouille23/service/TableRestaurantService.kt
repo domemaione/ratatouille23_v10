@@ -19,7 +19,8 @@ class TableRestaurantService(
         return saved
     }
 
-    fun getAll(restaurantId: Long): List<TableRestaurant>{
+    fun getAll(): List<TableRestaurant>{
+        val restaurantId = AuthenticatedUserHelper.get()?.restaurantId ?: throw IllegalStateException("Restaurant not found")
         return tableRestaurantRepository.findAllByRestaurantId(restaurantId)
     }
 
