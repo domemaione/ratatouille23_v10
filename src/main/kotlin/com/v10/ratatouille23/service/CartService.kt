@@ -101,5 +101,9 @@ class CartService(
         return billViewRepository.findByCartId(cartId)
     }
 
+    fun getAll(): List<Cart>{
+        return cartRepository.findAll()
+    }
+
 
 }

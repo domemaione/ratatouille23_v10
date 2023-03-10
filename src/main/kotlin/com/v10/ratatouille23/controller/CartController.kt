@@ -26,6 +26,10 @@ class CartController(
     fun getBill(@PathVariable("id") cartId: Long) =
         ResponseEntity.ok(ServerResponse.ok(cartService.getBill(cartId)))
 
+    @GetMapping("all")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun getAll() =
+        ResponseEntity.ok(ServerResponse.ok(cartService.getAll()))
 
 
     @PutMapping("close/{id}")
