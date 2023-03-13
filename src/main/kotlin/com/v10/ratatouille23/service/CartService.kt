@@ -47,19 +47,15 @@ class CartService(
                 this.cartDishRepository.saveAll(toSaveDishes)
             }
 
-        } else if (found != null && found.status == CartStatus.CLOSED) {
-            throw IllegalStateException("Cart already closed")
-
-        } else if (found == null) {
+        } else if ((found == null) || (found.status == CartStatus.CLOSED)) {
             val toSave = Cart(
                 id = null,
-                tableId = tableRestaurantId,
+                tableId = tableId,
                 status = CartStatus.OPEN,
                 createdAt = LocalDateTime.now(),
                 updateAt = null //TODO da controllare
             )
             val savedOrder = this.cartRepository.save(toSave)
-
             if (cartRequestDto.dishes != null) {
                 val toSaveDishes = cartRequestDto.dishes.map {
                     CartDish(
