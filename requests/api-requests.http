@@ -223,7 +223,6 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 GET {{host}}/api/restaurant/
 ###
 GET {{host}}/api/user/{email}
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzQ2ODQ2MTUsImV4cCI6MTY3NDc2MDkxNX0.lBeJ0my_blBdpmjdoDk1eFPX5YDvGNJc3VHZWkJAsFhw7CEbidf_Qzt9zGgLB7ZgdPG2kZ4LPO1IVs8lWLNGLw
 
 ###
 GET {{host}}/api/auth/validate/user/{token}

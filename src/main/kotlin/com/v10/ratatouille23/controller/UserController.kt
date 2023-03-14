@@ -15,7 +15,6 @@ class UserController (
 ){
 
     @GetMapping("{email}")
-    @PreAuthorize("hasAuthority('ADMIN')")
     fun get(@PathVariable("email") email: String) =
         ResponseEntity.ok(ServerResponse.ok(this.userMapper.toDomain(userService.get(email))))
 

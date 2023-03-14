@@ -32,7 +32,7 @@ class WebSecurity(
             ?.antMatchers(HttpMethod.GET, "/api/auth/validate/user/**")?.permitAll()
             ?.antMatchers(HttpMethod.GET, "/api/auth/check/token/*")?.permitAll()
            // ?.antMatchers(HttpMethod.GET, "/api/user/all/*")?.permitAll()
-           // ?.antMatchers(HttpMethod.GET, "/api/user/*")?.permitAll()
+            ?.antMatchers(HttpMethod.GET, "/api/user/{email}")?.permitAll()
             ?.antMatchers(HttpMethod.GET, "/api/restaurant/{id}")?.permitAll()
             ?.anyRequest()?.authenticated()
             ?.and()
