@@ -92,6 +92,10 @@ class CartService(
         return billViewRepository.findByCartId(cartId)
     }
 
+    fun getAllBill(): List<BillView>{
+        return billViewRepository.findAll()
+    }
+
     fun getAll(): List<Cart>{
         return cartRepository.findAll()
     }

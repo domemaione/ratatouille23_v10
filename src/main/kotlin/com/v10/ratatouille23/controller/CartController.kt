@@ -20,11 +20,17 @@ class CartController(
     fun add(@PathVariable("id") tableId: Long, @RequestBody cartRequestDto: CartRequestDto) =
         ResponseEntity.ok(ServerResponse.ok(this.cartMapper.toDomain(cartService.add(tableId,cartRequestDto))))
 
+    @GetMapping("bill/all")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun getAllBill() =
+        ResponseEntity.ok(ServerResponse.ok(cartService.getAllBill()))
+
 
     @GetMapping("bill/{id}")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
     fun getBill(@PathVariable("id") cartId: Long) =
         ResponseEntity.ok(ServerResponse.ok(cartService.getBill(cartId)))
+
 
     @GetMapping("all")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
