@@ -62,11 +62,11 @@ class UserService(
         this.logger.info("get() - returned obj: ${found.get()}")
         return found.get()
     }
-
+/*
     fun getAll(restaurantId: Long): List<User>{
         val user = AuthenticatedUserHelper.get() ?: throw IllegalStateException("User not valid")
         return userRepository.getAllNoAdmin(restaurantId)
-    }
+    }*/
 
     fun getAll(): List<User>{
         val restaurantId = AuthenticatedUserHelper.get()?.restaurantId ?: throw IllegalStateException("Restaurant not found")

@@ -17,11 +17,11 @@ class UserController (
     @GetMapping("{email}")
     fun get(@PathVariable("email") email: String) =
         ResponseEntity.ok(ServerResponse.ok(this.userMapper.toDomain(userService.get(email))))
-
+/*
     @GetMapping("all/{id}")
     @PreAuthorize("hasAuthority('ADMIN')")
     fun getAll(@PathVariable("id") restairantId: Long) =
-        ResponseEntity.ok(ServerResponse.ok(userService.getAll(restairantId)))
+        ResponseEntity.ok(ServerResponse.ok(userService.getAll(restairantId)))*/
 
     @GetMapping("all")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
