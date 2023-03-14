@@ -68,6 +68,11 @@ class UserService(
         return userRepository.getAllNoAdmin(restaurantId)
     }
 
+    fun getAll(): List<User>{
+        val restaurantId = AuthenticatedUserHelper.get()?.restaurantId ?: throw IllegalStateException("Restaurant not found")
+        return userRepository.findAllByRestaurantId(restaurantId)
+    }
+
 
     //Viene usata nel package security => JWTAuthorizationFilter, per prendere l'utente e verificare se è autorizzato
     override fun loadUserByUsername(username: String?): UserDetails {

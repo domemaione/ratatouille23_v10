@@ -23,6 +23,10 @@ class UserController (
     fun  getAll(@PathVariable("id") restairantId: Long) =
         ResponseEntity.ok(ServerResponse.ok(userService.getAll(restairantId)))
 
+    @GetMapping("all")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    fun  getAll() =
+        ResponseEntity.ok(ServerResponse.ok(userService.getAll()))
 
     @DeleteMapping("{id}")
     @PreAuthorize("hasAuthority('ADMIN')")
