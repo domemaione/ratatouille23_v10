@@ -1,5 +1,9 @@
 ARG PORT=8080
 
+FROM mysql:latest
+ARG TARGETPLATFORM=linux/arm/v7
+
+
 FROM gradle:7.2.0-jdk17 as BUILD
 COPY . /src
 WORKDIR /src

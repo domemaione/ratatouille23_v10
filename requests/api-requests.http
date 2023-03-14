@@ -40,13 +40,13 @@ Content-Type: application/json
 
 ###
 POST {{host}}/api/restaurant
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NjMyNDg0LCJleHAiOjE2Nzg3MDg3ODR9.hmttB5vnG0MKoocpEKISE9D4QetEdq4otnficnF_PrGhGt-a-KahvgxX4B_s2VW9bZ-ms-_-Hnz5aHKwPYaVNg
 Content-Type: application/json
 
 {
   "id": null,
-  "name": "Di capri forever",
-  "address": "Via Roma"
+  "name": "Ristorante la matricola",
+  "address": "Via Casanova"
 }
 
 ###
@@ -73,11 +73,11 @@ Content-Type: application/json
 }
 ###
 POST {{host}}/api/cart/add/table/112
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDQ5MzYyLCJleHAiOjE2Nzg1MjU2NjJ9.8mE3Zq69Y8wv3mqWnW8h7pwjrcXOd6viEtaxtIcwoPz9euSJdLttuUzwRTxUKgfqi4Ci9vuixjUlqyrXJ-X2LA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzkyNzM2LCJleHAiOjE2Nzg4NjkwMzZ9.jyTg2H4DNMnY2EdrJIGQ09Yh_hwS4l7IDfJraVwaqfHX95p-dPdt2mptJCmY2g8rkEviyLvxxcko8z5qVd1K0g
 Content-Type: application/json
 
 {
-  "dishes": [122]
+  "dishes": [210]
 }
 ###
 POST {{host}}/api/allergens/add
@@ -143,8 +143,8 @@ Content-Type: application/json
   "categoryName": "primo piatto"
 }
 ###
-PUT {{host}}/api/cart/close/224
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDM4Njc1LCJleHAiOjE2Nzg1MTQ5NzV9.mVTYgppcFWmUv8H9QQa4VNzBpqsdg5yF9TR9sWz85YxZOdb62nlzHrlE41Bp4v6TXweb55XXIUt4DFExO34Lnw
+PUT {{host}}/api/cart/close/245
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzkyNzM2LCJleHAiOjE2Nzg4NjkwMzZ9.jyTg2H4DNMnY2EdrJIGQ09Yh_hwS4l7IDfJraVwaqfHX95p-dPdt2mptJCmY2g8rkEviyLvxxcko8z5qVd1K0g
 
 
 
@@ -153,6 +153,25 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+###
+GET {{host}}/api/cart/bill/all
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4Nzk1NzcwLCJleHAiOjE2Nzg4NzIwNzB9.HEzbQiX1nNtj5R_oTl3Mi-gu1nu4oFkjv22q__ExeSl5geU9YK7jAOlk-KBGhrnVvQBceTXpDoJM_3-MMoXIIA
+
+
+###
+GET {{host}}/api/user/all
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4Nzk0OTgwLCJleHAiOjE2Nzg4NzEyODB9.iNLjgox8zosMFN5xXpJSds3wZF4yw125AHTfbsjFGxIsjcHglfh_38tlXXy10o41kuUT0Hoe3Oca36QxMuv4GA
 
 
 ###
