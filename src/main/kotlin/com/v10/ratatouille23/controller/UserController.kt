@@ -20,12 +20,12 @@ class UserController (
 
     @GetMapping("all/{id}")
     @PreAuthorize("hasAuthority('ADMIN')")
-    fun  getAll(@PathVariable("id") restairantId: Long) =
+    fun getAll(@PathVariable("id") restairantId: Long) =
         ResponseEntity.ok(ServerResponse.ok(userService.getAll(restairantId)))
 
     @GetMapping("all")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
-    fun  getAll() =
+    fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(userService.getAll()))
 
     @DeleteMapping("{id}")
@@ -33,4 +33,5 @@ class UserController (
     fun delete(@PathVariable("id") userId: Long) =
         ResponseEntity.ok(ServerResponse.ok(this.userMapper.toDomain(userService.delete(userId))))
 
+    //TODO: la PUT per modificare alcuni dati dell'utente come il nome
 }

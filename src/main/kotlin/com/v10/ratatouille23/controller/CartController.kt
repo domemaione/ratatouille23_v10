@@ -43,6 +43,6 @@ class CartController(
     fun closeCart(@PathVariable("id") id: Long) =
         ResponseEntity.ok(ServerResponse.ok(this.cartMapper.toDomain(cartService.closeCart(id))))
 
-
+    //TODO: cancellare un ordine tramite cartId
 
 }

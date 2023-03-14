@@ -38,4 +38,5 @@ class RestaurantController (
     fun delete() =
         ResponseEntity.ok(ServerResponse.ok(this.restaurantMapper.toDomain(restaurantService.delete())))
 
+    //TODO: la PUT per modificare alcune cose del ristorante come il nome, l'indirizzo
 }

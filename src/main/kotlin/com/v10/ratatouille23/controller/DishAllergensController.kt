@@ -18,4 +18,6 @@ class DishAllergensController(
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
     fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(dishAllergensService.getAll()))
+
+    //TODO: la DELETE
 }

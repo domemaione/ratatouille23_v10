@@ -30,5 +30,5 @@ class TableRestaurantController(
     @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
     fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(tableRestaurantService.getAll()))
-    //TODO cancellare un tavolo
+    //TODO: cancellare un tavolo
 }
