@@ -1,0 +1,721 @@
+GET http://localhost:8080/api/user
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4ODQwMjk4LCJleHAiOjE2Nzg5MTY1OTh9.qXKgAZ-JeXdx7R7vDGoIIhO_DiO0BX9FR0nawZ5_3FIFiS9v0sfPieuZe3feQ1Vhq3QjMwbIoHK_D5z5WGFFEg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-15T013206.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-15T013138.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-15T002540.200.txt
+
+###
+
+GET http://localhost:8080/api/user/all
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4ODM1MTY3LCJleHAiOjE2Nzg5MTE0Njd9.MXnHR8gTqsbxv1SMFZL5O-jYLGzuKxiG52FmR8k6JIsCb8QnjzIVmGSgdHPDApRtXWVeRw6788lwGJD1bj8FJA
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-15T000630.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-15T000607.200.txt
+
+###
+
+GET http://localhost:8080/api/cart/bill/all
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4Nzk1NzcwLCJleHAiOjE2Nzg4NzIwNzB9.HEzbQiX1nNtj5R_oTl3Mi-gu1nu4oFkjv22q__ExeSl5geU9YK7jAOlk-KBGhrnVvQBceTXpDoJM_3-MMoXIIA
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-14T130948.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-14T130930.200.txt
+
+###
+
+GET http://localhost:8080/api/user/all
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4Nzk0OTgwLCJleHAiOjE2Nzg4NzEyODB9.iNLjgox8zosMFN5xXpJSds3wZF4yw125AHTfbsjFGxIsjcHglfh_38tlXXy10o41kuUT0Hoe3Oca36QxMuv4GA
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-14T125638.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-14T125620.200.txt
+
+###
+
+POST http://localhost:8080/api/cart/add/table/112
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzkyNzM2LCJleHAiOjE2Nzg4NjkwMzZ9.jyTg2H4DNMnY2EdrJIGQ09Yh_hwS4l7IDfJraVwaqfHX95p-dPdt2mptJCmY2g8rkEviyLvxxcko8z5qVd1K0g
+Content-Type: application/json
+Content-Length: 21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "dishes": [210]
+}
+
+<> 2023-03-14T122147.200.json
+
+###
+
+PUT http://localhost:8080/api/cart/close/245
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzkyNzM2LCJleHAiOjE2Nzg4NjkwMzZ9.jyTg2H4DNMnY2EdrJIGQ09Yh_hwS4l7IDfJraVwaqfHX95p-dPdt2mptJCmY2g8rkEviyLvxxcko8z5qVd1K0g
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-14T122130.200.json
+
+###
+
+POST http://localhost:8080/api/cart/add/table/112
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzkyNzM2LCJleHAiOjE2Nzg4NjkwMzZ9.jyTg2H4DNMnY2EdrJIGQ09Yh_hwS4l7IDfJraVwaqfHX95p-dPdt2mptJCmY2g8rkEviyLvxxcko8z5qVd1K0g
+Content-Type: application/json
+Content-Length: 21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "dishes": [210]
+}
+
+<> 2023-03-14T122020.200.json
+
+###
+
+POST http://localhost:8080/api/cart/add/table/112
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzkyNzM2LCJleHAiOjE2Nzg4NjkwMzZ9.jyTg2H4DNMnY2EdrJIGQ09Yh_hwS4l7IDfJraVwaqfHX95p-dPdt2mptJCmY2g8rkEviyLvxxcko8z5qVd1K0g
+Content-Type: application/json
+Content-Length: 21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "dishes": [223]
+}
+
+<> 2023-03-14T121933.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-14T121857.200.txt
+
+###
+
+POST http://localhost:8080/api/cart/add/table/112
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzkwNzM3LCJleHAiOjE2Nzg4NjcwMzd9.ny1QMvGcBYLfTdPlvIO0hJLMeNS4Pmol3XanlqPWaY5Np5-VbpOffL0c7fKNu9TAIYKv_fmAii3GQ8ZQlGZ03A
+Content-Type: application/json
+Content-Length: 21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "dishes": [223]
+}
+
+<> 2023-03-14T114611.500.txt
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-14T114537.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-14T113554.404.html
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-14T112743.404.html
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-14T112014.404.html
+
+###
+
+PUT http://localhost:8080/api/cart/close/234
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzA0NDM3LCJleHAiOjE2Nzg3ODA3Mzd9.yig5xB-mB6SLEPYhXacC3xML9X_AEtNtx4SR801BYa-_zh933x5sKdFNFbjLll5pbruYUeKa4GS4HyNx_9C_Mw
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-13T114912.200.json
+
+###
+
+POST http://localhost:8080/api/cart/add/table/112
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzA0NDM3LCJleHAiOjE2Nzg3ODA3Mzd9.yig5xB-mB6SLEPYhXacC3xML9X_AEtNtx4SR801BYa-_zh933x5sKdFNFbjLll5pbruYUeKa4GS4HyNx_9C_Mw
+Content-Type: application/json
+Content-Length: 21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "dishes": [199]
+}
+
+<> 2023-03-13T114824.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-13T114717.200.txt
+
+###
+
+POST http://localhost:8080/api/cart/add/table/112
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzAzODMzLCJleHAiOjE2Nzg3ODAxMzN9.5IcGSRs38s9DhZzCclMGBNsMlI6gU6SexOD3nNNJUiTEaFsCrww_6yI4tcMjoefKEIQd5GQwnc95jpY9Lhtbiw
+Content-Type: application/json
+Content-Length: 21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "dishes": [122]
+}
+
+<> 2023-03-13T113748.400.txt
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-13T113713.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-12T171006.404.html
+
+###
+
+POST http://localhost:8080/api/restaurant
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NjMyNDg0LCJleHAiOjE2Nzg3MDg3ODR9.hmttB5vnG0MKoocpEKISE9D4QetEdq4otnficnF_PrGhGt-a-KahvgxX4B_s2VW9bZ-ms-_-Hnz5aHKwPYaVNg
+Content-Type: application/json
+Content-Length: 82
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": null,
+  "name": "Ristorante la matricola",
+  "address": "Via Casanova"
+}
+
+<> 2023-03-12T154909.400.txt
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-12T154804.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-12T154423.404.html
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-12T153751.404.html
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-12T153353.404.html
+
+###
+
+GET http://localhost:8080/api/tablerestaurant/all
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDYwMTQ2LCJleHAiOjE2Nzg1MzY0NDZ9.B9yRwP3UQWeyvBAwneBnN1d93p27SNPGaLYEoQR7S0CsAa9FdE9HRmu5skPLbWlU-1tde6c0JIiFB6svHWKEbQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-10T155607.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-10T155546.200.txt
+
+###
+
+GET http://localhost:8080/api/dish/all
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDU5ODE4LCJleHAiOjE2Nzg1MzYxMTh9.c6VR4ZRzx6vjP-aE7XIvhfXO1Fd2TWR51u8v-AXI-w7hFtAgZRzH-XvbGzvwzrcSsgdlQSHKKvlvNlEA0fnntg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-10T155046.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-10T155019.200.txt
+
+###
+
+GET http://localhost:8080/api/tablerestaurant/all/restaurant/229
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTU4NjgsImV4cCI6MTY3ODUzMjE2OH0.ZQ_gS8JN9Yn0KonjR5dq3AcTrGSy3BjXYHFGDnyZE6k86B7chuMe1_nuBX20x1G-Ri56JATja1688z3SjPifVw
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-10T144529.200.json
+
+###
+
+GET http://localhost:8080/api/tablerestaurant/all/restaurant/108
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTU4NjgsImV4cCI6MTY3ODUzMjE2OH0.ZQ_gS8JN9Yn0KonjR5dq3AcTrGSy3BjXYHFGDnyZE6k86B7chuMe1_nuBX20x1G-Ri56JATja1688z3SjPifVw
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-10T144506.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 64
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "dicapri@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-03-10T144428.200.txt
+
+###
+
+GET http://localhost:8080/api/dish/all/restaurant/229
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-10T143914.200.json
+
+###
+
+GET http://localhost:8080/api/dish/all/restaurant/108
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-10T143838.200.json
+
+###
+
+POST http://localhost:8080/api/dish/add
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
+Content-Type: application/json
+Content-Length: 217
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": null,
+  "name": "pizza con l'ananas",
+  "description": "ananas ben cotta di Pozzuoli",
+  "nameLan": null,
+  "descriptionLan": null,
+  "cost": 9.50,
+  "categoryName": "primo piatto",
+  "allergens": [12,14]
+
+}
+
+<> 2023-03-10T143735.200.json
+
+###
+
+POST http://localhost:8080/api/menu/add
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-10T143555.200.json
+
+###
+
+POST http://localhost:8080/api/restaurant
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
+Content-Type: application/json
+Content-Length: 71
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": null,
+  "name": "Di capri forever",
+  "address": "Via Roma"
+}
+
+<> 2023-03-10T143516.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 64
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "dicapri@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-03-10T143431.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+Content-Length: 109
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "peppino",
+  "surname": "dicapri",
+  "email": "dicapri@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-03-10T143337.200.json
+
+###
+
+GET http://localhost:8080/api/dish/all/restaurant/108
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDU1MTMwLCJleHAiOjE2Nzg1MzE0MzB9.5f8ugOFaDvwd3E5NZzvNXBB0xYZ71tvoYF1rRFqEOOeMIMVVhzCGzBrpcFMXLIxZnZ-1mvRWsPV4_6Q7AzyHcA
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-10T143237.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-10T143210.200.txt
+
+###
+
+POST http://localhost:8080/api/cart/add/table/112
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDQ5MzYyLCJleHAiOjE2Nzg1MjU2NjJ9.8mE3Zq69Y8wv3mqWnW8h7pwjrcXOd6viEtaxtIcwoPz9euSJdLttuUzwRTxUKgfqi4Ci9vuixjUlqyrXJ-X2LA
+Content-Type: application/json
+Content-Length: 21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "dishes": [122]
+}
+
+<> 2023-03-10T130002.400.txt
+
+###
+
+GET http://localhost:8080/api/tablerestaurant/all
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDQ5MzYyLCJleHAiOjE2Nzg1MjU2NjJ9.8mE3Zq69Y8wv3mqWnW8h7pwjrcXOd6viEtaxtIcwoPz9euSJdLttuUzwRTxUKgfqi4Ci9vuixjUlqyrXJ-X2LA
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-10T125624.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-10T125603.200.txt
+
+###
+
+GET http://localhost:8080/api/cartdish/user/107
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDQxMDAyLCJleHAiOjE2Nzg1MTczMDJ9.BwyUUJjKayrLSwU4mnlFCBtlsT-RsalkebfO3aDQnPVzmjU37day-0MqEjNPS3uPjAcxLLwD66cvBSHhU8THwg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-03-10T103732.200.json
+
+###
+
