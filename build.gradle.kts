@@ -40,14 +40,16 @@ dependencies {
     implementation("com.sendgrid:sendgrid-java:4.9.3")
     implementation ("org.springframework:spring-context:5.3.19")
     implementation("commons-validator:commons-validator:1.7")
+    implementation("junit:junit:4.13.2")
+    implementation("org.junit.jupiter:junit-jupiter:5.9.2")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 
 
-    testImplementation("org.testng:testng:7.7.0")
+
+
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.mysql:mysql-connector-j")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-
 }
 
 tasks.withType<KotlinCompile> {

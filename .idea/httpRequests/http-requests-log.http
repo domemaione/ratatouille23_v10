@@ -1,3 +1,19 @@
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "fagibic549@wireps.com",
+  "password": "provaprova"
+}
+
+<> 2023-03-16T201549.200.txt
+
+###
+
 GET http://localhost:8080/api/user
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4ODQwMjk4LCJleHAiOjE2Nzg5MTY1OTh9.qXKgAZ-JeXdx7R7vDGoIIhO_DiO0BX9FR0nawZ5_3FIFiS9v0sfPieuZe3feQ1Vhq3QjMwbIoHK_D5z5WGFFEg
 Connection: Keep-Alive
@@ -706,16 +722,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-03-10T125603.200.txt
-
-###
-
-GET http://localhost:8080/api/cartdish/user/107
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDQxMDAyLCJleHAiOjE2Nzg1MTczMDJ9.BwyUUJjKayrLSwU4mnlFCBtlsT-RsalkebfO3aDQnPVzmjU37day-0MqEjNPS3uPjAcxLLwD66cvBSHhU8THwg
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-03-10T103732.200.json
 
 ###
 

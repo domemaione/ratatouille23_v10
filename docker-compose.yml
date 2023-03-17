@@ -25,7 +25,7 @@ services:
     restart: always
     environment:
       PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_ROOT_PASSWORD: admin
     ports:
       - "8080:80"
     depends_on:
