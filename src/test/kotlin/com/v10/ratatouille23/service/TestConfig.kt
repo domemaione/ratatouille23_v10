@@ -12,6 +12,5 @@ import org.springframework.context.annotation.Bean
 @TestConfiguration
 @EnableAutoConfiguration(exclude = [SendGridAutoConfiguration::class])
 class TestConfig {
-    // La tua configurazione aggiuntiva per i test, se necessario
 
 }
