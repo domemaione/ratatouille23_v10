@@ -10,6 +10,7 @@ import com.v10.ratatouille23.repository.CartDishRepository
 import com.v10.ratatouille23.repository.CartRepository
 import com.v10.ratatouille23.repository.TableRestaurantRepository
 import com.v10.ratatouille23.utils.CartStatus
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import java.time.LocalDateTime

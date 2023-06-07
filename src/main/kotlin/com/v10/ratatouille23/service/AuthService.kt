@@ -14,6 +14,7 @@ import com.v10.ratatouille23.repository.UserRepository
 import com.v10.ratatouille23.security.JWTCustomManager
 import com.v10.ratatouille23.utils.UserRoles
 import org.apache.commons.validator.routines.EmailValidator
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpStatus
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
@@ -23,6 +24,9 @@ import java.util.logging.Logger
 
 @Service
     class AuthService(
+        @Value("\${spring.activation-token.url}")
+        private val authUrl: String,
+
         private val userService: UserService,
         private val userRepository: UserRepository,
         private val userMapper: UserMapper,
@@ -30,8 +34,11 @@ import java.util.logging.Logger
         private val activationTokenManager: ActivationTokenManager,
         private val jwtCustomManager: JWTCustomManager,
         private val passwordEncoder: BCryptPasswordEncoder,
-        private val passwordValidator: PasswordValidator
+        private val passwordValidator: PasswordValidator,
+
     ) {
+
+
         private val logger = Logger.getLogger(AuthService::class.java.name)
 
         //Registrazione utente con ruolo ADMIN
@@ -46,7 +53,9 @@ import java.util.logging.Logger
             val toSave = UserDto(null, user.name, user.surname, user.email, user.password, UserRoles.ADMIN, null, enabled = false, firstAccess = true)
             val saved = this.userService.save(toSave)
             val token = this.activationTokenManager.generate(saved.id.toString())
-            this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/validate/user"))
+            this.emailService.send(saved, EmailService.MailComposer.Registration(token,
+                "$authUrl/api/auth/validate/user"
+            ))
             return true
         }
 
@@ -58,7 +67,7 @@ import java.util.logging.Logger
             val toSave = UserDto(null, user.name, user.surname, user.email,user.password,role, restaurantId, enabled = false, firstAccess = false)
             val saved = this.userService.save(toSave)
             val token = this.activationTokenManager.generate(saved.id.toString())
-            this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/validate/user"))
+            this.emailService.send(saved, EmailService.MailComposer.Registration(token, "$authUrl/api/auth/validate/user"))
            // this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/signup/op/resetpassword"))
 
             return true

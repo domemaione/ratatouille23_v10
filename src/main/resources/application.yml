@@ -1,7 +1,7 @@
 spring:
   datasource:
     #PROD DB
-    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?useSSL=false
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?useSSL=true
     #Credentials
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
@@ -27,7 +27,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
   jwt:
     secret: ${JWT_SECRET}
     expiration: 76300000
@@ -36,4 +36,6 @@ spring:
     from: ${SENDGRID_FROM}
   activation-token:
     secret: ${ACTIVATION_TOKEN_SECRET}
+    url: ${HOST_FRONTEND}
     expiration: 3600000
+

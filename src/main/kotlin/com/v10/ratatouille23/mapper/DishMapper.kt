@@ -2,7 +2,6 @@ package com.v10.ratatouille23.mapper
 
 import com.v10.ratatouille23.dto.DishDto
 import com.v10.ratatouille23.model.Dish
-import com.v10.ratatouille23.repository.CategoryRepository
 import org.springframework.stereotype.Component
 
 @Component

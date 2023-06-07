@@ -40,10 +40,14 @@ dependencies {
     implementation("com.sendgrid:sendgrid-java:4.9.3")
     implementation ("org.springframework:spring-context:5.3.19")
     implementation("commons-validator:commons-validator:1.7")
-    implementation("junit:junit:4.13.2")
-    implementation("org.junit.jupiter:junit-jupiter:5.9.2")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
 
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation ("org.springframework.security:spring-security-test")
+    testImplementation("io.mockk:mockk:1.10.4")
+    testImplementation("org.mockito:mockito-junit-jupiter:3.12.4")
+    testImplementation("junit:junit:4.13.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
 
 
 

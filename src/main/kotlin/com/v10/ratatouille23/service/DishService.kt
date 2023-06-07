@@ -18,7 +18,9 @@ class DishService(
     @Transactional
     fun add(dishRequestDto: DishRequestDto): Dish {
         val foundRestaurantId = AuthenticatedUserHelper.get()?.restaurantId ?: throw IllegalStateException("Restaurant not found")
+
         val foundMenu = this.menuRepository.findByRestaurantId(foundRestaurantId)
+
         var categoryId: Long? = null
 
         if(dishRequestDto.categoryName != null) {

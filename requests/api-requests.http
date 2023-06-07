@@ -3,21 +3,21 @@ POST {{host}}/api/auth/signup
 Content-Type: application/json
 
 {
-  "name": "peppino",
-  "surname": "dicapri",
-  "email": "dicapri@gmail.com",
+  "name": "Emmerico",
+  "surname": "Daltonico",
+  "email": "domcmaione@gmail.com",
   "password": "Provaprova-1"
 }
 ###
 POST {{host}}/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3NzU0Njg1LCJleHAiOjE2Nzc4MzA5ODV9.kUyqi-69RmQpCXWFafICLAsXNeaUCozflV6e8f5tODT-O6ei-2Nm4CDz3wap7iq-b8QiBNJ4yIlWvtI9H-RqWA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODYxNDg5MDQsImV4cCI6MTY4NjIyNTIwNH0.B-6LBakvhAQ3mhJcFH-xLc4LHgylF2MonEfp6xRTw6Md72YWEHS9V94eCQkTSk5cSRTxF6oMrFznmkt7I53Zew
 Content-Type: application/json
 
 {
-  "email": "giacomino@gmail.com",
-  "name": "marco",
-  "surname": "merrino",
-  "password": "provaprova",
+  "email": "domenico.maione@outlook.it",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
   "role": "WAITER"
 }
 ###
@@ -34,30 +34,32 @@ POST {{host}}/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "fagibic549@wireps.com",
-  "password": "provaprova"
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
 }
 
 ###
 POST {{host}}/api/restaurant
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NjMyNDg0LCJleHAiOjE2Nzg3MDg3ODR9.hmttB5vnG0MKoocpEKISE9D4QetEdq4otnficnF_PrGhGt-a-KahvgxX4B_s2VW9bZ-ms-_-Hnz5aHKwPYaVNg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODYxNDE2NjMsImV4cCI6MTY4NjIxNzk2M30.mEh0de4PEQKVnVGCuKoSDLKe3aJk95l0cYMiiF2SWssM5B6h87aJaoiTiOzQZVkeBQTDe_l2sH5tQIjA9IlS8w
 Content-Type: application/json
 
 {
   "id": null,
-  "name": "Ristorante la matricola",
-  "address": "Via Casanova"
+  "name": "La Facoltà",
+  "address": "Via MSA"
 }
 
 ###
 POST {{host}}/api/menu/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODYxNDE2NjMsImV4cCI6MTY4NjIxNzk2M30.mEh0de4PEQKVnVGCuKoSDLKe3aJk95l0cYMiiF2SWssM5B6h87aJaoiTiOzQZVkeBQTDe_l2sH5tQIjA9IlS8w
+
+
 
 
 
 ###
 POST {{host}}/api/dish/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZGljYXByaUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Nzg0NTUyNzEsImV4cCI6MTY3ODUzMTU3MX0.mJb0xv8VZR5i4US-XIS2J1aKUDX8IsSDkw0O3PBON6CUbDTRQJ4Sy9FrpBtLp1HiC7KO9orh-fLD90qV64ChtA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODYxNDE2NjMsImV4cCI6MTY4NjIxNzk2M30.mEh0de4PEQKVnVGCuKoSDLKe3aJk95l0cYMiiF2SWssM5B6h87aJaoiTiOzQZVkeBQTDe_l2sH5tQIjA9IlS8w
 Content-Type: application/json
 
 {
@@ -67,8 +69,7 @@ Content-Type: application/json
   "nameLan": null,
   "descriptionLan": null,
   "cost": 9.50,
-  "categoryName": "primo piatto",
-  "allergens": [12,14]
+  "categoryName": "primo piatto"
 
 }
 ###
@@ -108,7 +109,7 @@ Content-Type: application/json
 }
 ###
 POST {{host}}/api/tablerestaurant/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3MjYwODQ4LCJleHAiOjE2NzczMzcxNDh9.mleejajy1dIxI1sQHX5s2uYGypTvgQOKtHXPU59XlGRydtCDzIila2yKoEqki7TsjXpSxaClTvdsdFJgA1XRPQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODYxNzEwODksImV4cCI6MTY4NjI0NzM4OX0.yg4HEP2P8FfoUHeqQ4arpWUZg9JtVblQzarcUbE2swgAWgN1yb7sl9yaMrW6O3DbQGvcLT7pbldNLmMlTdRmqw
 Content-Type: application/json
 
 {
@@ -132,33 +133,19 @@ Content-Type: application/json
 }
 ###
 PUT {{host}}/api/dish/category
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzcxNjI5MTYsImV4cCI6MTY3NzIzOTIxNn0.WBpzmvOky3z6VbHoHyNDw48ZX7SRg9BzVkVHK5uSmBecxwAuvkymATlYP-Hd8vPrnClFb8g6KOi5rFQYevwpsA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg0NzYwOTY0LCJleHAiOjE2ODQ4MzcyNjR9.D8xZlLv0S9IXNPzmLRPUeaLhzz3JGzwEAld7IIj5byLzooLEnNCdwwcvxfnmrVyNMBweoo6utuyYuebXQAXUjA
 Content-Type: application/json
 
 {
-  "id": 50,
-  "name": "maccheroni con braciola",
-  "description": "pasta fresca e carne di ieri, forse",
-  "cost": 15,
-  "categoryName": "primo piatto"
+  "id": 199,
+  "name": "Acqua minerale naturale Sant'Ann",
+  "description": "acqua",
+  "cost": 3,
+  "categoryName": "Bibita naturale"
 }
 ###
 PUT {{host}}/api/cart/close/245
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzkyNzM2LCJleHAiOjE2Nzg4NjkwMzZ9.jyTg2H4DNMnY2EdrJIGQ09Yh_hwS4l7IDfJraVwaqfHX95p-dPdt2mptJCmY2g8rkEviyLvxxcko8z5qVd1K0g
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -171,7 +158,8 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 ###
 GET {{host}}/api/user
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4ODQwMjk4LCJleHAiOjE2Nzg5MTY1OTh9.qXKgAZ-JeXdx7R7vDGoIIhO_DiO0BX9FR0nawZ5_3FIFiS9v0sfPieuZe3feQ1Vhq3QjMwbIoHK_D5z5WGFFEg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg2MTMwMjI2LCJleHAiOjE2ODYyMDY1MjZ9.3WRVBZdpl-ez_hZdv5V-EKHje0hhg_piKLtXnNSo-RR0BrTPOxH0OL8JDr2L0mEm4E04BL7-XewRgROiz8SCIQ
+
 
 ###
 GET {{host}}/api/tablerestaurant/all
@@ -199,7 +187,8 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 ###
 GET {{host}}/api/dish/all
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDU5ODE4LCJleHAiOjE2Nzg1MzYxMTh9.c6VR4ZRzx6vjP-aE7XIvhfXO1Fd2TWR51u8v-AXI-w7hFtAgZRzH-XvbGzvwzrcSsgdlQSHKKvlvNlEA0fnntg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODYxNDE2NjMsImV4cCI6MTY4NjIxNzk2M30.mEh0de4PEQKVnVGCuKoSDLKe3aJk95l0cYMiiF2SWssM5B6h87aJaoiTiOzQZVkeBQTDe_l2sH5tQIjA9IlS8w
+
 
 
 ###
@@ -216,6 +205,9 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 ###
 GET {{host}}/api/restaurant/
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg1NTU0OTAxLCJleHAiOjE2ODU2MzEyMDF9.khLB8J6ANIvuZbIbcVIVSt2E-pgEJsp2MlfumUfEeww5UKtc-G7OPMae1SwK-vV8HbQc94QmrtJOWmfBWPddkA
+
+
 ###
 GET {{host}}/api/user/{email}
 
@@ -278,3 +270,5 @@ DELETE {{host}}/api/user/172
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc3ODQzOTQyLCJleHAiOjE2Nzc5MjAyNDJ9.KGOc5zYSgyjetW98uJF9LLbQSyAjpTBOXcvQsnEZ9V_ig25oFu8ddhSBf8Pfv1A5sJkd_2oPYnSjUvDy1T8NtA
 
 ###
+
+GET {{host}}/api/health/check
