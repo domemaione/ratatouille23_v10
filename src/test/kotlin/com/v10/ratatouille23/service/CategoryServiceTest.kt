@@ -173,7 +173,7 @@ class CategoryServiceTest {
         SecurityContextHolder.clearContext()
 
 
-        // Esecuzione del metodo da testare
+        // Esecuzione del metodo da testare di addPriority
         assertThrows<IllegalStateException> {
             categoryService.addPriority(categoryId, priorityRequestDto)
         }

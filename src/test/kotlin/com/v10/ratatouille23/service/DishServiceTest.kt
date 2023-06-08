@@ -27,7 +27,7 @@ import org.springframework.security.core.Authentication
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.test.context.junit.jupiter.SpringExtension
 
-//Questo è un test sul metodo add e addCategoryToDish di DishService
+//Questo è un test sul metodo add e addCategoryToDish di DishService WB & BB
 @ExtendWith(SpringExtension::class)
 @SpringBootTest
 @Import(TestConfig::class)

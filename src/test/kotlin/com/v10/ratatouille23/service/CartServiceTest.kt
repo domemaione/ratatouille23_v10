@@ -210,7 +210,7 @@ class CartServiceTest{
         assertEquals(existingCart.createdAt, result.createdAt)
         assertNotNull(result.updateAt)
 
-        // Verifica delle interazioni con i repository
+        // Verifica delle interazioni con i repository principali
         verify(tableRestaurantRepository).getReferenceById(tableId)
         verify(cartRepository).findByTableIdAndStatus(tableId, CartStatus.OPEN)
         verify(cartRepository).save(any())
