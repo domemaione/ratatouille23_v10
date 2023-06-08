@@ -382,6 +382,133 @@ class DishServiceTest {
 
 
 
+
+    //----------Test blackbox del metodo add--------------
+
+    @Test
+    fun testAddDishWithMenuNullBB() {
+        // Preparazione dei dati di test
+        val restaurantId = 108L
+        val dishRequestDto = DishRequestDto(
+            id = null,
+            name = "Polpette milanesi",
+            description = "Carne e sugo",
+            nameLan = null,
+            descriptionLan = null,
+            cost = 7.00,
+            categoryName = null,
+            allergens = null
+        )
+
+        // Configurazione del mock per il repository del ristorante
+        `when`(restaurantRepository.findById(eq(restaurantId))).thenReturn(Optional.empty())
+
+        // Simulazione di un utente autenticato
+        SecurityContextHolder.clearContext()
+
+        // Esecuzione del metodo da testare e verifica dell'eccezione
+        assertThrows<IllegalStateException> {
+            dishService.add(dishRequestDto)
+        }
+
+    }
+
+    @Test
+    fun testAddDishWithValidDataBB() {
+        // Preparazione dei dati di test
+        val dishRequestDto = DishRequestDto(
+            id = 188L,
+            name = "Spaghetti alla carbonara",
+            description = "Pasta, uova, pancetta, pecorino",
+            nameLan = null,
+            descriptionLan = null,
+            cost = 9.50,
+            categoryName = "Primi piatti",
+            allergens = null
+        )
+
+        // Esecuzione del metodo da testare
+        val result = dishService.add(dishRequestDto)
+
+        // Verifica dell'output
+        assertNotNull(result.id)
+        assertEquals(dishRequestDto.name, result.name)
+        assertEquals(dishRequestDto.description, result.description)
+        assertEquals(dishRequestDto.cost, result.cost)
+
+    }
+
+    @Test
+    fun testAddDishWithEmptyNameBB() {
+        // Preparazione dei dati di test
+        val dishRequestDto = DishRequestDto(
+            id = 107L,
+            name = "",
+            description = "Pasta, uova, pancetta, pecorino",
+            cost = 9.50,
+            nameLan = null,
+            descriptionLan = null,
+            categoryName = "Primi piatti",
+            allergens = null
+        )
+
+        // Esecuzione del metodo da testare
+        assertThrows<IllegalArgumentException> {
+            dishService.add(dishRequestDto)
+        }
+    }
+
+
+
+    //----------Test blackbox del metodo addCategoryToDish--------------
+
+    //Verifica test che il risultato non sia nullo
+    @Test
+    fun testAddCategoryToDishNotNullBB() {
+
+        // Preparazione dei dati di test
+        val dishRequestDto = DishRequestDto(
+            id = 107L,
+            name = "",
+            description = "Pasta, uova, pancetta, pecorino",
+            cost = 9.50,
+            nameLan = null,
+            descriptionLan = null,
+            categoryName = "Primi piatti",
+            allergens = null
+        )
+
+        // Esecuzione del metodo da testare
+        val result = dishService.addCategoryToDish(dishRequestDto)
+
+        // Verifica dell'output
+        assertNotNull(result)
+    }
+
+    @Test
+    fun testAddCategoryToDishWithInvalidCategoryBB() {
+        // Preparazione dei dati di test
+        val dishRequestDto = DishRequestDto(
+            id = 107L,
+            name = "",
+            description = "Pasta, uova, pancetta, pecorino",
+            cost = 9.50,
+            nameLan = null,
+            descriptionLan = null,
+            categoryName = "Categoria non valida",
+            allergens = null
+        )
+
+        // Esecuzione del metodo da testare
+        val result = dishService.addCategoryToDish(dishRequestDto)
+
+        // Verifica dell'output
+        assertNotNull(result.id)
+        assertNull(result.categoryId)
+    }
+
+
+
 }
 
 

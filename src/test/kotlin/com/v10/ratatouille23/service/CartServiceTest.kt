@@ -13,6 +13,7 @@ import com.v10.ratatouille23.utils.UserRoles
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.ArgumentMatchers.any
 import org.mockito.Mock
@@ -29,6 +30,8 @@ import java.util.ArrayList
 import kotlin.collections.toLongArray
 import kotlin.collections.toTypedArray
 
+
+//Questo Test è stato fatto sul metodo add in CartService
 @ExtendWith(SpringExtension::class)
 @SpringBootTest
 @Import(TestConfig::class)
@@ -55,6 +58,8 @@ class CartServiceTest{
             cartRepository = mock(CartRepository::class.java),
             billViewRepository = mock(BillViewRepository::class.java)
         )
+        val tableRestaurant = TableRestaurant(id = 37L, seats = 8L, restaurantId = 28L)
+        `when`(tableRestaurantRepository.getReferenceById(eq(37L))).thenReturn(tableRestaurant)
     }
 
     @Test
@@ -216,6 +221,54 @@ class CartServiceTest{
         verify(cartRepository).save(any())
 
     }
+
+
+
+    //--------Test black-box del metodo add---------------
+
+    @Test
+    fun testAddCartNewCartWithDishesUserNotValidBB() {
+        // Preparazione dei dati di test
+        val tableId = 37L
+        val dishes: Array<Long>? = arrayOf(27L, 30L)
+        val cartRequestDto = CartRequestDto(dishes = dishes)
+
+        // Simulazione di un utente non autenticato
+        SecurityContextHolder.clearContext()
+
+        // Esecuzione del metodo da testare
+        assertThrows<IllegalStateException> {
+            cartService.add(tableId, cartRequestDto)
+        }
+
+        // Verifica delle interazioni con i repository
+        verify(tableRestaurantRepository).getReferenceById(tableId)
+        verify(cartRepository).findByTableIdAndStatus(tableId, CartStatus.OPEN)
+        verify(cartRepository, never()).save(any())
+    }
+
+
+    @Test
+    fun testAddCartExistingCartWithDishesBB() {
+        // Preparazione dei dati di test
+        val tableId = 37L
+        val dishes: Array<Long>? = arrayOf(27L, 30L)
+        val cartRequestDto = CartRequestDto(dishes = dishes)
+
+        // Esecuzione del metodo da testare
+        val result = cartService.add(tableId, cartRequestDto)
+
+        // Verifica dell'output
+        assertNotNull(result.id)
+        assertEquals(tableId, result.tableId)
+        assertEquals(CartStatus.OPEN, result.status)
+
+        // Verifica delle interazioni con i repository
+        verify(tableRestaurantRepository).getReferenceById(eq(tableId))
+        verify(cartRepository).findByTableIdAndStatus(eq(tableId), eq(CartStatus.OPEN))
+        verify(cartRepository, never()).save(any())
+    }
+
 
 
 

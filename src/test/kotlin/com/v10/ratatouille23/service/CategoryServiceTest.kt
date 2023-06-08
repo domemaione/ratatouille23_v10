@@ -163,7 +163,14 @@ class CategoryServiceTest {
 
     //Test di aggiunta di priorità con un utente non autenticato
     @Test
-    fun testAddPriorityWithUnauthenticatedUser() {
+
+
+
+
+
+    //-----------------Test black-box del metodo addPriority---------------
+
+    fun testAddPriorityWithUnauthenticatedUserBB() {
         // Preparazione dei dati di test
         val categoryId = 1L
         val priority = 2L
@@ -179,6 +186,42 @@ class CategoryServiceTest {
         }
 
 
+    }
+
+
+    @Test
+    fun testAddPriorityBB() {
+        // Preparazione dei dati di test
+        val categoryId = 26L
+        val priority = 2L
+        val priorityRequestDto = PriorityRequestDto(priority)
+
+        // Simulazione dell'utente autenticato
+        SecurityContextHolder.clearContext()
+
+        // Esecuzione del metodo da testare e verifica dell'eccezione generata
+        assertThrows<IllegalStateException> {
+            categoryService.addPriority(categoryId, priorityRequestDto)
+        }
+    }
+
+    @Test
+    fun testAddPriorityWithInvalidCategoryBB() {
+        // Preparazione dei dati di test
+        val categoryId = 26L
+        val priority = 2L
+        val priorityRequestDto = PriorityRequestDto(priority)
+
+        // Simulazione di una categoria inesistente nel repository
+        `when`(categoryRepository.getReferenceById(categoryId)).thenReturn(null)
+
+        // Simulazione dell'utente autenticato
+        SecurityContextHolder.clearContext()
+
+        // Esecuzione del metodo da testare e verifica dell'eccezione generata
+        assertThrows<IllegalStateException> {
+            categoryService.addPriority(categoryId, priorityRequestDto)
+        }
     }
 
 
