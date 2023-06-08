@@ -10,6 +10,7 @@ plugins {
 
 group = "com.v10_ratatouille23"
 version = ""
+
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 configurations {
