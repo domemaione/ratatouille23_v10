@@ -13,7 +13,7 @@ class EmailService(
         class Registration(
             private val token: String,
             private val url: String,
-        ) : MailComposer() {
+            ) : MailComposer() {
             override fun mail(user: User) =
                 MailObj(
                     subjectBenvenuto,

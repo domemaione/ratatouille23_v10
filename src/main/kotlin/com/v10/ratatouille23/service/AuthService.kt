@@ -69,7 +69,7 @@ import java.util.logging.Logger
             val token = this.activationTokenManager.generate(saved.id.toString())
             this.emailService.send(saved, EmailService.MailComposer.Registration(token, "$authUrl/api/auth/validate/user"))
            // this.emailService.send(saved, EmailService.MailComposer.Registration(token, "http://localhost:8080/api/auth/signup/op/resetpassword"))
-
+            println("Token generato: $token")
             return true
         }
 

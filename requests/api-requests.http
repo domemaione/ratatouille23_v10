@@ -10,7 +10,7 @@ Content-Type: application/json
 }
 ###
 POST {{host}}/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODYxNDg5MDQsImV4cCI6MTY4NjIyNTIwNH0.B-6LBakvhAQ3mhJcFH-xLc4LHgylF2MonEfp6xRTw6Md72YWEHS9V94eCQkTSk5cSRTxF6oMrFznmkt7I53Zew
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1ODM2NDAsImV4cCI6MTY4NjY1OTk0MH0.Ci_iizatz2atTQV2z8a7AqwYYEcAQnETUL_O0Jo2vDpakAHl0i5IpPKPKklKkynsfSVxifGt88c3DcvwGdPyXg
 Content-Type: application/json
 
 {
@@ -22,12 +22,16 @@ Content-Type: application/json
 }
 ###
 POST {{host}}/api/auth/signup/op/resetpassword
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoibWltbW9tYWlvbnNAZ21haWwuY29tIiwicm9sZSI6IlNVUEVSVklTT1IiLCJpYXQiOjE2NzUzMzA1MTAsImV4cCI6MTY3NTQwNjgxMH0.SshT-dXwtCucq2-EBY5tcjVAkBx_CYdJ5C19Z_5HUdqubMu4CIsdnS5M3dKiFNOMT4jfvgBwc2RCI7TYCo71ZQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1NzgyODcsImV4cCI6MTY4NjY1NDU4N30.ybTkwkTpQyKi-ee4Qxx26m0_MInz2m0Z2sbvmoCs51jBqAjcdoDDOXsLGDfz1lMc-gDwkOFBJfg_ROCTcxEgbQ
 Content-Type: application/json
 
 {
   "password": "ciaobello"
 }
+###
+
+###
+GET {{host}}/api/auth/validate/user/VylwIWsYax4TuNKA+KA++bZD0HbmjR13T9UaLD54BxA
 ###
 
 POST {{host}}/api/auth/login
@@ -163,7 +167,8 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 ###
 GET {{host}}/api/tablerestaurant/all
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NDYwMTQ2LCJleHAiOjE2Nzg1MzY0NDZ9.B9yRwP3UQWeyvBAwneBnN1d93p27SNPGaLYEoQR7S0CsAa9FdE9HRmu5skPLbWlU-1tde6c0JIiFB6svHWKEbQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoibXJjb3Bwb2xhQHZpcmdpbGlvLml0Iiwicm9sZSI6IldBSVRFUiIsImlhdCI6MTY4NjU2NDI5MSwiZXhwIjoxNjg2NjQwNTkxfQ.B6ahpPi0i4iNF1RNy4rwHaWaPJgbYNoRTjf8ii8pluvRx0lGN2fl5JiG5LMQb84MhL2SeXG2foOHtfm0Yv_wYw
+
 
 
 ###
@@ -211,8 +216,6 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 ###
 GET {{host}}/api/user/{email}
 
-###
-GET {{host}}/api/auth/validate/user/{token}
 ###
 GET {{host}}/api/restaurant/users/HALL_ATTENDANT
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tZW5pY28ubWFpb25lQG91dGxvb2suaXQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NzQ2ODQ2MTUsImV4cCI6MTY3NDc2MDkxNX0.lBeJ0my_blBdpmjdoDk1eFPX5YDvGNJc3VHZWkJAsFhw7CEbidf_Qzt9zGgLB7ZgdPG2kZ4LPO1IVs8lWLNGLw
