@@ -20,22 +20,22 @@ class AllergensController (
     private val allergensService: AllergensService
 ){
     @PostMapping("add")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun add(@RequestBody allergensDto: AllergensDto) =
         ResponseEntity.ok(ServerResponse.ok(this.allergensMapper.toDomain(allergensService.add(allergensDto))))
 
     @GetMapping("{id}")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun get(@PathVariable("id") id: Long) =
         ResponseEntity.ok(ServerResponse.ok(allergensService.get(id)))
 
     @GetMapping("all")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(allergensService.getAll()))
     //elimina allergeno
     @DeleteMapping("{id}")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun delete(@PathVariable("id") id: Long) =
         ResponseEntity.ok(ServerResponse.ok(allergensService.delete(id)))
 

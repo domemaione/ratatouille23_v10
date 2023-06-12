@@ -32,7 +32,7 @@ class MenuController(
 
     //TODO: la GET del menu
     @DeleteMapping()
-    @PreAuthorize("hasAuthority('ADMIN')") //il menu può essere creato solo dall'admin
+    @PreAuthorize("hasAuthority('ADMIN')")
     fun delete() =
         ResponseEntity.ok(ServerResponse.ok(this.menuMapper.toDomain(menuService.delete())))
 

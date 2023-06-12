@@ -17,28 +17,28 @@ class CategoryController(
 ){
 
     @PostMapping("add")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun add(@RequestBody categoryDto: CategoryDto) =
         ResponseEntity.ok(ServerResponse.ok(this.categoryMapper.toDomain(categoryService.add(categoryDto))))
 
     @PostMapping("priority/add/{id}")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun addPriority(@PathVariable("id") id: Long,@RequestBody priorityRequestDto: PriorityRequestDto ) =
         ResponseEntity.ok(ServerResponse.ok(this.categoryMapper.toDomain(categoryService.addPriority(id,priorityRequestDto))))
 
     @GetMapping("{id}")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun get(@PathVariable("id") id: Long) =
         ResponseEntity.ok(ServerResponse.ok(this.categoryMapper.toDomain(categoryService.get(id))))
 
     @GetMapping("all")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(categoryService.getAll()))
 
 
     @DeleteMapping("delete/{id}")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun delete(@PathVariable("id") id: Long) =
         ResponseEntity.ok(ServerResponse.ok(this.categoryMapper.toDomain(categoryService.delete(id))))
 

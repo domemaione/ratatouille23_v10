@@ -15,7 +15,7 @@ class DishAllergensController(
     private val dishAllergensService: DishAllergensService
 ){
     @GetMapping("all")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(dishAllergensService.getAll()))
 

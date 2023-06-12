@@ -59,7 +59,7 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 ###
 POST {{host}}/api/dish/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODYxNDE2NjMsImV4cCI6MTY4NjIxNzk2M30.mEh0de4PEQKVnVGCuKoSDLKe3aJk95l0cYMiiF2SWssM5B6h87aJaoiTiOzQZVkeBQTDe_l2sH5tQIjA9IlS8w
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY0MDgzODgsImV4cCI6MTY4NjQ4NDY4OH0.d4b2YlccHr57HXHvHqLm-wBUddRGo_pwbDJy5E1-3c5m-CuFYn_mPVNy3zmfhaDe-1cTGVUSn24OfjJdIfvwoQ
 Content-Type: application/json
 
 {
@@ -73,12 +73,12 @@ Content-Type: application/json
 
 }
 ###
-POST {{host}}/api/cart/add/table/112
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZmFnaWJpYzU0OUB3aXJlcHMuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjc4NzkyNzM2LCJleHAiOjE2Nzg4NjkwMzZ9.jyTg2H4DNMnY2EdrJIGQ09Yh_hwS4l7IDfJraVwaqfHX95p-dPdt2mptJCmY2g8rkEviyLvxxcko8z5qVd1K0g
+POST {{host}}/api/cart/add/table/105
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY0MDg4MTAsImV4cCI6MTY4NjQ4NTExMH0.nmF6dvar4dLOi3nW2ayKpBvmyf1nELG5mSEGSxejPx6rit0tNI0c3T7s5v88c2w8RZtItWBfkkvK1zBadNZI0A
 Content-Type: application/json
 
 {
-  "dishes": [210]
+  "dishes": [106]
 }
 ###
 POST {{host}}/api/allergens/add
@@ -109,12 +109,12 @@ Content-Type: application/json
 }
 ###
 POST {{host}}/api/tablerestaurant/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODYxNzEwODksImV4cCI6MTY4NjI0NzM4OX0.yg4HEP2P8FfoUHeqQ4arpWUZg9JtVblQzarcUbE2swgAWgN1yb7sl9yaMrW6O3DbQGvcLT7pbldNLmMlTdRmqw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY0MDgzODgsImV4cCI6MTY4NjQ4NDY4OH0.d4b2YlccHr57HXHvHqLm-wBUddRGo_pwbDJy5E1-3c5m-CuFYn_mPVNy3zmfhaDe-1cTGVUSn24OfjJdIfvwoQ
 Content-Type: application/json
 
 {
   "id": null,
-  "seats": 8
+  "seats": 11
 }
 
 

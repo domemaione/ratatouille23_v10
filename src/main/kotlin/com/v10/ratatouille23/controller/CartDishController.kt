@@ -19,12 +19,12 @@ class CartDishController(
 ) {
 
     @GetMapping("all")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(cartDishService.getAll()))
 
     @GetMapping("user/{id}")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun get(@PathVariable("id") userId: Long) =
         ResponseEntity.ok(ServerResponse.ok(cartDishService.get(userId)))
 

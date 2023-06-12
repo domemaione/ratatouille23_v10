@@ -24,7 +24,7 @@ class UserController (
         ResponseEntity.ok(ServerResponse.ok(userService.getAll(restairantId)))*/
 
     @GetMapping()
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(userService.getAll()))
 

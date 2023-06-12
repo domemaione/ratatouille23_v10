@@ -27,7 +27,7 @@ class AuthController(
 
 
     @PostMapping("signup/op/resetpassword")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun resetPassword(@RequestBody resetPasswordDto: ResetPasswordDto) =
         ResponseEntity.ok(ServerResponse.ok(authService.resetPassword(resetPasswordDto)))
 

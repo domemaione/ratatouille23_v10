@@ -19,40 +19,40 @@ class DishController (
 ){
 
     @PostMapping("add")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun add(@RequestBody dishRequestDto: DishRequestDto) =
         ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.add(dishRequestDto))))
 
 
     @GetMapping("{id}")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun get(@PathVariable("id") id: Long) =
         ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.get(id))))
 
     @GetMapping("all")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun getAll() =
         ResponseEntity.ok(ServerResponse.ok(dishService.getAll()))
 
     @GetMapping("category/{id}")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun getDishesByCategory(@PathVariable("id") categoryId: Long) =
         ResponseEntity.ok(ServerResponse.ok(dishService.getDishesByCategory(categoryId)))
 
     @PutMapping("")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun update(@RequestBody dishRequestDto: DishRequestDto) =
         ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.update(dishRequestDto))))
 
 
     @PutMapping("category")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun addCategoryToDish(@RequestBody dishRequestDto: DishRequestDto) =
         ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.addCategoryToDish(dishRequestDto))))
 
 
     @DeleteMapping("{id}")
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun delete(@PathVariable("id") id: Long) =
         ResponseEntity.ok(ServerResponse.ok(this.dishMapper.toDomain(dishService.delete(id))))
 

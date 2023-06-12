@@ -52,7 +52,7 @@ class CartService(
                 tableId = tableId,
                 status = CartStatus.OPEN,
                 createdAt = LocalDateTime.now(),
-                updateAt = null //TODO da controllare
+                updateAt =  LocalDateTime.now()//TODO da controllare
             )
             val savedOrder = this.cartRepository.save(toSave)
             if (cartRequestDto.dishes != null) {

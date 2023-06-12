@@ -18,7 +18,7 @@ class RestaurantController (
 
     //Query su tutti gli utenti attivi che hanno lo stesso ruolo nello stesso ristorante
     @GetMapping("/users/{role}")
-    @PreAuthorize("hasAuthority('ADMIN')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'SUPERVISOR', 'WAITER')")
     fun getUsersByRole(@PathVariable("role") role: UserRoles) =
         ResponseEntity.ok(ServerResponse.ok(this.restaurantService.getUsersByRole(role,true)))
 
