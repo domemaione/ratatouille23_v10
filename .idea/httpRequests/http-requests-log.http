@@ -1,3 +1,583 @@
+POST http://localhost:8080/api/dish/add
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY3NDYwODgsImV4cCI6MTY4NjgyMjM4OH0.sjk14vUiyDuahbZ-5ntaj6t4I-uWtUc9WTChjljsEDGElUNhek15Lwo1NU5Ax6IEMrn7B7FltTSP7tLqmP2Y-Q
+Content-Type: application/json
+Content-Length: 164
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": null,
+  "name": "name test",
+  "description": "descr test",
+  "nameLan": null,
+  "descriptionLan": null,
+  "cost": 9.50,
+  "categoryName": "primo test"
+
+}
+
+<> 2023-06-14T143504.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-14T143448.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-14T143320.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-14T143132.200.txt
+
+###
+
+POST https://ratatouille23v10-be.azurewebsites.net/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-14T143110.200.txt
+
+###
+
+POST https://ratatouille23v10-be.azurewebsites.net/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY2NzQ4NzAsImV4cCI6MTY4Njc1MTE3MH0.KfcY2T2w9-LEoee8C4yEnEKLzQbyP3QHpVDbtlwI8Lni6F9ItCc5ExTE-lAhPrNHUo61B0ttUtnbTTkNefCeKQ
+Content-Type: application/json
+Content-Length: 132
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "mimmomaions@gmail.com",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-13T184818.200.json
+
+###
+
+POST https://ratatouille23v10-be.azurewebsites.net/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-13T184752.200.txt
+
+###
+
+POST https://ratatouille23v10-be.azurewebsites.net/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY2NzQ1OTQsImV4cCI6MTY4Njc1MDg5NH0.467IqayETBb-OOYGr0ggMc-5Xp5tAiKByo7U9v_Lg_D22tZ0BdieelL90uPjHuSw8FqbJp_6x4QHwteWbT-vUg
+Content-Type: application/json
+Content-Length: 132
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "mimmomaions@gmail.com",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-13T184347.200.json
+
+###
+
+POST https://ratatouille23v10-be.azurewebsites.net/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-13T184314.200.txt
+
+###
+
+POST https://ratatouille23v10-be.azurewebsites.net/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-13T184305.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY2NzMxMjAsImV4cCI6MTY4Njc0OTQyMH0.eBz1vsYaF5Y-mw8wsQ-STiQlRWAieSZuHjRAui1_VedboLoSfgQjfufCr0qH0aMiJJQCexnpqtbIwFOwax5PDw
+Content-Type: application/json
+Content-Length: 132
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "mimmomaions@gmail.com",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-13T181939.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-13T181840.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY2NjkwMDMsImV4cCI6MTY4Njc0NTMwM30.osJoV2u4cyhJWLMs070rv-Q8vArK7WAu_sUD6h9zNQengRWZNl5EVhrA1T5ym5cIr5xaB4CHl7bN_DQwtKJdNA
+Content-Type: application/json
+Content-Length: 137
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domenico.maione@outlook.it",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-13T171019.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-13T171003.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY2Njg5MjcsImV4cCI6MTY4Njc0NTIyN30.sXUDVq13gyuTcDeAJRXVxqaFUwRdPA5D9Dc9JEYTlK1FIYqkN8kFq08nLTRYzCb-c0gNx82JCSETNw34-nKxhw
+Content-Type: application/json
+Content-Length: 137
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domenico.maione@outlook.it",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-13T170903.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-13T170847.200.txt
+
+###
+
+GET http://localhost:8080/api/auth/validate/user/8yTCWM1XOVsv+qTGOF2OYYuCFGjoQXkSnZMjXxtm144
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-13T170843.500.txt
+
+###
+
+POST http://localhost:8080/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY2Njc3ODksImV4cCI6MTY4Njc0NDA4OX0.lcyjrJAO71IAM1EviSfu1S7FrdzRB1GZRJdxTcMTyV-aKAqPL4asHxufTQEBBJAVDjXZzXWMAKlj4cdaTSeQ-w
+Content-Type: application/json
+Content-Length: 137
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domenico.maione@outlook.it",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-13T165008.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-13T164949.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY2NjU0NDIsImV4cCI6MTY4Njc0MTc0Mn0.zJ3VkuoYjMfTSO5WPm9YyFqED5xM0fMnjHnX2WATm5yR8_zb7rm-DbuEKbCl6kd_RXezzXIj_WAX6pJM1wUopw
+Content-Type: application/json
+Content-Length: 137
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domenico.maione@outlook.it",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-13T161236.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY2NjU0NDIsImV4cCI6MTY4Njc0MTc0Mn0.zJ3VkuoYjMfTSO5WPm9YyFqED5xM0fMnjHnX2WATm5yR8_zb7rm-DbuEKbCl6kd_RXezzXIj_WAX6pJM1wUopw
+Content-Type: application/json
+Content-Length: 137
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domenico.maione@outlook.it",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-13T161102.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-13T161042.200.txt
+
+###
+
+GET http://localhost:8080/api/auth/validate/user/8yTCWM1XOVsv+qTGOF2OYYuCFGjoQXkSnZMjXxtm144
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-12T175749.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1ODU0MTcsImV4cCI6MTY4NjY2MTcxN30.HkV1pWRkbV9tg-Nlh4qRTV4WyW1hA5QiG6jkX2ryp573Vk1PHlgd2fT9_ptdrWXvibFe4B5kqxPtfwQ67scb3A
+Content-Type: application/json
+Content-Length: 137
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domenico.maione@outlook.it",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-12T175714.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-12T175657.200.txt
+
+###
+
+GET http://localhost:8080/api/auth/validate/user/JNn1UEFMcsXuGIroP97HMUgFCmA9Zc5VfShvjGThb1M
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-12T175425.500.txt
+
+###
+
+POST http://localhost:8080/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1ODUyMTUsImV4cCI6MTY4NjY2MTUxNX0.kP0NY6vix9PQEf3jKmhvmeOWSHnK77L6se2dyQbdGoQgxYAqnZ7QjqIwum33faIJst4wVtzbG5242CGfUKcFXA
+Content-Type: application/json
+Content-Length: 137
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domenico.maione@outlook.it",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-12T175354.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-12T175336.200.txt
+
+###
+
+POST https://ratatouille23v10-be.azurewebsites.net/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1ODQ3MDcsImV4cCI6MTY4NjY2MTAwN30.IXCFLVWzvX2pdswXc04oCPOdYwchSKM4Q75Gdl-gYjBbYy_ZDiJ-uSbrud0Ym9zwQv15mPDTRli3rzUKEdn7rw
+Content-Type: application/json
+Content-Length: 137
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domenico.maione@outlook.it",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-12T174527.200.json
+
+###
+
+POST https://ratatouille23v10-be.azurewebsites.net/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-12T174508.200.txt
+
+###
+
+GET https://ratatouille23.azurewebsites.net/api/auth/validate/user/hXbxjzyYJl78lKcjAB7YVRKsE51+ebq2MBfXwESL3FA
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-12T174325.500.json
+
+###
+
+GET https://ratatouille23v10-be.azurewebsites.net/api/auth/validate/user/hXbxjzyYJl78lKcjAB7YVRKsE51+ebq2MBfXwESL3FA
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-12T174241.500.txt
+
+###
+
+POST https://ratatouille23v10-be.azurewebsites.net/api/auth/signup/op
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1ODQ1MDIsImV4cCI6MTY4NjY2MDgwMn0.TyX-EqhfYJXKpDsr8plihKrpfphgKqd7PS6smYuYrzG4UlggWdvxwQbtdcwiC_bB9qgeuzsEV-plxXcxtoYdbw
+Content-Type: application/json
+Content-Length: 137
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domenico.maione@outlook.it",
+  "name": "Michele",
+  "surname": "Capone",
+  "password": "Provaprova-1",
+  "role": "WAITER"
+}
+
+<> 2023-06-12T174206.200.json
+
+###
+
+POST https://ratatouille23v10-be.azurewebsites.net/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-12T174142.200.txt
+
+###
+
+POST https://ratatouille23v10-be.azurewebsites.net/api/auth/login
+Content-Type: application/json
+Content-Length: 67
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "domcmaione@gmail.com",
+  "password": "Provaprova-1"
+}
+
+<> 2023-06-12T173840.200.txt
+
+###
+
 POST https://ratatouille23v10-be.azurewebsites.net/api/auth/signup/op
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1ODM2NDAsImV4cCI6MTY4NjY1OTk0MH0.Ci_iizatz2atTQV2z8a7AqwYYEcAQnETUL_O0Jo2vDpakAHl0i5IpPKPKklKkynsfSVxifGt88c3DcvwGdPyXg
 Content-Type: application/json
@@ -224,596 +804,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-06-12T170931.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T170912.200.txt
-
-###
-
-GET http://localhost:8080/api/auth/validate/user/l7K9PqnWjRWNHeMMTBjbChKsE51+ebq2MBfBwESL3FA
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-12T164645.500.txt
-
-###
-
-GET http://localhost:8080/api/auth/validate/user/l7K9PqnWjRWNHeMMTBjbChKsE51+ebq2MBfBwESL3FA
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-12T164625.500.txt
-
-###
-
-GET http://localhost:8080/api/auth/validate/user/l7K9PqnWjRWNHeMMTBjbChKsE51+ebq2MBfBwESL3FA
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-12T164548.500.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1ODEwMjYsImV4cCI6MTY4NjY1NzMyNn0.3o48-wjJQ4wvXzEd9e8gu5LB-Wlw7Vha7dWeob8zYnufNMGJUfUmeO697wII-tS-d7puaG847pXmNruOZ-z6jQ
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T164434.200.json
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1ODEwMjYsImV4cCI6MTY4NjY1NzMyNn0.3o48-wjJQ4wvXzEd9e8gu5LB-Wlw7Vha7dWeob8zYnufNMGJUfUmeO697wII-tS-d7puaG847pXmNruOZ-z6jQ
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T164402.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T164346.200.txt
-
-###
-
-GET http://localhost:8080/api/auth/validate/user/fpPLUhzVOvuvkvkSaHK+StaBO9RGSUKmcK3jXMhM0BE
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-12T163627.500.txt
-
-###
-
-GET http://localhost:8080/api/auth/validate/user/fpPLUhzVOvuvkvkSaHK+StaBO9RGSUKmcK3jXMhM0BE
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-06-12T163558.500.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1ODAzODIsImV4cCI6MTY4NjY1NjY4Mn0.7ayKH3F7V41P3qOWLDRmkfa_6Gt9WDge3uvW878ZYRfwtd2XOfrLa6XuKicxwRWGPHOVMn7EV7FYux3yJWqlUg
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T163321.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T163303.200.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1ODAyMTIsImV4cCI6MTY4NjY1NjUxMn0.Kr07MIv4icqEqjA7mp6liwgsMdBr39iZblnrndXCDtn2AiQRBzfnzKQqRh6riAgACbz-qR0SNC5LoMUYF4nzpg
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T163037.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T163012.200.txt
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T163002.200.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1Nzk4MTUsImV4cCI6MTY4NjY1NjExNX0.qTv_9HvYWnjaWwrTZVTZqLWhe1HLnvs0eypJwWyRCiFR7paz4hfmxNRfHaeAfAfqU2svlI2atzLJMl1LqOAHgA
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T162353.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T162335.200.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1Nzk2MzQsImV4cCI6MTY4NjY1NTkzNH0.gJ8rI53FICSEG0KihchFQ4i23JdHF9MU-7nIGnEDOSCv92XaF3foXYM8zSHn_gOi4xCVNl3zni_urkZU4EuIaQ
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T162051.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T162034.200.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1Nzk1MzAsImV4cCI6MTY4NjY1NTgzMH0._UisE5xM_ZAriRe6y5KDUfGeuvk6wn76GuixvYzlV-uNbv7AGxMrqBKOVubvqXfSUin0sram1bRACoQvklYWGA
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T161913.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T161850.200.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1NzkzNzEsImV4cCI6MTY4NjY1NTY3MX0.2UJNSOmcFdyVlB7Kvm8sh7vyiP4HLvlN96qmX75upVMAfi0FeWhsO4Nti3dcUFOwKI-KpiiGDcjHE6K1s85f2w
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T161705.200.json
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1NzkzNzEsImV4cCI6MTY4NjY1NTY3MX0.2UJNSOmcFdyVlB7Kvm8sh7vyiP4HLvlN96qmX75upVMAfi0FeWhsO4Nti3dcUFOwKI-KpiiGDcjHE6K1s85f2w
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T161631.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T161611.200.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1NzkyNDYsImV4cCI6MTY4NjY1NTU0Nn0.740-FHYXut3s4RwnBx9WCt-H4SEKZw3lBVBbExY3tZ_3Q3jW8fD_bPN4OgWx352jw7pijo3hNZV5CXY3xav8Cg
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T161427.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T161406.200.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1Nzg0MDAsImV4cCI6MTY4NjY1NDcwMH0.00NpUOCMivtQUhEOsnw5RlAsMMEXNLjb9MmF9pmuP6Ka2uDIwUqDSFnaMUuwD66wmobMO8GVJ1XL8tTXjmgUIQ
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T160017.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T160000.200.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1NzgyODcsImV4cCI6MTY4NjY1NDU4N30.ybTkwkTpQyKi-ee4Qxx26m0_MInz2m0Z2sbvmoCs51jBqAjcdoDDOXsLGDfz1lMc-gDwkOFBJfg_ROCTcxEgbQ
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: XDEBUG_SESSION=12354
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T155858.500.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1NzgyODcsImV4cCI6MTY4NjY1NDU4N30.ybTkwkTpQyKi-ee4Qxx26m0_MInz2m0Z2sbvmoCs51jBqAjcdoDDOXsLGDfz1lMc-gDwkOFBJfg_ROCTcxEgbQ
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T155838.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T155808.200.txt
-
-###
-
-POST http://localhost:8080/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1NzgyMDMsImV4cCI6MTY4NjY1NDUwM30.7ZSXq5PJAuwQony0lgcr21YcbAz28PibxvtAQjMg35K5aMeukytEVe5gzKtV-AZ5dma6zvvBnwITMPuZu8NziQ
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T155704.200.json
-
-###
-
-POST http://localhost:8080/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T155643.200.txt
-
-###
-
-POST https://ratatouille23v10-be.azurewebsites.net/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1NzgxMDgsImV4cCI6MTY4NjY1NDQwOH0.6l2_VZplNKaLuNMMlVxMFt-G5eNZfDuEwLXiYtmpREhz39RxL_79fBiRgu8SWNe-5Om6yghqtZ2dt785nosLzg
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T155528.200.json
-
-###
-
-POST https://ratatouille23v10-be.azurewebsites.net/api/auth/login
-Content-Type: application/json
-Content-Length: 67
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domcmaione@gmail.com",
-  "password": "Provaprova-1"
-}
-
-<> 2023-06-12T155508.200.txt
-
-###
-
-POST https://ratatouille23v10-be.azurewebsites.net/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1Nzc1MzIsImV4cCI6MTY4NjY1MzgzMn0.kHVUSudPyfsrPU6E7ui9MdG8YPLKWOm1EwKMCeI26qtWPy7TDSZQmLWCHS-6DIc6HArCDxtNGmUJQA01q4HFyA
-Content-Type: application/json
-Content-Length: 137
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "domenico.maione@outlook.it",
-  "name": "Michele",
-  "surname": "Capone",
-  "password": "Provaprova-1",
-  "role": "WAITER"
-}
-
-<> 2023-06-12T154550.200.json
 
 ###
 

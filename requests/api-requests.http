@@ -10,11 +10,11 @@ Content-Type: application/json
 }
 ###
 POST {{host}}/api/auth/signup/op
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY1ODM2NDAsImV4cCI6MTY4NjY1OTk0MH0.Ci_iizatz2atTQV2z8a7AqwYYEcAQnETUL_O0Jo2vDpakAHl0i5IpPKPKklKkynsfSVxifGt88c3DcvwGdPyXg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY2NzQ4NzAsImV4cCI6MTY4Njc1MTE3MH0.KfcY2T2w9-LEoee8C4yEnEKLzQbyP3QHpVDbtlwI8Lni6F9ItCc5ExTE-lAhPrNHUo61B0ttUtnbTTkNefCeKQ
 Content-Type: application/json
 
 {
-  "email": "domenico.maione@outlook.it",
+  "email": "mimmomaions@gmail.com",
   "name": "Michele",
   "surname": "Capone",
   "password": "Provaprova-1",
@@ -31,7 +31,7 @@ Content-Type: application/json
 ###
 
 ###
-GET {{host}}/api/auth/validate/user/VylwIWsYax4TuNKA+KA++bZD0HbmjR13T9UaLD54BxA
+GET {{host}}/api/auth/validate/user/8yTCWM1XOVsv+qTGOF2OYYuCFGjoQXkSnZMjXxtm144
 ###
 
 POST {{host}}/api/auth/login
@@ -59,21 +59,19 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlb
 
 
 
-
-
 ###
 POST {{host}}/api/dish/add
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY0MDgzODgsImV4cCI6MTY4NjQ4NDY4OH0.d4b2YlccHr57HXHvHqLm-wBUddRGo_pwbDJy5E1-3c5m-CuFYn_mPVNy3zmfhaDe-1cTGVUSn24OfjJdIfvwoQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJSYXRhdG91aWxsZTIzLUJhY2tlbmQiLCJzdWIiOiJKV1QgQXV0aCBQcm92aWRlciIsImVtYWlsIjoiZG9tY21haW9uZUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2ODY3NDYwODgsImV4cCI6MTY4NjgyMjM4OH0.sjk14vUiyDuahbZ-5ntaj6t4I-uWtUc9WTChjljsEDGElUNhek15Lwo1NU5Ax6IEMrn7B7FltTSP7tLqmP2Y-Q
 Content-Type: application/json
 
 {
   "id": null,
-  "name": "pizza con l'ananas",
-  "description": "ananas ben cotta di Pozzuoli",
+  "name": "name test",
+  "description": "descr test",
   "nameLan": null,
   "descriptionLan": null,
   "cost": 9.50,
-  "categoryName": "primo piatto"
+  "categoryName": "primo test"
 
 }
 ###

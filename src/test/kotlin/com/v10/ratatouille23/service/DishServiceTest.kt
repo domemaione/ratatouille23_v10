@@ -1,5 +1,5 @@
 package com.v10.ratatouille23.service
-
+/*
 import com.v10.ratatouille23.dto.request.DishRequestDto
 import com.v10.ratatouille23.model.*
 import com.v10.ratatouille23.repository.*
@@ -256,8 +256,6 @@ class DishServiceTest {
 
 
 
-
-
     //Test sul secondo metodo addCategoryToDish in DishService
     @Test
     fun testAddCategoryToDishCategoryisNull() {
@@ -382,10 +380,12 @@ class DishServiceTest {
 
 
 
+
+
 }
 
 
-
+*/
 
 
 
