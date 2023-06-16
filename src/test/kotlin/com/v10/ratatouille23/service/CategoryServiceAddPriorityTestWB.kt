@@ -1,27 +1,29 @@
 package com.v10.ratatouille23.service
 
-import com.v10.ratatouille23.dto.request.DishRequestDto
 import com.v10.ratatouille23.dto.request.PriorityRequestDto
 import com.v10.ratatouille23.model.Category
-import com.v10.ratatouille23.model.Menu
-import com.v10.ratatouille23.model.Restaurant
 import com.v10.ratatouille23.model.User
-import com.v10.ratatouille23.repository.*
+import com.v10.ratatouille23.repository.CategoryRepository
+import com.v10.ratatouille23.repository.UserRepository
 import com.v10.ratatouille23.security.CustomUserDetails
 import com.v10.ratatouille23.utils.UserRoles
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
 import org.mockito.Mock
 import org.mockito.Mockito
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.security.authentication.TestingAuthenticationToken
 import org.springframework.security.core.Authentication
-import org.springframework.security.core.context.SecurityContextHolder
 import java.util.ArrayList
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
+import org.mockito.ArgumentMatchers.any
+import org.mockito.Mockito.times
+import org.mockito.Mockito.verify
+import org.springframework.security.core.context.SecurityContextHolder
 
 @SpringBootTest
-class CategoryServiceAddPriorityTest{
+class CategoryServiceAddPriorityTestWB{
     private val userWithRestaurant: User = User(
         id = 10L,
         name = "Alessio",
@@ -111,33 +113,36 @@ class CategoryServiceAddPriorityTest{
     }
 
     @Test
-    fun addPriorityFailed_UserNotValid() {
+    fun addPriorityFailed_UserNotValidWB() {
         SecurityContextHolder.getContext().authentication = authenticationUserNotValid
 
-        org.junit.jupiter.api.assertThrows<IllegalStateException> {
-          this.categoryService.addPriority(categoria.id!!,priorityValid)
+        assertThrows<IllegalStateException> {
+            categoryService.addPriority(categoria.id!!, priorityValid)
         }
 
+        verify(categoryRepository, times(0)).save(any(Category::class.java))
     }
 
     @Test
-    fun addPrioritySucces_UserIsValid() {
+    fun addPrioritySuccess_UserIsValidWB() {
         SecurityContextHolder.getContext().authentication = authenticationUserWithRestaurant
 
-        org.junit.jupiter.api.assertThrows<IllegalStateException> {
-            this.categoryService.addPriority(categoria.id!!,priorityValid)
+        assertThrows<IllegalStateException> {
+            categoryService.addPriority(categoria.id!!, priorityValid)
         }
 
+        verify(categoryRepository, times(1)).save(any(Category::class.java))
     }
 
     @Test
-    fun failedWithPriorityNotValid() {
+    fun failedWithPriorityNotValidWB() {
         SecurityContextHolder.getContext().authentication = authenticationUserWithRestaurant
 
-        org.junit.jupiter.api.assertThrows<IllegalStateException> {
-            this.categoryService.addPriority(categoria.id!!,priorityNotValid)
+        assertThrows<IllegalStateException> {
+            categoryService.addPriority(categoria.id!!, priorityNotValid)
         }
 
+        verify(categoryRepository, times(0)).save(any(Category::class.java))
     }
 
 
