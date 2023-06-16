@@ -1,10 +1,7 @@
 package com.v10.ratatouille23.service
 
-import com.v10.ratatouille23.dto.request.DishRequestDto
-import com.v10.ratatouille23.dto.request.PriorityRequestDto
-import com.v10.ratatouille23.model.Category
-import com.v10.ratatouille23.model.Menu
-import com.v10.ratatouille23.model.Restaurant
+import com.v10.ratatouille23.dto.request.CartRequestDto
+import com.v10.ratatouille23.model.TableRestaurant
 import com.v10.ratatouille23.model.User
 import com.v10.ratatouille23.repository.*
 import com.v10.ratatouille23.security.CustomUserDetails
@@ -19,7 +16,7 @@ import org.springframework.security.core.Authentication
 import org.springframework.security.core.context.SecurityContextHolder
 import java.util.ArrayList
 
-class CategoryServiceAddPriorityTest{
+class CartServiceAddTest{
     private val userWithRestaurant: User = User(
         id = 10L,
         name = "Alessio",
@@ -44,40 +41,59 @@ class CategoryServiceAddPriorityTest{
         firstAccess = true
     )
 
-    private val priorityValid: PriorityRequestDto = PriorityRequestDto(
-        priority = 3L
+    private val tableRestaurantValid: TableRestaurant = TableRestaurant(
+        id = 11L,
+        restaurantId = 18L,
+        seats = 8L
     )
 
-    private val priorityNotValid: PriorityRequestDto = PriorityRequestDto(
-        priority = -3
+    private val tableRestaurantNotValid: TableRestaurant = TableRestaurant(
+        id = 19L,
+        restaurantId = 18L,
+        seats = 8L
     )
 
-    private val categoria: Category = Category(id = 1L, name = "Primo piatto", priority = 1)
+    private val tableRestaurantWithStatusClosed: TableRestaurant = TableRestaurant(
+        id = 23L,
+        restaurantId = 18L,
+        seats = 8L
+    )
+
+    private val cartRequestDtoTest: CartRequestDto = CartRequestDto(dishes = arrayOf(27L, 30L))
 
     private lateinit var authenticationUserWithRestaurant: Authentication
     private lateinit var authenticationUserWithoutRestaurant: Authentication
-    private lateinit var categoryService: CategoryService
-
+    private lateinit var cartService: CartService
 
     @Mock
     lateinit var userRepository: UserRepository
 
     @Mock
-    lateinit var categoryRepository: CategoryRepository
+    lateinit var tableRestaurantRepository: TableRestaurantRepository
 
+    @Mock
+    lateinit var cartDishRepository: CartDishRepository
+
+    @Mock
+    lateinit var cartRepository: CartRepository
+
+    @Mock
+    lateinit var billViewRepository: BillViewRepository
 
     @BeforeEach
     fun setup() {
         userRepository = Mockito.mock(UserRepository::class.java)
-        categoryRepository = Mockito.mock(CategoryRepository::class.java)
-
-        categoryRepository.save(categoria)
         userRepository.save(userWithRestaurant)
-        userRepository.save(userWithoutRestaurant)
 
-        categoryService = CategoryService(
-            categoryRepository = Mockito.mock(CategoryRepository::class.java)
+        cartService = CartService(
+            tableRestaurantRepository = Mockito.mock(TableRestaurantRepository::class.java),
+            cartDishRepository = Mockito.mock(CartDishRepository::class.java),
+            cartRepository = Mockito.mock(CartRepository::class.java),
+            billViewRepository = Mockito.mock(BillViewRepository::class.java)
         )
+
+        tableRestaurantRepository.save(tableRestaurantValid)
+
 
         val userDetailsWithRestaurant = CustomUserDetails.build(userWithRestaurant)
         authenticationUserWithRestaurant = TestingAuthenticationToken(
@@ -96,34 +112,36 @@ class CategoryServiceAddPriorityTest{
     }
 
     @Test
-    fun addPriorityFailed_UserWtihoutRestaurant() {
+    fun addCartFailed_UserWithoutRestaurant() {
         SecurityContextHolder.getContext().authentication = authenticationUserWithoutRestaurant
 
         org.junit.jupiter.api.assertThrows<IllegalStateException> {
-          this.categoryService.addPriority(categoria.id!!,priorityValid)
+            this.cartService.add(tableRestaurantValid.id!!,cartRequestDtoTest)
         }
 
     }
 
     @Test
-    fun addPrioritySucces_UserWithRestaurant() {
+    fun addCartFailed_TableRestaurantNotValid() {
         SecurityContextHolder.getContext().authentication = authenticationUserWithRestaurant
 
         org.junit.jupiter.api.assertThrows<IllegalStateException> {
-            this.categoryService.addPriority(categoria.id!!,priorityValid)
+            this.cartService.add(tableRestaurantNotValid.id!!,cartRequestDtoTest)
         }
 
     }
+
 
     @Test
-    fun failedWithPriorityNotValid() {
+    fun addCartFailed_StatusClosed() {
         SecurityContextHolder.getContext().authentication = authenticationUserWithRestaurant
 
         org.junit.jupiter.api.assertThrows<IllegalStateException> {
-            this.categoryService.addPriority(categoria.id!!,priorityNotValid)
+            this.cartService.add(tableRestaurantWithStatusClosed.id!!,cartRequestDtoTest)
         }
 
     }
+
 
 
 
