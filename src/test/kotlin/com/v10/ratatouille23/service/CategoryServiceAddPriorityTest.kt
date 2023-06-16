@@ -44,6 +44,18 @@ class CategoryServiceAddPriorityTest{
         firstAccess = true
     )
 
+    private val userNotValid: User = User(
+        id = 13L,
+        name = "Salvatore",
+        surname = "Esposito",
+        email = "s.esp@gmail.com",
+        password = "",
+        role = UserRoles.WAITER,
+        restaurantId = null,
+        enabled = true,
+        firstAccess = true
+    )
+
     private val priorityValid: PriorityRequestDto = PriorityRequestDto(
         priority = 3L
     )
@@ -56,6 +68,7 @@ class CategoryServiceAddPriorityTest{
 
     private lateinit var authenticationUserWithRestaurant: Authentication
     private lateinit var authenticationUserWithoutRestaurant: Authentication
+    private lateinit var authenticationUserNotValid: Authentication
     private lateinit var categoryService: CategoryService
 
 
@@ -86,18 +99,18 @@ class CategoryServiceAddPriorityTest{
             ArrayList(userDetailsWithRestaurant.authorities)
         )
 
-        val userDetailsWithoutRestaurant = CustomUserDetails.build(userWithoutRestaurant)
-        authenticationUserWithoutRestaurant = TestingAuthenticationToken(
-            userDetailsWithoutRestaurant,
+        val userDetailsWithUserNotValid = CustomUserDetails.build(userNotValid)
+        authenticationUserNotValid = TestingAuthenticationToken(
+            userNotValid,
             null,
-            ArrayList(userDetailsWithoutRestaurant.authorities)
+            ArrayList(userDetailsWithUserNotValid.authorities)
         )
 
     }
 
     @Test
-    fun addPriorityFailed_UserWtihoutRestaurant() {
-        SecurityContextHolder.getContext().authentication = authenticationUserWithoutRestaurant
+    fun addPriorityFailed_UserNotValid() {
+        SecurityContextHolder.getContext().authentication = authenticationUserNotValid
 
         org.junit.jupiter.api.assertThrows<IllegalStateException> {
           this.categoryService.addPriority(categoria.id!!,priorityValid)
@@ -106,7 +119,7 @@ class CategoryServiceAddPriorityTest{
     }
 
     @Test
-    fun addPrioritySucces_UserWithRestaurant() {
+    fun addPrioritySucces_UserIsValid() {
         SecurityContextHolder.getContext().authentication = authenticationUserWithRestaurant
 
         org.junit.jupiter.api.assertThrows<IllegalStateException> {
